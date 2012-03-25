@@ -1,0 +1,36 @@
+C:\Users\Lars\documents\visual studio 2010\Projects\Lux\LuxEngine\bin\x86\Debug\LuxEngine.dll
+C:\Users\Lars\documents\visual studio 2010\Projects\Lux\LuxEngine\bin\x86\Debug\LuxEngine.pdb
+C:\Users\Lars\documents\visual studio 2010\Projects\Lux\LuxEngine\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Lars\documents\visual studio 2010\Projects\Lux\LuxEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Lars\documents\visual studio 2010\Projects\Lux\LuxEngine\obj\x86\Debug\LuxEngine.dll
+C:\Users\Lars\documents\visual studio 2010\Projects\Lux\LuxEngine\obj\x86\Debug\LuxEngine.pdb
+C:\Users\Lars\Documents\Fiat Lux\trunk\dev\Lux\LuxEngine\bin\x86\Debug\LuxEngine.dll
+C:\Users\Lars\Documents\Fiat Lux\trunk\dev\Lux\LuxEngine\bin\x86\Debug\LuxEngine.pdb
+C:\Users\Lars\Documents\Fiat Lux\trunk\dev\Lux\LuxEngine\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Lars\Documents\Fiat Lux\trunk\dev\Lux\LuxEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Lars\Documents\Fiat Lux\trunk\dev\Lux\LuxEngine\obj\x86\Debug\LuxEngine.dll
+C:\Users\Lars\Documents\Fiat Lux\trunk\dev\Lux\LuxEngine\obj\x86\Debug\LuxEngine.pdb
+C:\Users\Lars\Documents\fiatlux\trunk\dev\Lux\LuxEngine\bin\x86\Debug\LuxEngine.dll
+C:\Users\Lars\Documents\fiatlux\trunk\dev\Lux\LuxEngine\bin\x86\Debug\LuxEngine.pdb
+C:\Users\Lars\Documents\fiatlux\trunk\dev\Lux\LuxEngine\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Lars\Documents\fiatlux\trunk\dev\Lux\LuxEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Lars\Documents\fiatlux\trunk\dev\Lux\LuxEngine\obj\x86\Debug\LuxEngine.dll
+C:\Users\Lars\Documents\fiatlux\trunk\dev\Lux\LuxEngine\obj\x86\Debug\LuxEngine.pdb
+D:\lars\Desktop\Fiat Lux\trunk\dev\Lux\LuxEngine\bin\x86\Debug\LuxEngine.dll
+D:\lars\Desktop\Fiat Lux\trunk\dev\Lux\LuxEngine\bin\x86\Debug\LuxEngine.pdb
+D:\lars\Desktop\Fiat Lux\trunk\dev\Lux\LuxEngine\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\lars\Desktop\Fiat Lux\trunk\dev\Lux\LuxEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\lars\Desktop\Fiat Lux\trunk\dev\Lux\LuxEngine\obj\x86\Debug\LuxEngine.dll
+D:\lars\Desktop\Fiat Lux\trunk\dev\Lux\LuxEngine\obj\x86\Debug\LuxEngine.pdb
+D:\lars\Desktop\Raccourcis\Fiat Lux\trunk\dev\Lux\LuxEngine\bin\x86\Debug\LuxEngine.dll
+D:\lars\Desktop\Raccourcis\Fiat Lux\trunk\dev\Lux\LuxEngine\bin\x86\Debug\LuxEngine.pdb
+D:\lars\Desktop\Raccourcis\Fiat Lux\trunk\dev\Lux\LuxEngine\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\lars\Desktop\Raccourcis\Fiat Lux\trunk\dev\Lux\LuxEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\lars\Desktop\Raccourcis\Fiat Lux\trunk\dev\Lux\LuxEngine\obj\x86\Debug\LuxEngine.dll
+D:\lars\Desktop\Raccourcis\Fiat Lux\trunk\dev\Lux\LuxEngine\obj\x86\Debug\LuxEngine.pdb
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\LuxEngine\bin\x86\Debug\LuxEngine.dll
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\LuxEngine\bin\x86\Debug\LuxEngine.pdb
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\LuxEngine.dll
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\LuxEngine.pdb

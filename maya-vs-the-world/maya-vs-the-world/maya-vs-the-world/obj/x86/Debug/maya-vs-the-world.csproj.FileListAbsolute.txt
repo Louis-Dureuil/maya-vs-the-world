@@ -1,0 +1,6 @@
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\maya-vs-the-world\maya-vs-the-world\bin\x86\Debug\maya-vs-the-world.exe
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\maya-vs-the-world\maya-vs-the-world\bin\x86\Debug\maya-vs-the-world.pdb
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\maya-vs-the-world\maya-vs-the-world\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\maya-vs-the-world\maya-vs-the-world\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\maya-vs-the-world\maya-vs-the-world\obj\x86\Debug\maya-vs-the-world.exe
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\maya-vs-the-world\maya-vs-the-world\obj\x86\Debug\maya-vs-the-world.pdb

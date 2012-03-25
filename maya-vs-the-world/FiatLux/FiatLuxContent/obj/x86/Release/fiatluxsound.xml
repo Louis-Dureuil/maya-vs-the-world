@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Sections>
+  <WaveBank Name="Music">Wave Bank
+{
+    Name = Music;
+    Xbox File = Xbox\Music.xwb;
+    Windows File = Win\Music.xwb;
+    Xbox Bank Path Edited = 0;
+    Windows Bank Path Edited = 0;
+    Streaming = 1;
+    Entry Names = 1;
+    Audition Sync Disabled = 1;
+    Seek Tables = 1;
+    Compression Preset Name = Compression Preset;
+    Bank Last Revised Low = 2985069869;
+    Bank Last Revised High = 30109226;
+
+    Wave
+    {
+        Name = battle_1_intro;
+        File = C:\Users\Lars\Documents\battle_1_intro.wav;
+        Build Settings Last Modified Low = 1169426020;
+        Build Settings Last Modified High = 30109226;
+        Compression Preset Name = &lt;none&gt;;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 529200;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 3801062920;
+            Last Modified High = 30109216;
+        }
+    }
+
+    Wave
+    {
+        Name = battle_1_suite;
+        File = C:\Users\Lars\Documents\battle_1_suite.wav;
+        Build Settings Last Modified Low = 1255600949;
+        Build Settings Last Modified High = 30109226;
+        Compression Preset Name = &lt;none&gt;;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 16934400;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 3966259093;
+            Last Modified High = 30109218;
+        }
+    }
+}
+
+</WaveBank>
+</Sections>

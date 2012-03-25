@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maya-vs-the-world", "maya-vs-the-world\maya-vs-the-world\maya-vs-the-world.csproj", "{BD718206-C75C-4FF7-B52A-52E63D94F8BC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{20E92B55-0C9C-4754-8257-7E3CC1EC3288} = {20E92B55-0C9C-4754-8257-7E3CC1EC3288}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maya-vs-the-worldContent", "maya-vs-the-world\maya-vs-the-worldContent\maya-vs-the-worldContent.contentproj", "{7A429292-5D9B-4BB5-B9E1-7BF8A2F6C736}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiatLux", "FiatLux\FiatLux\FiatLux.csproj", "{392C41A0-B682-4F49-82A3-B32C886371DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiatLuxContent", "FiatLux\FiatLuxContent\FiatLuxContent.contentproj", "{AC5ACEE8-8087-4CBB-B552-50846F8E992B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxEngine", "LuxEngine\LuxEngine.csproj", "{20E92B55-0C9C-4754-8257-7E3CC1EC3288}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD718206-C75C-4FF7-B52A-52E63D94F8BC}.Debug|x86.ActiveCfg = Debug|x86
+		{BD718206-C75C-4FF7-B52A-52E63D94F8BC}.Debug|x86.Build.0 = Debug|x86
+		{BD718206-C75C-4FF7-B52A-52E63D94F8BC}.Release|x86.ActiveCfg = Release|x86
+		{BD718206-C75C-4FF7-B52A-52E63D94F8BC}.Release|x86.Build.0 = Release|x86
+		{7A429292-5D9B-4BB5-B9E1-7BF8A2F6C736}.Debug|x86.ActiveCfg = Debug|x86
+		{7A429292-5D9B-4BB5-B9E1-7BF8A2F6C736}.Release|x86.ActiveCfg = Release|x86
+		{392C41A0-B682-4F49-82A3-B32C886371DA}.Debug|x86.ActiveCfg = Debug|x86
+		{392C41A0-B682-4F49-82A3-B32C886371DA}.Debug|x86.Build.0 = Debug|x86
+		{392C41A0-B682-4F49-82A3-B32C886371DA}.Release|x86.ActiveCfg = Release|x86
+		{392C41A0-B682-4F49-82A3-B32C886371DA}.Release|x86.Build.0 = Release|x86
+		{AC5ACEE8-8087-4CBB-B552-50846F8E992B}.Debug|x86.ActiveCfg = Debug|x86
+		{AC5ACEE8-8087-4CBB-B552-50846F8E992B}.Release|x86.ActiveCfg = Release|x86
+		{20E92B55-0C9C-4754-8257-7E3CC1EC3288}.Debug|x86.ActiveCfg = Debug|x86
+		{20E92B55-0C9C-4754-8257-7E3CC1EC3288}.Debug|x86.Build.0 = Debug|x86
+		{20E92B55-0C9C-4754-8257-7E3CC1EC3288}.Release|x86.ActiveCfg = Release|x86
+		{20E92B55-0C9C-4754-8257-7E3CC1EC3288}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,18 @@
+c:\users\lars\documents\visual studio 2010\Projects\Lux\LuxEngine\bin\x86\Release\LuxEngine.dll
+c:\users\lars\documents\visual studio 2010\Projects\Lux\LuxEngine\bin\x86\Release\LuxEngine.pdb
+c:\users\lars\documents\visual studio 2010\Projects\Lux\LuxEngine\obj\x86\Release\ResolveAssemblyReference.cache
+c:\users\lars\documents\visual studio 2010\Projects\Lux\LuxEngine\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\lars\documents\visual studio 2010\Projects\Lux\LuxEngine\obj\x86\Release\LuxEngine.dll
+c:\users\lars\documents\visual studio 2010\Projects\Lux\LuxEngine\obj\x86\Release\LuxEngine.pdb
+C:\Users\Lars\Documents\Fiat Lux\trunk\dev\Lux\LuxEngine\bin\x86\Release\LuxEngine.dll
+C:\Users\Lars\Documents\Fiat Lux\trunk\dev\Lux\LuxEngine\bin\x86\Release\LuxEngine.pdb
+C:\Users\Lars\Documents\Fiat Lux\trunk\dev\Lux\LuxEngine\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Lars\Documents\Fiat Lux\trunk\dev\Lux\LuxEngine\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Lars\Documents\Fiat Lux\trunk\dev\Lux\LuxEngine\obj\x86\Release\LuxEngine.dll
+C:\Users\Lars\Documents\Fiat Lux\trunk\dev\Lux\LuxEngine\obj\x86\Release\LuxEngine.pdb
+C:\Users\Lars\Documents\fiatlux\trunk\dev\Lux\LuxEngine\bin\x86\Release\LuxEngine.dll
+C:\Users\Lars\Documents\fiatlux\trunk\dev\Lux\LuxEngine\bin\x86\Release\LuxEngine.pdb
+C:\Users\Lars\Documents\fiatlux\trunk\dev\Lux\LuxEngine\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Lars\Documents\fiatlux\trunk\dev\Lux\LuxEngine\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Lars\Documents\fiatlux\trunk\dev\Lux\LuxEngine\obj\x86\Release\LuxEngine.dll
+C:\Users\Lars\Documents\fiatlux\trunk\dev\Lux\LuxEngine\obj\x86\Release\LuxEngine.pdb
