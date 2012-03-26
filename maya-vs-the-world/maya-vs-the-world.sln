@@ -1,18 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maya-vs-the-world", "maya-vs-the-world\maya-vs-the-world\maya-vs-the-world.csproj", "{BD718206-C75C-4FF7-B52A-52E63D94F8BC}"
-	ProjectSection(ProjectDependencies) = postProject
-		{20E92B55-0C9C-4754-8257-7E3CC1EC3288} = {20E92B55-0C9C-4754-8257-7E3CC1EC3288}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maya-vs-the-worldContent", "maya-vs-the-world\maya-vs-the-worldContent\maya-vs-the-worldContent.contentproj", "{7A429292-5D9B-4BB5-B9E1-7BF8A2F6C736}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiatLux", "FiatLux\FiatLux\FiatLux.csproj", "{392C41A0-B682-4F49-82A3-B32C886371DA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiatLuxContent", "FiatLux\FiatLuxContent\FiatLuxContent.contentproj", "{AC5ACEE8-8087-4CBB-B552-50846F8E992B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxEngine", "LuxEngine\LuxEngine.csproj", "{20E92B55-0C9C-4754-8257-7E3CC1EC3288}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{F3ACAFB1-0D22-4D9E-882E-FAE7BDECF0B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rpg", "Rpg\Rpg\Rpg.csproj", "{70FF5F41-E9E4-467F-A206-C4D0491507E3}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "RpgContent", "Rpg\RpgContent\RpgContent.contentproj", "{F257D676-F5E0-4BC6-AE4C-6FFA9D27EDB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schmup", "Schmup\Schmup\Schmup.csproj", "{E86380D3-41CF-4553-8380-077E80C9B5F1}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "SchmupContent", "Schmup\SchmupContent\SchmupContent.contentproj", "{12F8EDFC-5A8A-444C-968B-F893E735AABD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,12 +23,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BD718206-C75C-4FF7-B52A-52E63D94F8BC}.Debug|x86.ActiveCfg = Debug|x86
-		{BD718206-C75C-4FF7-B52A-52E63D94F8BC}.Debug|x86.Build.0 = Debug|x86
-		{BD718206-C75C-4FF7-B52A-52E63D94F8BC}.Release|x86.ActiveCfg = Release|x86
-		{BD718206-C75C-4FF7-B52A-52E63D94F8BC}.Release|x86.Build.0 = Release|x86
-		{7A429292-5D9B-4BB5-B9E1-7BF8A2F6C736}.Debug|x86.ActiveCfg = Debug|x86
-		{7A429292-5D9B-4BB5-B9E1-7BF8A2F6C736}.Release|x86.ActiveCfg = Release|x86
 		{392C41A0-B682-4F49-82A3-B32C886371DA}.Debug|x86.ActiveCfg = Debug|x86
 		{392C41A0-B682-4F49-82A3-B32C886371DA}.Debug|x86.Build.0 = Debug|x86
 		{392C41A0-B682-4F49-82A3-B32C886371DA}.Release|x86.ActiveCfg = Release|x86
@@ -36,6 +33,22 @@ Global
 		{20E92B55-0C9C-4754-8257-7E3CC1EC3288}.Debug|x86.Build.0 = Debug|x86
 		{20E92B55-0C9C-4754-8257-7E3CC1EC3288}.Release|x86.ActiveCfg = Release|x86
 		{20E92B55-0C9C-4754-8257-7E3CC1EC3288}.Release|x86.Build.0 = Release|x86
+		{F3ACAFB1-0D22-4D9E-882E-FAE7BDECF0B3}.Debug|x86.ActiveCfg = Debug|x86
+		{F3ACAFB1-0D22-4D9E-882E-FAE7BDECF0B3}.Debug|x86.Build.0 = Debug|x86
+		{F3ACAFB1-0D22-4D9E-882E-FAE7BDECF0B3}.Release|x86.ActiveCfg = Release|x86
+		{F3ACAFB1-0D22-4D9E-882E-FAE7BDECF0B3}.Release|x86.Build.0 = Release|x86
+		{70FF5F41-E9E4-467F-A206-C4D0491507E3}.Debug|x86.ActiveCfg = Debug|x86
+		{70FF5F41-E9E4-467F-A206-C4D0491507E3}.Debug|x86.Build.0 = Debug|x86
+		{70FF5F41-E9E4-467F-A206-C4D0491507E3}.Release|x86.ActiveCfg = Release|x86
+		{70FF5F41-E9E4-467F-A206-C4D0491507E3}.Release|x86.Build.0 = Release|x86
+		{F257D676-F5E0-4BC6-AE4C-6FFA9D27EDB0}.Debug|x86.ActiveCfg = Debug|x86
+		{F257D676-F5E0-4BC6-AE4C-6FFA9D27EDB0}.Release|x86.ActiveCfg = Release|x86
+		{E86380D3-41CF-4553-8380-077E80C9B5F1}.Debug|x86.ActiveCfg = Debug|x86
+		{E86380D3-41CF-4553-8380-077E80C9B5F1}.Debug|x86.Build.0 = Debug|x86
+		{E86380D3-41CF-4553-8380-077E80C9B5F1}.Release|x86.ActiveCfg = Release|x86
+		{E86380D3-41CF-4553-8380-077E80C9B5F1}.Release|x86.Build.0 = Release|x86
+		{12F8EDFC-5A8A-444C-968B-F893E735AABD}.Debug|x86.ActiveCfg = Debug|x86
+		{12F8EDFC-5A8A-444C-968B-F893E735AABD}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

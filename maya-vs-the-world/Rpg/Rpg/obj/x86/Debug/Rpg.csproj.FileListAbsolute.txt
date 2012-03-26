@@ -1,0 +1,10 @@
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\bin\x86\Debug\Rpg.exe
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\bin\x86\Debug\Rpg.pdb
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\bin\x86\Debug\Data.dll
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\bin\x86\Debug\LuxEngine.dll
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\bin\x86\Debug\Data.pdb
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\bin\x86\Debug\LuxEngine.pdb
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\obj\x86\Debug\Rpg.exe
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\obj\x86\Debug\Rpg.pdb

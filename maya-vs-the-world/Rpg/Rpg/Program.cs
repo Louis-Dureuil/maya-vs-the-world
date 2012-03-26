@@ -1,7 +1,7 @@
 using System;
 using LuxEngine;
 
-namespace Schmup
+namespace Rpg
 {
 #if WINDOWS || XBOX
     static class Program
