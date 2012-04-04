@@ -1,5 +1,4 @@
 using System;
-using LuxEngine;
 
 namespace Schmup
 {
@@ -11,7 +10,7 @@ namespace Schmup
         /// </summary>
         static void Main(string[] args)
         {
-            using (LuxGame game = new LuxGame())
+            using (ShmupGame game = new ShmupGame())
             {
                 //game.Components.Add(new Scenes.DemoTitleScene(game));
                 game.Run();

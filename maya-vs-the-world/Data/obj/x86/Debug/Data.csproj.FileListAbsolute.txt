@@ -4,3 +4,7 @@ D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Resolve
 D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Data.dll
 D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Data.pdb
+C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Data.dll
+C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Data.pdb

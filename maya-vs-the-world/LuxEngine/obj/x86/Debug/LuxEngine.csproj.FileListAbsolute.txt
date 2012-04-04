@@ -34,3 +34,9 @@ D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\Re
 D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\LuxEngine.dll
 D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\LuxEngine.pdb
+C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\LuxEngine\bin\x86\Debug\LuxEngine.dll
+C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\LuxEngine\bin\x86\Debug\LuxEngine.pdb
+C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\LuxEngine.dll
+C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\LuxEngine.pdb
