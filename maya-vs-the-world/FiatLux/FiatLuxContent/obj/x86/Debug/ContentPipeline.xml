@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\Square.xnb</Output>
-      <Time>2012-03-28T19:08:10.9058888+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\Square.xnb</Output>
+      <Time>2010-12-04T17:14:15.8564354+01:00</Time>
     </Item>
     <Item>
       <Source>Circle.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\Circle.xnb</Output>
-      <Time>2012-03-28T19:08:10.8758887+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\Circle.xnb</Output>
+      <Time>2010-12-04T17:13:52.1224354+01:00</Time>
     </Item>
     <Item>
       <Source>WoTAP.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\WoTAP.xnb</Output>
-      <Time>2012-03-28T19:08:10.9158888+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\WoTAP.xnb</Output>
+      <Time>2010-12-04T17:14:52.5944354+01:00</Time>
     </Item>
     <Item>
       <Source>WoTCenter.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\WoTCenter.xnb</Output>
-      <Time>2012-03-28T19:08:11.0058889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\WoTCenter.xnb</Output>
+      <Time>2010-12-04T17:05:35.9964354+01:00</Time>
     </Item>
     <Item>
       <Source>WoTAP_old.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\WoTAP_old.xnb</Output>
-      <Time>2012-03-28T19:08:11.0058889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\WoTAP_old.xnb</Output>
+      <Time>2010-12-04T17:05:03.3564354+01:00</Time>
     </Item>
     <Item>
       <Source>WoTCenter_old.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\WoTCenter_old.xnb</Output>
-      <Time>2012-03-28T19:08:11.0158889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\WoTCenter_old.xnb</Output>
+      <Time>2010-12-04T17:06:15.6624354+01:00</Time>
     </Item>
     <Item>
       <Source>WoTCenterOrange.png</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\WoTCenterOrange.xnb</Output>
-      <Time>2012-03-28T19:08:11.0158889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\WoTCenterOrange.xnb</Output>
+      <Time>2010-12-04T17:06:57.5364354+01:00</Time>
     </Item>
     <Item>
       <Source>Lucien.png</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\Lucien.xnb</Output>
-      <Time>2012-03-28T19:08:10.9058888+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\Lucien.xnb</Output>
+      <Time>2011-03-23T20:31:30.5592816+01:00</Time>
     </Item>
     <Item>
       <Source>FontTest.bmp</Source>
@@ -79,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>FontTextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\FontTest.xnb</Output>
-      <Time>2012-03-28T19:08:10.9058888+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\FontTest.xnb</Output>
+      <Time>2011-03-23T23:16:46.9995784+01:00</Time>
     </Item>
     <Item>
       <Source>etoileactive.png</Source>
@@ -88,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\etoileactive.xnb</Output>
-      <Time>2012-03-28T19:08:11.0358889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\etoileactive.xnb</Output>
+      <Time>2011-03-24T17:45:02.7087108+01:00</Time>
     </Item>
     <Item>
       <Source>etoiledesactive.png</Source>
@@ -97,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\etoiledesactive.xnb</Output>
-      <Time>2012-03-28T19:08:11.0358889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\etoiledesactive.xnb</Output>
+      <Time>2011-03-24T17:45:25.6809841+01:00</Time>
     </Item>
     <Item>
       <Source>backgroundM.png</Source>
@@ -106,8 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\backgroundM.xnb</Output>
-      <Time>2012-03-28T19:08:11.0258889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\backgroundM.xnb</Output>
+      <Time>2011-03-24T22:31:29.0329766+01:00</Time>
     </Item>
     <Item>
       <Source>lucien_dead.png</Source>
@@ -115,8 +115,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\lucien_dead.xnb</Output>
-      <Time>2012-03-28T19:08:11.045889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\lucien_dead.xnb</Output>
+      <Time>2011-03-28T23:40:54.2631851+02:00</Time>
     </Item>
     <Item>
       <Source>WindowSkinBack1.png</Source>
@@ -124,8 +124,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\WindowSkinBack1.xnb</Output>
-      <Time>2012-03-28T19:08:10.9058888+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\WindowSkinBack1.xnb</Output>
+      <Time>2011-04-01T22:57:40.146701+02:00</Time>
     </Item>
     <Item>
       <Source>Sergent.png</Source>
@@ -133,8 +133,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\Sergent.xnb</Output>
-      <Time>2012-03-28T19:08:10.9058888+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\Sergent.xnb</Output>
+      <Time>2011-04-15T23:00:15.9831229+02:00</Time>
     </Item>
     <Item>
       <Source>Bar.png</Source>
@@ -142,8 +142,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\Bar.xnb</Output>
-      <Time>2012-03-28T19:08:10.8758887+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\Bar.xnb</Output>
+      <Time>2011-04-17T16:21:10.6819213+02:00</Time>
     </Item>
     <Item>
       <Source>portraitLucien.png</Source>
@@ -151,8 +151,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\portraitLucien.xnb</Output>
-      <Time>2012-03-28T19:08:11.065889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\portraitLucien.xnb</Output>
+      <Time>2011-05-03T14:00:04.394382+02:00</Time>
     </Item>
     <Item>
       <Source>portraitSergent.png</Source>
@@ -160,8 +160,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\portraitSergent.xnb</Output>
-      <Time>2012-03-28T19:08:11.065889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\portraitSergent.xnb</Output>
+      <Time>2011-05-03T14:00:15.3790103+02:00</Time>
     </Item>
     <Item>
       <Source>ice.png</Source>
@@ -169,8 +169,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\ice.xnb</Output>
-      <Time>2012-03-28T19:08:11.045889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\ice.xnb</Output>
+      <Time>2011-05-13T09:37:16.2297444+02:00</Time>
     </Item>
     <Item>
       <Source>spiral.png</Source>
@@ -178,8 +178,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\spiral.xnb</Output>
-      <Time>2012-03-28T19:08:11.065889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\spiral.xnb</Output>
+      <Time>2011-05-13T09:37:16.3437509+02:00</Time>
     </Item>
     <Item>
       <Source>conic.png</Source>
@@ -187,8 +187,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\conic.xnb</Output>
-      <Time>2012-03-28T19:08:11.0258889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\conic.xnb</Output>
+      <Time>2011-05-13T09:37:16.3877535+02:00</Time>
     </Item>
     <Item>
       <Source>fleche.png</Source>
@@ -196,8 +196,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\fleche.xnb</Output>
-      <Time>2012-03-28T19:08:11.045889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\fleche.xnb</Output>
+      <Time>2011-05-13T20:12:32.0255681+02:00</Time>
     </Item>
     <Item>
       <Source>RakunCôté.png</Source>
@@ -205,8 +205,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\RakunCôté.xnb</Output>
-      <Time>2012-03-28T19:08:10.9058888+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\RakunCôté.xnb</Output>
+      <Time>2011-06-28T00:11:32.1682039+02:00</Time>
     </Item>
     <Item>
       <Source>arrow.png</Source>
@@ -214,8 +214,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\arrow.xnb</Output>
-      <Time>2012-03-28T19:08:11.0158889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\arrow.xnb</Output>
+      <Time>2011-06-29T12:41:46.7224445+02:00</Time>
     </Item>
     <Item>
       <Source>portraitRakun.png</Source>
@@ -223,8 +223,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\portraitRakun.xnb</Output>
-      <Time>2012-03-28T19:08:11.065889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\portraitRakun.xnb</Output>
+      <Time>2011-07-01T14:57:04.5886191+02:00</Time>
     </Item>
     <Item>
       <Source>curseurzone.png</Source>
@@ -232,8 +232,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\curseurzone.xnb</Output>
-      <Time>2012-03-28T19:08:11.0358889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\curseurzone.xnb</Output>
+      <Time>2011-07-04T09:46:32.5501336+02:00</Time>
     </Item>
     <Item>
       <Source>DefaultSpriteFont.spritefont</Source>
@@ -241,8 +241,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\DefaultSpriteFont.xnb</Output>
-      <Time>2012-03-28T19:08:10.8758887+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\DefaultSpriteFont.xnb</Output>
+      <Time>2011-03-07T01:10:35.4850188+01:00</Time>
     </Item>
     <Item>
       <Source>Fog.fx</Source>
@@ -250,8 +250,8 @@
       <Importer>EffectImporter</Importer>
       <Processor>EffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\Fog.xnb</Output>
-      <Time>2012-03-28T19:08:10.8958887+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\Fog.xnb</Output>
+      <Time>2011-05-13T10:52:26.4077118+02:00</Time>
     </Item>
     <Item>
       <Source>Distorsion.fx</Source>
@@ -259,8 +259,8 @@
       <Importer>EffectImporter</Importer>
       <Processor>EffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\Distorsion.xnb</Output>
-      <Time>2012-03-28T19:08:10.8958887+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\Distorsion.xnb</Output>
+      <Time>2011-09-14T09:20:45.3153605+02:00</Time>
     </Item>
     <Item>
       <Source>barEffect.fx</Source>
@@ -268,8 +268,8 @@
       <Importer>EffectImporter</Importer>
       <Processor>EffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\barEffect.xnb</Output>
-      <Time>2012-03-28T19:08:11.0258889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\barEffect.xnb</Output>
+      <Time>2011-05-16T01:31:02.546252+02:00</Time>
     </Item>
     <Item>
       <Source>afterimageeffect.fx</Source>
@@ -277,8 +277,8 @@
       <Importer>EffectImporter</Importer>
       <Processor>EffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\afterimageeffect.xnb</Output>
-      <Time>2012-03-28T19:08:11.0158889+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\afterimageeffect.xnb</Output>
+      <Time>2011-05-24T12:05:15.1517349+02:00</Time>
     </Item>
     <Item>
       <Source>FontEffects.fx</Source>
@@ -286,8 +286,8 @@
       <Importer>EffectImporter</Importer>
       <Processor>EffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\FontEffects.xnb</Output>
-      <Time>2012-03-28T19:08:10.8958887+02:00</Time>
+      <Output>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\FontEffects.xnb</Output>
+      <Time>2011-08-31T13:39:11.1344615+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -295,39 +295,39 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>true</CompressContent>
-      <RootDirectory>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLuxContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLuxContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLuxContent\</RootDirectory>
+      <LoggerRootDirectory>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\</LoggerRootDirectory>
+      <IntermediateDirectory>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLuxContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLux\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
         <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
         <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
         <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
         <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
         <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
         <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2012-03-28T10:58:00.0679366+02:00</Value>
+        <Value>2011-10-10T21:28:20.7083895+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

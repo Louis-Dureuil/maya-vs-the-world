@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Data
 {
-    private class Tile
+    class Tile
     {
         /// <summary>
         /// Relative or absolute path to the file
@@ -30,18 +30,18 @@ namespace Data
  
     }
 
-    private enum InstructionMnemonic
+    enum InstructionMnemonic
     {
         Nop
     }
 
-    private class Instruction
+    class Instruction
     {
         private InstructionMnemonic mnemonic;
         private List<Object> args;
     }
 
-    private class TileEvent : Tile
+    class TileEvent : Tile
     {
         private List<Instruction> instructions;
     }

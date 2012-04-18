@@ -47,9 +47,9 @@ namespace LuxEngine
             //Initialize Input
             Input.Initialize();
           //uncomment when the .wav are available for compilation (on pengouin-fixe)
-            engine = new AudioEngine("Content\\fiatluxsound.xgs");
-            soundBank = new SoundBank(engine, "Content\\Sound Bank.xsb");
-            waveBank = new WaveBank(engine, "Content\\Sound.xwb");
+            //engine = new AudioEngine("Content\\fiatluxsound.xgs");
+            //soundBank = new SoundBank(engine, "Content\\Sound Bank.xsb");
+            //waveBank = new WaveBank(engine, "Content\\Sound.xwb");
 
             base.Initialize();
         }
