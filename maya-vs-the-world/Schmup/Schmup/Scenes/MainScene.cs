@@ -10,7 +10,6 @@ namespace Schmup
         public MainScene(LuxEngine.LuxGame game)
             : base(game)
         {
-            Shot = new Shot();
         }
     }
 }
