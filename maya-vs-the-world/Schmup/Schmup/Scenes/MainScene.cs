@@ -10,7 +10,7 @@ namespace Schmup.Scenes
         public MainScene(LuxEngine.LuxGame game)
             : base(game)
         {
-
+            // on sait pas quoi mettre apres
         }
     }
 }
