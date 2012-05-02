@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using LuxEngine;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
@@ -18,27 +19,24 @@ namespace Schmup
         private List<uint> powerList;
         private uint invincibleTime;
 
-        private KeyboardState _keyboardState;
-
 
         public override void Update(GameTime gameTime)
         {
-            if (_keyboardState.IsKeyDown(Keys.Z) || _keyboardState.IsKeyDown(Keys.z))
+            if (Input.isActionDone(Input.Action.Up,true))
             {
                 Position.Y -= speed;
             }
-            else if (_keyboardState.IsKeyDown(Keys.S) ||_keyboardState.IsKeyDown(Keys.s))
+            else if (Input.isActionDone(Input.Action.Down, true))
             {
-                _zozorPosition.Y++;
+                Position.Y += speed;
             }
-
-            if (_keyboardState.IsKeyDown(Keys.Q) || _keyboardState.IsKeyDown(Keys.q))
+            if (Input.isActionDone(Input.Action.Left, true))
             {
-                _zozorPosition.X++;
+                Position.X -= speed;
             }
-            if (_keyboardState.IsKeyDown(Keys.D) || _keyboardState.IsKeyDown(Keys.d)
+            else if (Input.isActionDone(Input.Action.Right, true))
             {
-                _zozorPosition.X--;
+                Position.X += speed;
             }
         }
     }
