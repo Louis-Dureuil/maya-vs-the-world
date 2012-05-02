@@ -39,5 +39,11 @@ namespace Schmup
                 Position.X += speed;
             }
         }
+
+        public Hero(LuxGame game, uint life, uint takenDamageCollision, uint givenDamageCollision, Sprite skin)
+            : base(game, life, takenDamageCollision, givenDamageCollision, skin)
+        {
+
+        }
     }
 }

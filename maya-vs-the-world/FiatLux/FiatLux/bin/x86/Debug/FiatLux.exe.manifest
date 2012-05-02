@@ -15,16 +15,16 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
-          Options du manifeste de contrôle de compte d'utilisateur
-          Si vous souhaitez modifier le niveau du contrôle de compte d'utilisateur Windows, remplacez le 
-          nœud requestedExecutionLevel par l'une des propositions suivantes :
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         Si vous souhaitez utiliser la virtualisation de fichiers et du Registre pour la 
-         compatibilité descendante, supprimez le nœud requestedExecutionLevel.
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -100,7 +100,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>OuK1q8b3f1hkAXa83O/tWsHtaFY=</dsig:DigestValue>
+        <dsig:DigestValue>BOKmd6wzKKOM2nowOgwK2loGnl4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -112,7 +112,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>awb3Zu45zdJ55Ha2CsQu5ysOAPs=</dsig:DigestValue>
+        <dsig:DigestValue>paowi7EkKwqBsiJwQ0BvHlzcHAI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -124,17 +124,17 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>EpUYvM49+X5dJwH2eRgIomEYQqQ=</dsig:DigestValue>
+        <dsig:DigestValue>1miBSHcPnLfriyOxdwD/UwDZcMo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Content\afterimageeffect.xnb" size="824">
+  <file name="Content\afterimageeffect.xnb" size="822">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>kwHh1surnfzBoli3NONbGU+xA60=</dsig:DigestValue>
+      <dsig:DigestValue>Zyd2hoJvzEof1AbjPm9SNceTSLM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\arrow.xnb" size="244">
@@ -164,13 +164,13 @@
       <dsig:DigestValue>qgdwYadd720groLUp3tEZd4PyEU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\barEffect.xnb" size="1034">
+  <file name="Content\barEffect.xnb" size="1038">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>RKWwAGrRilpinDtAt73J2H/xT1U=</dsig:DigestValue>
+      <dsig:DigestValue>PSaov3iGgXap/gBegmle/+cy86I=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Circle.xnb" size="418">
@@ -209,13 +209,13 @@
       <dsig:DigestValue>1CK99CmtzN7NK/ZEj1XN9My6W5U=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Distorsion.xnb" size="2316">
+  <file name="Content\Distorsion.xnb" size="2320">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>kqiQWFkiZ+sua9yUAQqgMn+V6xw=</dsig:DigestValue>
+      <dsig:DigestValue>5ztabtVbuDiNJKjRNMX3ifyfuho=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\etoileactive.xnb" size="522">
@@ -245,13 +245,13 @@
       <dsig:DigestValue>QgcLXweuH6wE/W3wExlgJR57keU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Fog.xnb" size="1610">
+  <file name="Content\Fog.xnb" size="1624">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>txIzR99YpnTjvNWyi0ezFhiaoqA=</dsig:DigestValue>
+      <dsig:DigestValue>et4lrILQPnnl6gpGnRkXv6V/UWM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\FontEffects.xnb" size="1072">
@@ -260,7 +260,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>7XL5/17eWESiQ8GYpSLy8ZrkXuI=</dsig:DigestValue>
+      <dsig:DigestValue>re4KqzvmYsy3wNaLMDciR7K4u1Q=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\FontTest.xnb" size="6510">

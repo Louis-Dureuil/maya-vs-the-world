@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using LuxEngine;
+using Microsoft.Xna.Framework;
 
 namespace Schmup
 {
@@ -42,5 +43,10 @@ namespace Schmup
             base.Draw(gameTime);
         }
 
+        public Shot(LuxGame game, uint invincibleTime)
+            : base(game)
+        {
+            this.invincibleTime = invincibleTime;
+        }
     }
 }
