@@ -96,7 +96,6 @@
     <Compile Include="Bar.cs" />
     <Compile Include="Camera.cs" />
     <Compile Include="Input.cs" />
-    <Compile Include="Lazer.cs" />
     <Compile Include="LuxGame.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="MenuWindow.cs" />
