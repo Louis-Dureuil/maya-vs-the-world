@@ -8,3 +8,5 @@ C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\ResolveAss
 C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Data.dll
 C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Data.pdb
+C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\Data\bin\x86\Debug\Data.dll
+C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\Data\bin\x86\Debug\Data.pdb

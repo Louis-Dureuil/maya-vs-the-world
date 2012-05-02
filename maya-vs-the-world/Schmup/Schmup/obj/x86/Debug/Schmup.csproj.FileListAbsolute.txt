@@ -21,3 +21,4 @@ C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\obj\x86\Debug\S
 C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\carre.xnb
 D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\carre.xnb
 D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\SchmupFont.xnb
+C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\SchmupFont.xnb

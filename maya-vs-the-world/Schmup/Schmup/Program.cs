@@ -13,7 +13,7 @@ namespace Schmup
         {
             using (LuxGame game = new LuxGame())
             {
-                game.Components.Add(new Scenes.TestScene(game));
+                game.Components.Add(new Scenes.MainScene(game));
                 game.Run();
             }
         }
