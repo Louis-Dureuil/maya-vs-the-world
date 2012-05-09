@@ -46,3 +46,4 @@ C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\
 C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\obj\x86\Debug\Schmup.exe
 C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\obj\x86\Debug\Schmup.pdb
+D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\afterimageeffect.xnb
