@@ -8,8 +8,12 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Schmup
 {
+
+
     class Hero : Character
     {
+        static private const float SQRT2 = 1.414f;
+
         private uint mana;
         private uint currentWeapon;
         private uint speed;
@@ -24,13 +28,39 @@ namespace Schmup
         {
             if (Input.isActionDone(Input.Action.Up,true))
             {
-                Position.Y -= speed;
+                if (Input.isActionDone(Input.Action.Left, true))
+                {
+                    Position.X += speed / SQRT2;
+                    Position.Y -= speed / SQRT2;
+                }
+                else if (Input.isActionDone(Input.Action.Left, true))
+                {
+                    Position.X -= speed / SQRT2;
+                    Position.Y -= speed / SQRT2;
+                }
+                else
+                {
+                    Position.Y -= speed;
+                }
             }
             else if (Input.isActionDone(Input.Action.Down, true))
             {
-                Position.Y += speed;
+                if (Input.isActionDone(Input.Action.Left, true))
+                {
+                    Position.X += speed / SQRT2;
+                    Position.Y += speed / SQRT2;
+                }
+                else if (Input.isActionDone(Input.Action.Left, true))
+                {
+                    Position.X -= speed / SQRT2;
+                    Position.Y += speed / SQRT2;
+                }
+                else
+                {
+                    Position.Y += speed;
+                }
             }
-            if (Input.isActionDone(Input.Action.Left, true))
+            else if (Input.isActionDone(Input.Action.Left, true))
             {
                 Position.X -= speed;
             }
