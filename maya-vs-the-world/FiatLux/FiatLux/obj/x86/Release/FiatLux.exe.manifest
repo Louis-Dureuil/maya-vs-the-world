@@ -15,16 +15,16 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
-          Options du manifeste de contrôle de compte d'utilisateur
-          Si vous souhaitez modifier le niveau du contrôle de compte d'utilisateur Windows, remplacez le 
-          nœud requestedExecutionLevel par l'une des propositions suivantes :
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         Si vous souhaitez utiliser la virtualisation de fichiers et du Registre pour la 
-         compatibilité descendante, supprimez le nœud requestedExecutionLevel.
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -93,60 +93,48 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FiatLux.exe" size="134656">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FiatLux.exe" size="164352">
       <assemblyIdentity name="FiatLux" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>0m3VusO/Xu8c0t8ZHmSGv7JxOb4=</dsig:DigestValue>
+        <dsig:DigestValue>PEhaInONc+qsKcDMvn0aYWMASWQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LuxEngine.dll" size="32256">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fr\FiatLux.resources.dll" size="9728">
+      <assemblyIdentity name="FiatLux.resources" version="1.0.0.0" language="fr" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>aIBkpvGV3owKJtB8PQAKB3qBXiU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LuxEngine.dll" size="37376">
       <assemblyIdentity name="LuxEngine" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>KWoMtIkYpHM3hokD8tlNwKvJpDs=</dsig:DigestValue>
+        <dsig:DigestValue>YdJ0VqVek0I/zJ8LWc0rsGgFzpk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fr-FR\Microsoft.Xna.Framework.Game.resources.dll" size="17176">
-      <assemblyIdentity name="Microsoft.Xna.Framework.Game.resources" version="4.0.0.0" publicKeyToken="842CF8BE1DE50553" language="fr-FR" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>9po+bBaMU0OfDDtL81Hxfb8tDmE=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fr-FR\Microsoft.Xna.Framework.resources.dll" size="55064">
-      <assemblyIdentity name="Microsoft.Xna.Framework.resources" version="4.0.0.0" publicKeyToken="842CF8BE1DE50553" language="fr-FR" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ey2sL6FZado429RuJFddAU+OXeA=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <file name="Content\afterimageeffect.xnb" size="612">
+  <file name="Content\afterimageeffect.xnb" size="614">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>g6bX/zAThhsHGyMbbzhPOSy6wKM=</dsig:DigestValue>
+      <dsig:DigestValue>VS6LpmnjseH8u4huFGv/LWlI8lo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\arrow.xnb" size="244">
@@ -182,7 +170,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>yoT0gQV25OeX+ckQ/Cm1IllU4Fk=</dsig:DigestValue>
+      <dsig:DigestValue>3p0R0ir/GZBvr+W+vcArQkOA03Q=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Circle.xnb" size="418">
@@ -221,13 +209,13 @@
       <dsig:DigestValue>1CK99CmtzN7NK/ZEj1XN9My6W5U=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Distorsion.xnb" size="1478">
+  <file name="Content\Distorsion.xnb" size="1618">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>MvHHeOUNuU/EFnTB2pBsU/9vqZ0=</dsig:DigestValue>
+      <dsig:DigestValue>m+1UFi6fkX6ZkJYdBdUwEAlELck=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\etoileactive.xnb" size="522">
@@ -257,13 +245,22 @@
       <dsig:DigestValue>QgcLXweuH6wE/W3wExlgJR57keU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Fog.xnb" size="1104">
+  <file name="Content\Fog.xnb" size="1100">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>QMPhdkVtcjNLoJz1sAeCHD0Mpig=</dsig:DigestValue>
+      <dsig:DigestValue>ums5PUej56A6nbZDKyfJ8PpLnBI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\FontEffects.xnb" size="634">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>n1BG0OuOojiNDCeTZzlVh0bRyEE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\FontTest.xnb" size="6510">

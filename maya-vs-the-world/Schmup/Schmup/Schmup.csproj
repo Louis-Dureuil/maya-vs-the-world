@@ -124,7 +124,6 @@
     <Compile Include="Scenes\SimpleMissile.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="carre.png" />
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
   </ItemGroup>

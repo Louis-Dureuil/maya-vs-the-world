@@ -34,3 +34,15 @@ C:\Users\hoby\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Da
 C:\Users\hoby\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\LuxEngine.dll
 C:\Users\hoby\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Data.pdb
 C:\Users\hoby\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\LuxEngine.pdb
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\carre.xnb
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\SchmupFont.xnb
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Schmup.exe
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Schmup.pdb
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Data.dll
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\LuxEngine.dll
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Data.pdb
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\LuxEngine.pdb
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\obj\x86\Debug\Schmup.exe
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\obj\x86\Debug\Schmup.pdb

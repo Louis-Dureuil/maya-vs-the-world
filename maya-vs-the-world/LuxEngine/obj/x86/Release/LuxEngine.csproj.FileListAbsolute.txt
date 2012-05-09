@@ -16,3 +16,9 @@ C:\Users\Lars\Documents\fiatlux\trunk\dev\Lux\LuxEngine\obj\x86\Release\ResolveA
 C:\Users\Lars\Documents\fiatlux\trunk\dev\Lux\LuxEngine\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Lars\Documents\fiatlux\trunk\dev\Lux\LuxEngine\obj\x86\Release\LuxEngine.dll
 C:\Users\Lars\Documents\fiatlux\trunk\dev\Lux\LuxEngine\obj\x86\Release\LuxEngine.pdb
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\LuxEngine\bin\x86\Release\LuxEngine.dll
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\LuxEngine\bin\x86\Release\LuxEngine.pdb
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Release\LuxEngine.dll
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Release\LuxEngine.pdb
