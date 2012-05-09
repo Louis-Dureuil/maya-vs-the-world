@@ -11,18 +11,18 @@ namespace Schmup
     {
         //private uint hitboxHeight;
         //private uint hitboxWidth;
-        private uint invincibleTime;
+        private uint invincibleTimeMilisec;
 
         // méthodes pour update, draw et destroy??
-        public uint InvincibleTime
+        public uint InvincibleTimeMilisec
         {
             get
             {
-                return invincibleTime;
+                return invincibleTimeMilisec;
             }
             set
             {
-                invincibleTime = value;
+                invincibleTimeMilisec = value;
             }
         }
 
@@ -43,10 +43,10 @@ namespace Schmup
             base.Draw(gameTime);
         }
 
-        public Shot(LuxGame game, uint invincibleTime)
+        public Shot(LuxGame game, uint invincibleTimeMilisec)
             : base(game)
         {
-            this.invincibleTime = invincibleTime;
+            this.invincibleTimeMilisec = invincibleTimeMilisec;
         }
     }
 }
