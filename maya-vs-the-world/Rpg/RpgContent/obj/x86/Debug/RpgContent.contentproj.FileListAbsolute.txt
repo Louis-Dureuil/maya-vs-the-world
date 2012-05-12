@@ -2,3 +2,4 @@ D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Rpg\RpgContent\obj\x86\Deb
 C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\Rpg\RpgContent\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\hoby\maya-vs-the-world\maya-vs-the-world\Rpg\RpgContent\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Rpg\RpgContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Rpg\RpgContent\obj\x86\Debug\ResolveAssemblyReference.cache
