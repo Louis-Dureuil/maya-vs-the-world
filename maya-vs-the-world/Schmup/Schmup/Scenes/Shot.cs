@@ -54,12 +54,13 @@ namespace Schmup
 
         public override void Initialize()
         {
-            
+
             base.Initialize();
         }
 
         public override void Update(GameTime gameTime)
         {
+            Position = Position + speed;
 
             base.Update(gameTime);
         }
