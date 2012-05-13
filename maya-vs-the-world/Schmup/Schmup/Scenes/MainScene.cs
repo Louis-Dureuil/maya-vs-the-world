@@ -22,6 +22,31 @@ namespace Schmup
             Vector2 vect = new Vector2(1,1);
             Vector2 vect2 = new Vector2(1,0);
             // Les creations de sprite doivent être dans Initialize.
+            // GROSSE MODIFICATION
+            // A ENLEVER DES QUE POSSIBLE
+            // Euh... je gère pas les sprites correctement, je règlerai ça plus tard
+            // Génération des nbTirs tirs
+            // Allocation des données
+            Vector2 debut = new Vector2 (1,1);
+            Vector2 fin = new Vector2 (1,0);
+            Vector2[] vectar = new Vector2[5];
+            Shot[] shotar = new Shot[5];
+            Sprite[] shotSpritear = new Sprite[5];
+            // Création des sprites et affectation des vitesses
+            for (uint i = 0; i<5; i++)
+            {
+                vectar[i] = new Vector2 (5-i)*debut+i*fin;
+                shotar[i] = new Shot(this.LuxGame, 1, null);
+                shotSpritear[i] = new Sprite(shotar[i], skinName);
+                shotar[i].Speed = vectar[i];
+                shotar[i].Position = this.Position;
+                shotar[i].Skin = shotSpritear[i];
+                //Ajout au jeu des éléments
+                Game.Components.Add(shotar[i]);
+                Game.Components.Add(shotSpritear[i]);
+                shotSpritear[i].SetAnimation("carre");
+            }
+            // FIN DE LA MODIF
             BulletPattern bPatternTest = new BulletPattern(this.LuxGame, 1, vect, vect);
             Hero hero = new Hero(this.LuxGame, 1, 0, 0, null, 5);
             Sprite heroSprite = new Sprite(hero, skinName);
