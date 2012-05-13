@@ -28,6 +28,24 @@
       <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\afterimageeffect.xnb</Output>
       <Time>2012-05-12T20:53:10.216+02:00</Time>
     </Item>
+    <Item>
+      <Source>bullet001-1.png</Source>
+      <Name>bullet001-1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet001-1.xnb</Output>
+      <Time>2012-05-13T21:13:35.2557463+02:00</Time>
+    </Item>
+    <Item>
+      <Source>bullet001-2.png</Source>
+      <Name>bullet001-2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet001-2.xnb</Output>
+      <Time>2012-05-13T21:13:50.4407463+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

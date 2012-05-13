@@ -12,10 +12,12 @@ namespace Schmup
         private uint nbTirs;
         private Vector2 debut;
         private Vector2 fin;
+        
 
         public override void Initialize()
         {
             base.Initialize();
+            // double beta = (Math.Atan((double) fin.X / (double) fin.Y) - Math.Atan((double) debut.X / (double) debut.Y))/(nbTirs-1);
             // Euh... je gère pas les sprites correctement, je règlerai ça plus tard
             List<string> skinName = new List<string>(1);
             skinName.Add("carre");
