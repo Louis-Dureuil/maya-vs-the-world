@@ -16,3 +16,15 @@ C:\Users\hoby\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\ResolveAsse
 C:\Users\hoby\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\hoby\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Data.dll
 C:\Users\hoby\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Data.pdb
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Data\bin\x86\Debug\Data.dll
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Data\bin\x86\Debug\Data.pdb
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Data.dll
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Data.pdb
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Data\bin\x86\Debug\Data.dll
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Data\bin\x86\Debug\Data.pdb
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Data.dll
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Data.pdb

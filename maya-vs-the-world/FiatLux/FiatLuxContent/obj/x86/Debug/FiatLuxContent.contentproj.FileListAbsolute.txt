@@ -5,3 +5,5 @@ D:\lars\Desktop\Raccourcis\Fiat Lux\trunk\dev\Lux\FiatLux\FiatLuxContent\obj\x86
 D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLuxContent\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Hélo\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLuxContent\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\hoby\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLuxContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLuxContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLuxContent\obj\x86\Debug\ResolveAssemblyReference.cache

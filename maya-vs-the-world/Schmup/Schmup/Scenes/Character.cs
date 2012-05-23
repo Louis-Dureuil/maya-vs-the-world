@@ -26,9 +26,27 @@ namespace Schmup
             this.skin = skin;
         }
 
+        public Sprite Skin
+        {
+            get
+            {
+                return skin;
+            }
+            set
+            {
+                skin = value;
+            }
+        }
+
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+        }
+
         public override void Draw(GameTime gameTime)
         {
             skin.Draw(gameTime);
+            base.Draw(gameTime);
         }
     }
 }

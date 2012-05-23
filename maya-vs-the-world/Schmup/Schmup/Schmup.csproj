@@ -112,6 +112,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Scenes\BulletPattern.cs" />
     <Compile Include="Scenes\HomingMissile.cs" />
     <Compile Include="Scenes\Character.cs" />
     <Compile Include="Scenes\ComplexEnemy.cs" />
@@ -124,7 +125,6 @@
     <Compile Include="Scenes\SimpleMissile.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="carre.png" />
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
   </ItemGroup>

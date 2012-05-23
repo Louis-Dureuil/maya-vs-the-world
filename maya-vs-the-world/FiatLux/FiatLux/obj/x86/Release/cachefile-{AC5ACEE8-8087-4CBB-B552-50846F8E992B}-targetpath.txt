@@ -29,3 +29,4 @@ Content\Fog.xnb
 Content\Distorsion.xnb
 Content\barEffect.xnb
 Content\afterimageeffect.xnb
+Content\FontEffects.xnb

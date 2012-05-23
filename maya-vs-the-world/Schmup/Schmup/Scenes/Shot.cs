@@ -11,29 +11,56 @@ namespace Schmup
     {
         //private uint hitboxHeight;
         //private uint hitboxWidth;
-        private uint invincibleTime;
+        private uint invincibleTimeMilisec;
+        private Vector2 speed;
+        private Sprite skin;
 
         // méthodes pour update, draw et destroy??
-        public uint InvincibleTime
+        public uint InvincibleTimeMilisec
         {
             get
             {
-                return invincibleTime;
+                return invincibleTimeMilisec;
             }
             set
             {
-                invincibleTime = value;
+                invincibleTimeMilisec = value;
+            }
+        }
+
+        public Vector2 Speed
+        {
+            get
+            {
+                return speed;
+            }
+            set
+            {
+                speed = value;
+            }
+        }
+
+        public Sprite Skin
+        {
+            get
+            {
+                return skin;
+            }
+            set
+            {
+                skin = value;
             }
         }
 
         public override void Initialize()
         {
-            
+
             base.Initialize();
         }
 
         public override void Update(GameTime gameTime)
         {
+            Position = Position + speed;
 
             base.Update(gameTime);
         }
@@ -43,10 +70,11 @@ namespace Schmup
             base.Draw(gameTime);
         }
 
-        public Shot(LuxGame game, uint invincibleTime)
+        public Shot(LuxGame game, uint invincibleTimeMilisec, Sprite skin = null)
             : base(game)
         {
-            this.invincibleTime = invincibleTime;
+            this.invincibleTimeMilisec = invincibleTimeMilisec;
+            this.skin = skin;
         }
     }
 }

@@ -46,3 +46,15 @@ C:\Users\hoby\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\Resolv
 C:\Users\hoby\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\hoby\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\LuxEngine.dll
 C:\Users\hoby\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\LuxEngine.pdb
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\LuxEngine\bin\x86\Debug\LuxEngine.dll
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\LuxEngine\bin\x86\Debug\LuxEngine.pdb
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\LuxEngine.dll
+C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\LuxEngine.pdb
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\LuxEngine\bin\x86\Debug\LuxEngine.dll
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\LuxEngine\bin\x86\Debug\LuxEngine.pdb
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\LuxEngine.dll
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\LuxEngine.pdb

@@ -8,8 +8,11 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Schmup
 {
+
     class Hero : Character
     {
+        private const float SQRT2 = 1.414f;
+
         private uint mana;
         private uint currentWeapon;
         private uint speed;
@@ -19,18 +22,49 @@ namespace Schmup
         private List<uint> powerList;
         private uint invincibleTime;
 
+        public Hero(LuxGame game, uint life = 0, uint takenDamageCollision = 0, uint givenDamageCollision = 0, Sprite skin = null, uint speed = 0)
+            : base(game, life, takenDamageCollision, givenDamageCollision, skin)
+        {
+            this.speed = speed;
+        }
 
         public override void Update(GameTime gameTime)
         {
             if (Input.isActionDone(Input.Action.Up,true))
             {
-                Position.Y -= speed;
+                if (Input.isActionDone(Input.Action.Right, true))
+                {
+                    Position.X += speed / SQRT2;
+                    Position.Y -= speed / SQRT2;
+                }
+                else if (Input.isActionDone(Input.Action.Left, true))
+                {
+                    Position.X -= speed / SQRT2;
+                    Position.Y -= speed / SQRT2;
+                }
+                else
+                {
+                    Position.Y -= speed;
+                }
             }
             else if (Input.isActionDone(Input.Action.Down, true))
             {
-                Position.Y += speed;
+                if (Input.isActionDone(Input.Action.Right, true))
+                {
+                    Position.X += speed / SQRT2;
+                    Position.Y += speed / SQRT2;
+                }
+                else if (Input.isActionDone(Input.Action.Left, true))
+                {
+                    Position.X -= speed / SQRT2;
+                    Position.Y += speed / SQRT2;
+                }
+                else
+                {
+                    Position.Y += speed;
+                }
             }
-            if (Input.isActionDone(Input.Action.Left, true))
+            else if (Input.isActionDone(Input.Action.Left, true))
             {
                 Position.X -= speed;
             }
@@ -38,12 +72,8 @@ namespace Schmup
             {
                 Position.X += speed;
             }
-        }
 
-        public Hero(LuxGame game, uint life, uint takenDamageCollision, uint givenDamageCollision, Sprite skin)
-            : base(game, life, takenDamageCollision, givenDamageCollision, skin)
-        {
-
+            base.Update(gameTime);
         }
     }
 }
