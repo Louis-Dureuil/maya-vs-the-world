@@ -21,23 +21,25 @@ namespace Schmup
             skinName.Add("carre");
             skinName.Add("bullet001-1");
             skinName.Add("bullet001-2");
-            Vector2 vect = new Vector2(2,2);
+            Vector2 vect = new Vector2(0,1);
+            Vector2 rien = new Vector2(0,0);
             // Les creations de sprite doivent être dans Initialize.
             
-            ShotPattern bPatternTest = new ShotPattern(this.LuxGame, 36, vect, 10);
+            ShotPattern bPatternTest = new ShotPattern(this.LuxGame, 7, vect, 10);
             bPatternTest.Position = new Vector2(300, 300);
             Hero hero = new Hero(this.LuxGame, 1, 0, 0, null, 5);
             Sprite heroSprite = new Sprite(hero, skinName);
             Shot shot = new Shot(this.LuxGame, 1, null);
             Sprite shotSprite = new Sprite(shot, skinName);
-            shot.Speed = vect;
+            shot.Position = bPatternTest.Position;
+            shot.Speed = rien;
             shot.Skin = shotSprite;
             hero.Skin = heroSprite;
             // Il faut ajouter au jeu les élements que vous créez.
             Game.Components.Add(hero);
             Game.Components.Add(heroSprite);
-            //Game.Components.Add(shot);
-            //Game.Components.Add(shotSprite);
+            Game.Components.Add(shot);
+            Game.Components.Add(shotSprite);
             Game.Components.Add(bPatternTest);
             // Il faut appliquer "SetAnimation" au sprite pour qu'il affiche quelque chose.
 

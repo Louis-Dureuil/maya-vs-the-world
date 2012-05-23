@@ -29,7 +29,7 @@ namespace Schmup
             // double beta = (Math.Atan((double) fin.X / (double) fin.Y) - Math.Atan((double) debut.X / (double) debut.Y))/(nbTirs-1);
 
             double bigAngleRadian = Math.PI/180*(shotNb - 1) * angleBtwShotsDegrees;
-            Vector2 currentVector = new Vector2 ((float) (direction.X + Math.Cos(bigAngleRadian/2)), (float) (direction.Y - Math.Sin((float) bigAngleRadian/2)));
+            Vector2 currentVector = new Vector2 ((float) (direction.X * Math.Cos(bigAngleRadian/2) - Math.Sin(bigAngleRadian/2) * direction.Y), (float) (Math.Sin(bigAngleRadian/2)*direction.X + Math.Cos(bigAngleRadian/2) * direction.Y));
             // Euh... je gère pas les sprites correctement, je règlerai ça plus tard
             List<string> skinName = new List<string>(1);
             skinName.Add("bullet001-1");
@@ -46,7 +46,7 @@ namespace Schmup
             //    shotSprite[i] = new Sprite(shot[i], skinName);
             //    shot[i].Speed = vect[i];
             //    shot[i].Position = this.Position;
-            for (uint i = 0; i < shotNb; i++)
+            for (uint i = 0; i < shotNb+1; i++)
             {
                 Shot shot = new Shot(this.LuxGame, 1, null);
                 // TODO : Faire que le sprite soit crée dans le constructeur à partir du nom passé en paramètre
