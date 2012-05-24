@@ -31,9 +31,14 @@ namespace Schmup
             Sprite heroSprite = new Sprite(hero, skinName);
             Shot shot = new Shot(this.LuxGame, 1, null);
             Sprite shotSprite = new Sprite(shot, skinName);
+            TestEnemy testEnemy = new TestEnemy(this.LuxGame, 10, 2, 3, false, 100, null);
+            Sprite enemySprite = new Sprite(testEnemy, skinName);
+
             shot.Position = bPatternTest.Position;
             shot.Speed = rien;
             shot.Skin = shotSprite;
+            testEnemy.Position = new Vector2(400, 100);
+            testEnemy.Skin = enemySprite;
             hero.Skin = heroSprite;
             // Il faut ajouter au jeu les élements que vous créez.
             Game.Components.Add(hero);
@@ -41,10 +46,12 @@ namespace Schmup
             Game.Components.Add(shot);
             Game.Components.Add(shotSprite);
             Game.Components.Add(bPatternTest);
+            Game.Components.Add(testEnemy);
             // Il faut appliquer "SetAnimation" au sprite pour qu'il affiche quelque chose.
 
             heroSprite.SetAnimation("bullet001-2");
             shotSprite.SetAnimation("bullet001-1");
+            enemySprite.SetAnimation("carre");
         }
 
         public override void Update(GameTime gameTime)

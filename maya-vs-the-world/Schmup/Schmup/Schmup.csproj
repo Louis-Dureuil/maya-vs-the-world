@@ -123,6 +123,7 @@
     <Compile Include="Scenes\Shot.cs" />
     <Compile Include="Scenes\ShotPattern.cs" />
     <Compile Include="Scenes\SimpleMissile.cs" />
+    <Compile Include="Scenes\TestEnemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
