@@ -12,6 +12,7 @@ namespace Schmup
         private bool shootsHero;
         private uint waitTimeFrames;
         private uint shootNb;
+        private float shootSpeed;
 
         public TestEnemy (LuxGame game, uint life, uint takenDamageCollision, uint givenDamageCollision, bool shootsHero, uint waitTimeFrames, Sprite skin)
             : base(game, life, takenDamageCollision, givenDamageCollision, skin)
@@ -40,25 +41,30 @@ namespace Schmup
             Game.Components.Add(shotSprite);
             shotSprite.SetAnimation("bullet001-1");
             shootNb=1;
+            shootSpeed = (float) 0.05;
         }
 
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-            if (waitTimeFrames == 0)
+            if (shootNb < 30)
             {
-                shootNb++;
-                Vector2 vector = new Vector2(0,1);
-                if (shootsHero)
+                if (waitTimeFrames == 0)
                 {
-                    Vector2 vect = new Vector2(1, 1);
+                    shootNb++;
+                    shootSpeed = (float) 1.1 * shootSpeed + (float) 0.1;
+                    Vector2 vector = new Vector2(0,(float) shootSpeed);
+                    if (shootsHero)
+                    {
+                        Vector2 vect = new Vector2(1, 1);
+                    }
+                    ShotPattern bPatternTest = new ShotPattern(this.LuxGame, 7, vector, 12);
+                    bPatternTest.Position = this.Position;
+                    Game.Components.Add(bPatternTest);
+                    waitTimeFrames += 3;
                 }
-                ShotPattern bPatternTest = new ShotPattern(this.LuxGame, shootNb, vector, 12);
-                bPatternTest.Position = this.Position;
-                Game.Components.Add(bPatternTest);
-                waitTimeFrames += 60;
+                waitTimeFrames--;
             }
-            waitTimeFrames--;
         }
     }
 }

@@ -112,6 +112,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Scenes\ShotPattern2.cs" />
     <Compile Include="Scenes\HomingMissile.cs" />
     <Compile Include="Scenes\Character.cs" />
     <Compile Include="Scenes\ComplexEnemy.cs" />

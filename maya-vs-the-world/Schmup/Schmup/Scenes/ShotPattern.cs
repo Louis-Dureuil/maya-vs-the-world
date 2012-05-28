@@ -17,9 +17,7 @@ namespace Schmup
             : base(game)
         {
             this.shotNb = shotNb;
-            direction.Normalize();
             this.direction = direction;
-            System.Console.WriteLine(this.direction);
             this.angleBtwShotsDegrees = angleBtwShotsDegrees;
         }
 
