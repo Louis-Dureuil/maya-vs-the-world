@@ -14,6 +14,7 @@ namespace Schmup
         private const float SQRT2 = 1.414f;
 
         private uint mana;
+        private bool cannotShoot;
         private uint currentWeapon;
         private uint speed;
         private uint currentPower;
@@ -30,6 +31,7 @@ namespace Schmup
 
         public override void Update(GameTime gameTime)
         {
+            // Gestion du déplacement
             if (Input.isActionDone(Input.Action.Up,true))
             {
                 if (Input.isActionDone(Input.Action.Right, true))
@@ -71,6 +73,21 @@ namespace Schmup
             else if (Input.isActionDone(Input.Action.Right, true))
             {
                 Position.X += speed;
+            }
+
+            // Gestion des tirs
+            if (Input.isActionDone(Input.Action.Confirm, true))
+            {
+                List<string> skinName = new List<string>(1);
+                skinName.Add("bullet003-1");
+                Shot shot = new Shot(this.LuxGame, 0, null);
+                Sprite shotSprite = new Sprite(shot, skinName);
+                shot.Speed = new Vector2(0, -10);
+                shot.Position = this.Position;
+                shot.Skin = shotSprite;
+                shotSprite.SetAnimation("bullet003-1");
+                Game.Components.Add(shot);
+                Game.Components.Add(shotSprite);
             }
 
             base.Update(gameTime);

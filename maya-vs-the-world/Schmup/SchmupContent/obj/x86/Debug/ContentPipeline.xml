@@ -55,6 +55,15 @@
       <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\hero.xnb</Output>
       <Time>2012-06-25T17:26:56.7927276+02:00</Time>
     </Item>
+    <Item>
+      <Source>bullet003-1.png</Source>
+      <Name>bullet003-1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet003-1.xnb</Output>
+      <Time>2012-07-04T17:33:47.124+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
