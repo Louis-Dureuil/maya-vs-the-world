@@ -1,7 +1,9 @@
 Content\carre.xnb
-Content\SchmupFont.xnb
-Content\afterimageeffect.xnb
 Content\bullet001-1.xnb
 Content\bullet001-2.xnb
 Content\hero.xnb
 Content\bullet003-1.xnb
+Content\SchmupFont.xnb
+Content\afterimageeffect.xnb
+Content\boss.xnb
+Content\commonEnemy.xnb

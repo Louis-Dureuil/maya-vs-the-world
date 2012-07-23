@@ -107,10 +107,25 @@ namespace LuxEngine
                 AnimationID.Add(assetNames[i], i);
             }
             SpriteSheet = new Texture2D[assetNames.Count];
-            LoadContent();
+            InitContent();
         }
 
-        protected override void LoadContent()
+        public Sprite(Scene parent, List<Texture2D> assets, Effect effect)
+            : base(parent)
+        {
+            int i = 0;
+            SpriteSheet = new Texture2D[assets.Count];
+            foreach (Texture2D asset in assets)
+            {
+                AnimationID.Add(asset.Name,i);
+                SpriteSheet[i] = asset;
+                i++;
+            }
+
+            afterImageEffect = effect;
+        }
+
+        private void InitContent()
         {
             base.LoadContent();
             afterImageEffect = Content.Load<Effect>("afterimageeffect");
