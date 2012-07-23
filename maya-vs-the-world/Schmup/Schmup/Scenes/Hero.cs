@@ -22,15 +22,41 @@ namespace Schmup
         private List<uint> speedList;
         private List<uint> powerList;
         private uint invincibleTime;
+        private uint speed1;
+        private uint speed2;
+        /// <summary>
+        /// Détermine le type de vitesse
+        /// </summary>
+        private bool speedType;
 
-        public Hero(LuxGame game, uint life = 0, uint takenDamageCollision = 0, uint givenDamageCollision = 0, Sprite skin = null, uint speed = 0)
+        public Hero(LuxGame game, uint life = 0, uint takenDamageCollision = 0, uint givenDamageCollision = 0, Sprite skin = null, uint speed1 = 0, uint speed2 = 0)
             : base(game, life, takenDamageCollision, givenDamageCollision, skin)
         {
-            this.speed = speed;
+            this.speed1 = speed1;
+            this.speed2 = speed2;
         }
 
         public override void Update(GameTime gameTime)
         {
+            if (Input.isActionDone(Input.Action.Cancel, true))
+            {
+                if (speedType)
+                {
+                    speedType = false;
+                }
+                else
+                {
+                    speedType = true;
+                }
+            }
+            if (speedType)
+            {
+                speed = speed1;
+            }
+            else
+            {
+                speed = speed2;
+            }
             // Gestion du déplacement
             if (Input.isActionDone(Input.Action.Up,true))
             {

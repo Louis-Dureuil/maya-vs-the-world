@@ -26,19 +26,23 @@ namespace Schmup
             Vector2 rien = new Vector2(0,0);
             // Les creations de sprite doivent être dans Initialize.
             
-            Hero hero = new Hero(this.LuxGame, 1, 0, 0, null, 5);
+            Hero hero = new Hero(this.LuxGame, 1, 0, 0, null, 5, 2);
             Sprite heroSprite = new Sprite(hero, skinName);
-            TestEnemy testEnemy = new TestEnemy(this.LuxGame, 10, 2, 3, false, 100, null);
+            TestEnemy3 testEnemy = new TestEnemy3(this.LuxGame, 10, 2, 3, false, 100, null);
             Sprite enemySprite = new Sprite(testEnemy, skinName);
+            TestEnemy2 testEnemy2 = new TestEnemy2(this.LuxGame, 10, 2, 3, false, 60, null);
             
             testEnemy.Position = new Vector2(0,0);
+            testEnemy2.Position = new Vector2(100, 100);
             testEnemy.Skin = enemySprite;
+            testEnemy2.Skin = enemySprite;
             hero.Position = new Vector2(400, 200);
             hero.Skin = heroSprite;
             // Il faut ajouter au jeu les élements que vous créez.
             Game.Components.Add(hero);
             Game.Components.Add(heroSprite);
             Game.Components.Add(testEnemy);
+            Game.Components.Add(testEnemy2);
             // Il faut appliquer "SetAnimation" au sprite pour qu'il affiche quelque chose.
 
             heroSprite.SetAnimation("hero");
