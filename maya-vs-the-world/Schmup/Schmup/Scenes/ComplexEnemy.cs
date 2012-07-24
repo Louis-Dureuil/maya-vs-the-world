@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using LuxEngine;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Schmup
 {

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 using LuxEngine;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Schmup
 {
@@ -19,6 +20,7 @@ namespace Schmup
         private float shootSpeed;
         private Vector2 speed = new Vector2((float)2, (float)1);
         private Vector2 accel = new Vector2(0, (float)-0.01);
+        private Texture2D bulletTexture;
 
         public TestEnemy3(LuxGame game, uint life, uint takenDamageCollision, uint givenDamageCollision, bool shootsHero, uint waitTimeFrames, Sprite skin)
             : base(game, life, takenDamageCollision, givenDamageCollision, skin)
@@ -59,7 +61,7 @@ namespace Schmup
                     {
                         Vector2 vect = new Vector2(1, 1);
                     }
-                    ShotPattern bPatternTest = new ShotPattern(this.LuxGame, 4, vector, shootAngle);
+                    ShotPattern bPatternTest = new ShotPattern(this.LuxGame, 4, vector, shootAngle, bulletTexture);
                     bPatternTest.Position = this.Position;
                     Game.Components.Add(bPatternTest);
                     waitTimeFrames += 4;

@@ -37,22 +37,22 @@ namespace Schmup
             Hero hero = new Hero(this.LuxGame, 1, 0, 0, null, 5, 2);
             Sprite heroSprite = new Sprite(hero, skinName);
             // Instancions 20 ennemis communs et un boss.
-            List<TestEnemy> commonEnemies = new List<TestEnemy>(20);
-            for (int i = 0; i < 20; i++)
-            {
-                commonEnemies.Add(new TestEnemy(this.LuxGame, 10, 2, 3, false, (uint)i*5+20, null, bulletTexture));
-                commonEnemies[i].Skin = new Sprite(commonEnemies[i],new List<Texture2D>() { enemyTexture }, null);
-                commonEnemies[i].Skin.SetAnimation(enemyTexture.Name);
-                commonEnemies[i].Position = new Vector2(i*20, 300 - i*20);
-                // Il faut appliquer "SetAnimation" au sprite pour qu'il affiche quelque chose.
-                Game.Components.Add(commonEnemies[i]);
-            }
+            //List<TestEnemy> commonEnemies = new List<TestEnemy>(20);
+            //for (int i = 0; i < 20; i++)
+            //{
+            //    commonEnemies.Add(new TestEnemy(this.LuxGame, 10, 2, 3, false, (uint)i*5+20, null, bulletTexture));
+            //    commonEnemies[i].Skin = new Sprite(commonEnemies[i],new List<Texture2D>() { enemyTexture }, null);
+            //    commonEnemies[i].Skin.SetAnimation(enemyTexture.Name);
+            //    commonEnemies[i].Position = new Vector2(i*20, 300 - i*20);
+            //    // Il faut appliquer "SetAnimation" au sprite pour qu'il affiche quelque chose.
+            //    Game.Components.Add(commonEnemies[i]);
+            //}
             hero.Position = new Vector2(400, 200);
             hero.Skin = heroSprite;
-            TestEnemy boss = new TestEnemy(this.LuxGame, 10, 2, 3, false, 10, null, bulletTexture); 
-            boss.Skin = new Sprite(boss,new List<string>() { "boss" });
+            Boss boss = new Boss(this.LuxGame, 10, 10, 10, false, 1, null);
+            boss.Skin = new Sprite(boss, new List<string>() { "boss" });
             boss.Skin.SetAnimation("boss");
-            boss.Skin.Position = new Vector2(100, 100);
+            boss.Position = new Vector2(100, 100);
             // Il faut ajouter au jeu les élements que vous créez.
             Game.Components.Add(hero);
             Game.Components.Add(heroSprite);
