@@ -11,24 +11,6 @@
       <Time>2012-05-12T20:53:10.256+02:00</Time>
     </Item>
     <Item>
-      <Source>SchmupFont.spritefont</Source>
-      <Name>SchmupFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\SchmupFont.xnb</Output>
-      <Time>2012-05-12T20:53:10.177+02:00</Time>
-    </Item>
-    <Item>
-      <Source>afterimageeffect.fx</Source>
-      <Name>afterimageeffect</Name>
-      <Importer>EffectImporter</Importer>
-      <Processor>EffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\afterimageeffect.xnb</Output>
-      <Time>2012-05-12T20:53:10.216+02:00</Time>
-    </Item>
-    <Item>
       <Source>bullet001-1.png</Source>
       <Name>bullet001-1</Name>
       <Importer>TextureImporter</Importer>
@@ -63,6 +45,42 @@
       <Options>None</Options>
       <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet003-1.xnb</Output>
       <Time>2012-07-04T17:33:47.124+02:00</Time>
+    </Item>
+    <Item>
+      <Source>boss.png</Source>
+      <Name>boss</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\boss.xnb</Output>
+      <Time>2012-07-24T13:40:02.4447343+02:00</Time>
+    </Item>
+    <Item>
+      <Source>commonEnemy.png</Source>
+      <Name>commonEnemy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\commonEnemy.xnb</Output>
+      <Time>2012-07-24T13:40:02.4507343+02:00</Time>
+    </Item>
+    <Item>
+      <Source>SchmupFont.spritefont</Source>
+      <Name>SchmupFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\SchmupFont.xnb</Output>
+      <Time>2012-05-12T20:53:10.177+02:00</Time>
+    </Item>
+    <Item>
+      <Source>afterimageeffect.fx</Source>
+      <Name>afterimageeffect</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\afterimageeffect.xnb</Output>
+      <Time>2012-05-12T20:53:10.216+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
