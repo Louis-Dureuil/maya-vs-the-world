@@ -119,6 +119,7 @@
     <Compile Include="Scenes\Enemy.cs" />
     <Compile Include="Scenes\Hero.cs" />
     <Compile Include="Scenes\Lazer.cs" />
+    <Compile Include="Scenes\LockShotPattern.cs" />
     <Compile Include="Scenes\MainScene.cs" />
     <Compile Include="Scenes\Missile.cs" />
     <Compile Include="Scenes\RandomShotPattern.cs" />

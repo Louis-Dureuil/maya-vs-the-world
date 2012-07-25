@@ -12,12 +12,15 @@ namespace Schmup
     {
         private int shootNb;
         private Texture2D bulletTexture;
-        private List<RandomShotPattern> spatterns = new List<RandomShotPattern>();
+        private List<RandomShotPattern> rspatterns = new List<RandomShotPattern>();
+        private List<LockShotPattern> lspatterns = new List<LockShotPattern>();
+        public Vector2 HeroPosition;
 
-        public Boss(LuxGame game, uint life, uint takenDamageCollision, uint givenDamageCollision, bool shootsHero, uint waitTimeFrames, Sprite skin)
+        public Boss(LuxGame game, uint life, uint takenDamageCollision, uint givenDamageCollision, bool shootsHero, uint waitTimeFrames, Sprite skin, Vector2 HeroPosition)
             : base(game, life, takenDamageCollision, givenDamageCollision, skin)
         {
             this.bulletTexture = this.Content.Load<Texture2D>("bullet001-1");
+            this.HeroPosition = HeroPosition;
         }
 
         public override void Initialize()
@@ -28,16 +31,21 @@ namespace Schmup
             {
                 //Vector2 vect = new Vector2(0, (float)i/4);
                 Vector2 vect = new Vector2(0, 1);
-                RandomShotPattern bPatternTest = new RandomShotPattern(this.LuxGame, 20, vect, 5, bulletTexture, i);
+                RandomShotPattern bPatternTest = new RandomShotPattern(this.LuxGame, 24, 3*vect, 15, bulletTexture, 15);
                 Game.Components.Add(bPatternTest);
-                spatterns.Add(bPatternTest);
+                rspatterns.Add(bPatternTest);
+                //LockShotPattern bPatternTest2 = new LockShotPattern(this.LuxGame, 20, vect, 10, bulletTexture, 2*Vector2.Normalize(HeroPosition - this.Position));
+                //Game.Components.Add(bPatternTest2);
+                //lspatterns.Add(bPatternTest2);
             }
         }
 
         public void Shoot()
         {
-            spatterns[(int)shootNb].Position = this.Position;
-            spatterns[(int)shootNb].Shoot();
+            rspatterns[(int)shootNb].Position = this.Position;
+            rspatterns[(int)shootNb].Shoot();
+            //lspatterns[(int)shootNb].Position = this.Position;
+            //lspatterns[(int)shootNb].Shoot(2 * Vector2.Normalize(HeroPosition - this.Position));
         }
 
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime)

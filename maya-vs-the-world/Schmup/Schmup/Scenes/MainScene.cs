@@ -12,8 +12,10 @@ namespace Schmup
     {
 
         // Textures utilisées pendant tout le combat.
-        private Texture2D bulletTexture;
+        private Texture2D bullet1Texture;
+        private Texture2D bullet2Texture;
         private Texture2D enemyTexture;
+        public Vector2 HeroPosition;
 
         public MainScene(LuxGame game)
             : base(game)
@@ -23,7 +25,8 @@ namespace Schmup
         public override void Initialize()
         {
             base.Initialize();
-            this.bulletTexture = this.Content.Load<Texture2D>("bullet001-1");
+            this.bullet1Texture = this.Content.Load<Texture2D>("bullet001-1");
+            this.bullet2Texture = this.Content.Load<Texture2D>("bullet002-1");
             this.enemyTexture = this.Content.Load<Texture2D>("commonEnemy");
             List<string> skinName = new List<string>(3);
             skinName.Add("carre");
@@ -48,8 +51,9 @@ namespace Schmup
             //    Game.Components.Add(commonEnemies[i]);
             //}
             hero.Position = new Vector2(400, 200);
+            HeroPosition = hero.Position;
             hero.Skin = heroSprite;
-            Boss boss = new Boss(this.LuxGame, 10, 10, 10, false, 1, null);
+            Boss boss = new Boss(this.LuxGame, 10, 10, 10, false, 1, null, HeroPosition);
             boss.Skin = new Sprite(boss, new List<string>() { "boss" });
             boss.Skin.SetAnimation("boss");
             boss.Position = new Vector2(100, 100);
@@ -64,6 +68,9 @@ namespace Schmup
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
+
+            // Mise à jour de la position du héros
+            
         }
     }
 }

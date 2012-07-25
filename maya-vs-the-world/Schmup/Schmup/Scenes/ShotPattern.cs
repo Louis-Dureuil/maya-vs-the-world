@@ -25,6 +25,11 @@ namespace Schmup
             this.bulletText = bulletText;
         }
 
+        public void Direction(Vector2 direction)
+        {
+            this.direction = direction;
+        }
+
         public override void Initialize()
         {
             base.Initialize();

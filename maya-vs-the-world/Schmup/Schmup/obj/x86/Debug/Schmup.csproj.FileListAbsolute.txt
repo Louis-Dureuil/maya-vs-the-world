@@ -73,3 +73,4 @@ D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debu
 D:\lars\Documents\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\commonEnemy.xnb
 C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\boss.xnb
 C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\commonEnemy.xnb
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-1.xnb

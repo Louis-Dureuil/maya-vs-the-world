@@ -116,6 +116,9 @@ namespace Schmup
                 Game.Components.Add(shotSprite);
             }
 
+            // Mise à jour de la position pour les ennemis
+            //this.HeroPosition = this.Position;
+
             base.Update(gameTime);
         }
     }
