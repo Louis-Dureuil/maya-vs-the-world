@@ -34,10 +34,16 @@ namespace Schmup
                 RandomShotPattern bPatternTest = new RandomShotPattern(this.LuxGame, 72, 3*vect, 5, bulletTexture, 15);
                 Game.Components.Add(bPatternTest);
                 rspatterns.Add(bPatternTest);
+                LockShotPattern bPatternTest2 = new LockShotPattern(this.LuxGame, 5, Common.Rand.Next(2, 10), bulletTexture2, 5 * Vector2.Normalize(Common.HeroPosition - this.Position));
+                Game.Components.Add(bPatternTest2);
+                lspatterns.Add(bPatternTest2);
             }
             RandomShotPattern bPatternTestFinal = new RandomShotPattern(this.LuxGame, 120, 4 * vect, 3, bulletTexture, 15);
             Game.Components.Add(bPatternTestFinal);
             rspatterns.Add(bPatternTestFinal);
+            LockShotPattern bPatternFinal2 = new LockShotPattern(this.LuxGame, 0, 40, bulletTexture2, 5 * Vector2.Normalize(Common.HeroPosition - this.Position));
+            Game.Components.Add(bPatternFinal2);
+            lspatterns.Add(bPatternFinal2);
         }
 
         public void Shoot()
@@ -45,17 +51,16 @@ namespace Schmup
             rspatterns[(int)shootNb].Position = this.Position;
             rspatterns[(int)shootNb].Shoot();
             lspatterns[(int)shootNb].Position = this.Position;
-            lspatterns[(int)shootNb].Shoot();
+            lspatterns[(int)shootNb].Shoot(5 * Vector2.Normalize(Common.HeroPosition - this.Position));
         }
 
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
         {
             base.Update(gameTime);
+            //this.Position += new Vector2(0,1);
+
             if (gameTime.TotalGameTime.Milliseconds == 100 && shootNb < 10)
             {
-                LockShotPattern bPatternTest2 = new LockShotPattern(this.LuxGame, 5, Common.Rand.Next(2, 10), bulletTexture2, 5 * Vector2.Normalize(Common.HeroPosition - this.Position));
-                Game.Components.Add(bPatternTest2);
-                lspatterns.Add(bPatternTest2);
                 Shoot();
                 shootNb++;
             }

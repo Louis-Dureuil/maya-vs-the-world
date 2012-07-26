@@ -16,5 +16,11 @@ namespace Schmup
         {
             this.Direction(position);
         }
+
+        public void Shoot(Vector2 direction)
+        {
+            this.Direction(direction);
+            this.Shoot();
+        }
     }
 }
