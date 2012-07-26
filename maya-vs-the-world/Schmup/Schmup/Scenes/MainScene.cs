@@ -56,7 +56,7 @@ namespace Schmup
             Boss boss = new Boss(this.LuxGame, 10, 10, 10, false, 1, null, HeroPosition);
             boss.Skin = new Sprite(boss, new List<string>() { "boss" });
             boss.Skin.SetAnimation("boss");
-            boss.Position = new Vector2(100, 100);
+            boss.Position = new Vector2(400, 50);
             // Il faut ajouter au jeu les élements que vous créez.
             Game.Components.Add(hero);
             Game.Components.Add(heroSprite);

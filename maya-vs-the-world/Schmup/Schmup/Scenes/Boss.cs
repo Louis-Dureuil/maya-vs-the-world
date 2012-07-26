@@ -31,7 +31,7 @@ namespace Schmup
             {
                 //Vector2 vect = new Vector2(0, (float)i/4);
                 Vector2 vect = new Vector2(0, 1);
-                RandomShotPattern bPatternTest = new RandomShotPattern(this.LuxGame, 24, 3*vect, 15, bulletTexture, 15);
+                RandomShotPattern bPatternTest = new RandomShotPattern(this.LuxGame, 72, 3*vect, 5, bulletTexture, 15);
                 Game.Components.Add(bPatternTest);
                 rspatterns.Add(bPatternTest);
                 //LockShotPattern bPatternTest2 = new LockShotPattern(this.LuxGame, 20, vect, 10, bulletTexture, 2*Vector2.Normalize(HeroPosition - this.Position));
