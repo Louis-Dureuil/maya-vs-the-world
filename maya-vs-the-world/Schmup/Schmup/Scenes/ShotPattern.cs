@@ -12,11 +12,11 @@ namespace Schmup
     {
         private uint shotNb;
         private Vector2 direction;
-        private uint angleBtwShotsDegrees;
+        private int angleBtwShotsDegrees;
         private Texture2D bulletText;
         private List<Shot> shots = new List<Shot>();
 
-        public ShotPattern(LuxGame game, uint shotNb, Vector2 direction, uint angleBtwShotsDegrees, Texture2D bulletText)
+        public ShotPattern(LuxGame game, uint shotNb, Vector2 direction, int angleBtwShotsDegrees, Texture2D bulletText)
             : base(game)
         {
             this.shotNb = shotNb;

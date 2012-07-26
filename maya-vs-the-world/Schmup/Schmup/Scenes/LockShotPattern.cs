@@ -11,16 +11,10 @@ namespace Schmup
     class LockShotPattern : ShotPattern
     {
 
-        public LockShotPattern(LuxGame game, uint shotNb, Vector2 direction, uint angleBtwShotsDegrees, Texture2D bulletText, Vector2 position)
-            : base(game, shotNb, direction, angleBtwShotsDegrees, bulletText)
+        public LockShotPattern(LuxGame game, uint shotNb, int angleBtwShotsDegrees, Texture2D bulletText, Vector2 position)
+            : base(game, shotNb, new Vector2(0,0), angleBtwShotsDegrees, bulletText)
         {
             this.Direction(position);
-        }
-
-        public void Shoot(Vector2 direction)
-        {
-            this.Direction(direction);
-            this.Shoot();
         }
     }
 }

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework;
+using LuxEngine;
 
 namespace Schmup
 {
@@ -12,5 +14,6 @@ namespace Schmup
         {
         get { return rand; }
         }
+        public static Vector2 HeroPosition;
     }
 }

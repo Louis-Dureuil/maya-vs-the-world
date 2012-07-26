@@ -117,7 +117,7 @@ namespace Schmup
             }
 
             // Mise à jour de la position pour les ennemis
-            //this.HeroPosition = this.Position;
+            Common.HeroPosition = this.Position;
 
             base.Update(gameTime);
         }

@@ -15,7 +15,6 @@ namespace Schmup
         private Texture2D bullet1Texture;
         private Texture2D bullet2Texture;
         private Texture2D enemyTexture;
-        public Vector2 HeroPosition;
 
         public MainScene(LuxGame game)
             : base(game)
@@ -37,8 +36,6 @@ namespace Schmup
             Vector2 rien = new Vector2(0,0);
             // Les creations de sprite doivent être dans Initialize.
             
-            Hero hero = new Hero(this.LuxGame, 1, 0, 0, null, 5, 2);
-            Sprite heroSprite = new Sprite(hero, skinName);
             // Instancions 20 ennemis communs et un boss.
             //List<TestEnemy> commonEnemies = new List<TestEnemy>(20);
             //for (int i = 0; i < 20; i++)
@@ -50,17 +47,20 @@ namespace Schmup
             //    // Il faut appliquer "SetAnimation" au sprite pour qu'il affiche quelque chose.
             //    Game.Components.Add(commonEnemies[i]);
             //}
-            hero.Position = new Vector2(400, 200);
-            HeroPosition = hero.Position;
-            hero.Skin = heroSprite;
-            Boss boss = new Boss(this.LuxGame, 10, 10, 10, false, 1, null, HeroPosition);
+            Boss boss = new Boss(this.LuxGame, 10, 10, 10, false, 1, null);
             boss.Skin = new Sprite(boss, new List<string>() { "boss" });
             boss.Skin.SetAnimation("boss");
             boss.Position = new Vector2(400, 50);
+
+            Hero hero = new Hero(this.LuxGame, 1, 0, 0, null, 5, 2);
+            Sprite heroSprite = new Sprite(hero, skinName);
+            hero.Position = new Vector2(400, 400);
+            Common.HeroPosition = hero.Position;
+            hero.Skin = heroSprite;
             // Il faut ajouter au jeu les élements que vous créez.
+            Game.Components.Add(boss);
             Game.Components.Add(hero);
             Game.Components.Add(heroSprite);
-            Game.Components.Add(boss);
 
             heroSprite.SetAnimation("hero");
         }
@@ -68,9 +68,6 @@ namespace Schmup
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-
-            // Mise à jour de la position du héros
-            
         }
     }
 }

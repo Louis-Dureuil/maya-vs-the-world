@@ -16,7 +16,7 @@ namespace Schmup
         /// <summary>
         /// Angle de tir de l'attaquant, se rétrécit pendant l'attaque
         /// </summary>
-        private uint shootAngle;
+        private int shootAngle;
         private float shootSpeed;
         private Vector2 speed = new Vector2((float)2, (float)1);
         private Vector2 accel = new Vector2(0, (float)-0.01);
