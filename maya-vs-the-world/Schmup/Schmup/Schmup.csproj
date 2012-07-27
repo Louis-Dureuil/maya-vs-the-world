@@ -118,7 +118,6 @@
     <Compile Include="Scenes\Common.cs" />
     <Compile Include="Scenes\HomingMissile.cs" />
     <Compile Include="Scenes\Character.cs" />
-    <Compile Include="Scenes\ComplexEnemy.cs" />
     <Compile Include="Scenes\Enemy.cs" />
     <Compile Include="Scenes\Hero.cs" />
     <Compile Include="Scenes\Lazer.cs" />
@@ -126,13 +125,12 @@
     <Compile Include="Scenes\MainScene.cs" />
     <Compile Include="Scenes\Missile.cs" />
     <Compile Include="Scenes\RandomShotPattern.cs" />
+    <Compile Include="Scenes\RotatingEnemy.cs" />
     <Compile Include="Scenes\Shot.cs" />
     <Compile Include="Scenes\ShotPattern.cs" />
     <Compile Include="Scenes\ShotPattern2.cs" />
     <Compile Include="Scenes\SimpleMissile.cs" />
     <Compile Include="Scenes\TestEnemy.cs" />
-    <Compile Include="Scenes\TestEnemy2.cs" />
-    <Compile Include="Scenes\TestEnemy3.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

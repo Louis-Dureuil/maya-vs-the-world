@@ -8,14 +8,21 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Schmup
 {
-    class ComplexEnemy : Enemy
+    class RotatingEnemy : Enemy
     {
-        // private List<uint> weaponList;
 
-        public ComplexEnemy(LuxGame game, uint life, uint takenDamageCollision, uint givenDamageCollision, Sprite skin)
+        public RotatingEnemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin)
             : base(game, life, takenDamageCollision, givenDamageCollision, skin)
         {
+        }
 
+        public override void Initialize()
+        {
+            base.Initialize();
+            for (int i = 0; i < 20; i++)
+            {
+
+            }
         }
     }
 }

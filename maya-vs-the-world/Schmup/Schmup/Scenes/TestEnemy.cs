@@ -11,8 +11,8 @@ namespace Schmup
     class TestEnemy : Enemy
     {
         private bool shootsHero;
-        private uint waitTimeFrames;
-        private uint shootNb;
+        private int waitTimeFrames;
+        private int shootNb;
         private float shootSpeed;
         private Vector2 speed = new Vector2((float)2, (float)1);
         private Vector2 accel = new Vector2(0, (float)-0.01);
@@ -21,7 +21,7 @@ namespace Schmup
         // Ces textures seront utilisées tout le temps pendant le combat, et doivent donc être préchargées.
         private Texture2D bulletTexture;
 
-        public TestEnemy(LuxGame game, uint life, uint takenDamageCollision, uint givenDamageCollision, bool shootsHero, uint waitTimeFrames, Sprite skin)
+        public TestEnemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, bool shootsHero, int waitTimeFrames, Sprite skin)
             : base(game, life, takenDamageCollision, givenDamageCollision, skin)
         {
             this.shootsHero = shootsHero;
@@ -30,7 +30,7 @@ namespace Schmup
         }
 
 
-        public TestEnemy(LuxGame game, uint life, uint takenDamageCollision, uint givenDamageCollision, bool shootsHero, uint waitTimeFrames, Sprite skin, Texture2D bulletTexture)
+        public TestEnemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, bool shootsHero, int waitTimeFrames, Sprite skin, Texture2D bulletTexture)
             : base(game, life, takenDamageCollision, givenDamageCollision, skin)
         {
             this.shootsHero = shootsHero;

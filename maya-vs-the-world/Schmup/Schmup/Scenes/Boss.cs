@@ -16,7 +16,7 @@ namespace Schmup
         private List<LockShotPattern> lspatterns = new List<LockShotPattern>();
         private Texture2D bulletTexture2;
 
-        public Boss(LuxGame game, uint life, uint takenDamageCollision, uint givenDamageCollision, bool shootsHero, uint waitTimeFrames, Sprite skin)
+        public Boss(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, bool shootsHero, int waitTimeFrames, Sprite skin)
             : base(game, life, takenDamageCollision, givenDamageCollision, skin)
         {
             // A AMELIORER

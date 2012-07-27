@@ -12,7 +12,7 @@ namespace Schmup
         // private uint weapon;
         // weapon a changer
 
-        public Enemy(LuxGame game, uint life, uint takenDamageCollision, uint givenDamageCollision, Sprite skin)
+        public Enemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin)
             : base(game, life, takenDamageCollision, givenDamageCollision, skin)
         {
 

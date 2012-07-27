@@ -9,15 +9,15 @@ namespace Schmup
 {
     class Character : LuxEngine.Scene
     {
-        private uint life;
-        private uint takenDamageCollision;
-        private uint givenDamageCollision;
+        private int life;
+        private int takenDamageCollision;
+        private int givenDamageCollision;
         // hurtbox a definir
         // animation mort
         // skin
         private Sprite skin;
 
-        public Character(LuxGame game, uint life, uint takenDamageCollision, uint givenDamageCollision, Sprite skin)
+        public Character(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin)
             : base(game)
         {
             this.life = life;

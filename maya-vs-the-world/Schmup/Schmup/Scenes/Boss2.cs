@@ -16,7 +16,7 @@ namespace Schmup
         private List<BigLockShotPattern> blspatterns = new List<BigLockShotPattern>();
         private Texture2D bulletTexture2;
 
-        public Boss2(LuxGame game, uint life, uint takenDamageCollision, uint givenDamageCollision, bool shootsHero, uint waitTimeFrames, Sprite skin)
+        public Boss2(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, bool shootsHero, int waitTimeFrames, Sprite skin)
             : base(game, life, takenDamageCollision, givenDamageCollision, skin)
         {
             // A AMELIORER
@@ -29,7 +29,7 @@ namespace Schmup
             base.Initialize();
             shootNb = 0;
             Vector2 vect = new Vector2(0, 1);
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < 10; i++)
             {
                 BigLockShotPattern bPatternTest2 = new BigLockShotPattern(this.LuxGame, i, 20, bulletTexture2, i+2, i, 2*i);
                 Game.Components.Add(bPatternTest2);
@@ -42,7 +42,7 @@ namespace Schmup
 
         public void Shoot()
         {
-            if (shootNb < 9)
+            if (shootNb < 10)
             {
                 blspatterns[(int)shootNb].Position = this.Position;
                 blspatterns[(int)shootNb].Shoot(Common.HeroPosition - this.Position);
@@ -59,7 +59,7 @@ namespace Schmup
             base.Update(gameTime);
             //this.Position += new Vector2(0,1);
 
-            if (gameTime.TotalGameTime.Milliseconds.Equals(100) && shootNb < 10)
+            if (gameTime.TotalGameTime.Milliseconds.Equals(100) && shootNb < 11)
             {
                 Shoot();
                 shootNb++;
