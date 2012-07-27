@@ -17,5 +17,16 @@ namespace Schmup
         {
 
         }
+
+        public override void Initialize()
+        {
+            base.Initialize();
+            //this.Enabled = false;
+        }
+
+        //public void Create()
+        //{
+        //    this.Enabled = true;
+        //}
     }
 }

@@ -15,6 +15,7 @@ namespace Schmup
         private Texture2D bullet1Texture;
         private Texture2D bullet2Texture;
         private Texture2D enemyTexture;
+        //List<TestEnemy> commonEnemies = new List<TestEnemy>(20);
 
         public MainScene(LuxGame game)
             : base(game)
@@ -37,17 +38,16 @@ namespace Schmup
             // Les creations de sprite doivent être dans Initialize.
             
             // Instancions 20 ennemis communs et un boss.
-            //List<TestEnemy> commonEnemies = new List<TestEnemy>(20);
             //for (int i = 0; i < 20; i++)
             //{
-            //    commonEnemies.Add(new TestEnemy(this.LuxGame, 10, 2, 3, false, (uint)i*5+20, null, bulletTexture));
-            //    commonEnemies[i].Skin = new Sprite(commonEnemies[i],new List<Texture2D>() { enemyTexture }, null);
+            //    commonEnemies.Add(new TestEnemy(this.LuxGame, 10, 2, 3, false, (uint)i * 5 + 20, null, bullet2Texture));
+            //    commonEnemies[i].Skin = new Sprite(commonEnemies[i], new List<Texture2D>() { enemyTexture }, null);
             //    commonEnemies[i].Skin.SetAnimation(enemyTexture.Name);
-            //    commonEnemies[i].Position = new Vector2(i*20, 300 - i*20);
+            //    commonEnemies[i].Position = new Vector2(i * 20, 300 - i * 20);
             //    // Il faut appliquer "SetAnimation" au sprite pour qu'il affiche quelque chose.
             //    Game.Components.Add(commonEnemies[i]);
             //}
-            Boss boss = new Boss(this.LuxGame, 10, 10, 10, false, 1, null);
+            Boss2 boss = new Boss2(this.LuxGame, 10, 10, 10, false, 1, null);
             boss.Skin = new Sprite(boss, new List<string>() { "boss" });
             boss.Skin.SetAnimation("boss");
             boss.Position = new Vector2(400, 50);
@@ -65,9 +65,21 @@ namespace Schmup
             heroSprite.SetAnimation("hero");
         }
 
+        //public void Create()
+        //{
+        //    foreach (TestEnemy enemy in commonEnemies)
+        //    {
+        //        enemy.Create();
+        //    }
+        //}
+
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
+            //if (gameTime.TotalGameTime.TotalSeconds.Equals(15))
+            //{
+            //    this.Create();
+            //}
         }
     }
 }

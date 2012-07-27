@@ -10,7 +10,7 @@ namespace Schmup
 {
     class RandomShotPattern : ShotPattern
     {
-        public RandomShotPattern(LuxGame game, uint shotNb, Vector2 direction, int angleBtwShotsDegrees, Texture2D bulletText, int deviationDegrees)
+        public RandomShotPattern(LuxGame game, int shotNb, Vector2 direction, int angleBtwShotsDegrees, Texture2D bulletText, int deviationDegrees)
             : base(game, shotNb, direction, angleBtwShotsDegrees, bulletText)
         {
             int randomNumber = Common.Rand.Next(-deviationDegrees, deviationDegrees);

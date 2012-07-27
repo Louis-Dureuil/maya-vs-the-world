@@ -10,13 +10,13 @@ namespace Schmup
 {
     class ShotPattern : LuxEngine.Scene
     {
-        private uint shotNb;
+        private int shotNb;
         private Vector2 direction;
         private int angleBtwShotsDegrees;
         private Texture2D bulletText;
         private List<Shot> shots = new List<Shot>();
 
-        public ShotPattern(LuxGame game, uint shotNb, Vector2 direction, int angleBtwShotsDegrees, Texture2D bulletText)
+        public ShotPattern(LuxGame game, int shotNb, Vector2 direction, int angleBtwShotsDegrees, Texture2D bulletText)
             : base(game)
         {
             this.shotNb = shotNb;
@@ -33,7 +33,7 @@ namespace Schmup
         public override void Initialize()
         {
             base.Initialize();
-            for (uint i = 0; i < shotNb; i++)
+            for (int i = 0; i < shotNb; i++)
             {
                 Shot shot = new Shot(this.LuxGame, 1, null);
                 // TODO : Faire que le sprite soit crée dans le constructeur à partir du nom passé en paramètre

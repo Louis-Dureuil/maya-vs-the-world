@@ -8,15 +8,15 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Schmup
 {
-    class Boss : Enemy
+    class Boss2 : Enemy
     {
         private int shootNb;
         private Texture2D bulletTexture;
         private List<RandomShotPattern> rspatterns = new List<RandomShotPattern>();
-        private List<LockShotPattern> lspatterns = new List<LockShotPattern>();
+        private List<BigLockShotPattern> blspatterns = new List<BigLockShotPattern>();
         private Texture2D bulletTexture2;
 
-        public Boss(LuxGame game, uint life, uint takenDamageCollision, uint givenDamageCollision, bool shootsHero, uint waitTimeFrames, Sprite skin)
+        public Boss2(LuxGame game, uint life, uint takenDamageCollision, uint givenDamageCollision, bool shootsHero, uint waitTimeFrames, Sprite skin)
             : base(game, life, takenDamageCollision, givenDamageCollision, skin)
         {
             // A AMELIORER
@@ -31,27 +31,27 @@ namespace Schmup
             Vector2 vect = new Vector2(0, 1);
             for (int i = 0; i < 9; i++)
             {
-                RandomShotPattern bPatternTest = new RandomShotPattern(this.LuxGame, 72, 3*vect, 5, bulletTexture, 15);
-                Game.Components.Add(bPatternTest);
-                rspatterns.Add(bPatternTest);
-                LockShotPattern bPatternTest2 = new LockShotPattern(this.LuxGame, 5, Common.Rand.Next(2, 10), bulletTexture2);
+                BigLockShotPattern bPatternTest2 = new BigLockShotPattern(this.LuxGame, i, 20, bulletTexture2, i+2, i, 2*i);
                 Game.Components.Add(bPatternTest2);
-                lspatterns.Add(bPatternTest2);
+                blspatterns.Add(bPatternTest2);
             }
             RandomShotPattern bPatternTestFinal = new RandomShotPattern(this.LuxGame, 120, 4 * vect, 3, bulletTexture, 15);
             Game.Components.Add(bPatternTestFinal);
             rspatterns.Add(bPatternTestFinal);
-            LockShotPattern bPatternFinal2 = new LockShotPattern(this.LuxGame, 0, 40, bulletTexture2);
-            Game.Components.Add(bPatternFinal2);
-            lspatterns.Add(bPatternFinal2);
         }
 
         public void Shoot()
         {
-            rspatterns[(int)shootNb].Position = this.Position;
-            rspatterns[(int)shootNb].Shoot();
-            lspatterns[(int)shootNb].Position = this.Position;
-            lspatterns[(int)shootNb].Shoot(5 * Vector2.Normalize(Common.HeroPosition - this.Position));
+            if (shootNb < 9)
+            {
+                blspatterns[(int)shootNb].Position = this.Position;
+                blspatterns[(int)shootNb].Shoot(Common.HeroPosition - this.Position);
+            }
+            else
+            {
+                rspatterns[0].Position = this.Position;
+                rspatterns[0].Shoot();
+            }
         }
 
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
