@@ -15,7 +15,7 @@ namespace Schmup
         private Texture2D bullet1Texture;
         private Texture2D bullet2Texture;
         private Texture2D enemyTexture;
-        //List<TestEnemy> commonEnemies = new List<TestEnemy>(20);
+        List<RotatingEnemy> commonEnemies = new List<RotatingEnemy>(5);
 
         public MainScene(LuxGame game)
             : base(game)
@@ -38,19 +38,21 @@ namespace Schmup
             // Les creations de sprite doivent être dans Initialize.
             
             // Instancions 20 ennemis communs et un boss.
-            //for (int i = 0; i < 20; i++)
-            //{
-            //    commonEnemies.Add(new TestEnemy(this.LuxGame, 10, 2, 3, false, (uint)i * 5 + 20, null, bullet2Texture));
-            //    commonEnemies[i].Skin = new Sprite(commonEnemies[i], new List<Texture2D>() { enemyTexture }, null);
-            //    commonEnemies[i].Skin.SetAnimation(enemyTexture.Name);
-            //    commonEnemies[i].Position = new Vector2(i * 20, 300 - i * 20);
-            //    // Il faut appliquer "SetAnimation" au sprite pour qu'il affiche quelque chose.
-            //    Game.Components.Add(commonEnemies[i]);
-            //}
+            for (int i = 0; i < 5; i++)
+            {
+                commonEnemies.Add(new RotatingEnemy(this.LuxGame, 1,1,1, null, 30, 3, new ShotPattern(this.LuxGame, 4, new Vector2(0,1), 30, bullet2Texture),100, 10, 36));
+                commonEnemies[i].Skin = new Sprite(commonEnemies[i], new List<Texture2D>() { enemyTexture }, null);
+                commonEnemies[i].Skin.SetAnimation(enemyTexture.Name);
+                commonEnemies[i].Position = new Vector2(i * 20, 300 - i * 20);
+                // Il faut appliquer "SetAnimation" au sprite pour qu'il affiche quelque chose.
+                Game.Components.Add(commonEnemies[i]);
+            }
             Boss2 boss = new Boss2(this.LuxGame, 10, 10, 10, false, 1, null);
             boss.Skin = new Sprite(boss, new List<string>() { "boss" });
             boss.Skin.SetAnimation("boss");
             boss.Position = new Vector2(400, 50);
+
+
 
             Hero hero = new Hero(this.LuxGame, 1, 0, 0, null, 5, 2);
             Sprite heroSprite = new Sprite(hero, skinName);

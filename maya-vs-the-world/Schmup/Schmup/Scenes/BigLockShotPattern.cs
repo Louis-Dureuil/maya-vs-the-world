@@ -42,13 +42,14 @@ namespace Schmup
 
         public void Shoot(Vector2 direction)
         {
+            Vector2 startVector = initialSpeed * Vector2.Normalize(direction);
             Vector2 currentVector = initialSpeed * Vector2.Normalize(direction);
             for (int i = 0; i< patternNb; i++)
             {
-                spatterns[i].Direction(currentVector);
+                spatterns[i].Direction=currentVector;
                 spatterns[i].Position = this.Position;
                 spatterns[i].Shoot();
-                currentVector = ((i+1)*finalSpeed/((patternNb-1)*initialSpeed)) * currentVector;
+                currentVector += ((finalSpeed - initialSpeed)/(patternNb-1)) * startVector;
             }
         }
     }

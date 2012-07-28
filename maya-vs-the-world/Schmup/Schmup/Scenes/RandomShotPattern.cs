@@ -15,7 +15,7 @@ namespace Schmup
         {
             int randomNumber = Common.Rand.Next(-deviationDegrees, deviationDegrees);
             float randomDeviationRadian = 2 * (float)Math.PI * randomNumber / 360;
-            this.Direction(Vector2.Transform(direction, Matrix.CreateRotationZ(randomDeviationRadian)));
+            this.Direction=Vector2.Transform(direction, Matrix.CreateRotationZ(randomDeviationRadian));
         }
     }
 }

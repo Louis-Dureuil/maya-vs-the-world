@@ -11,7 +11,7 @@ namespace Schmup
     class ShotPattern : LuxEngine.Scene
     {
         private int shotNb;
-        private Vector2 direction;
+        public Vector2 Direction;
         private int angleBtwShotsDegrees;
         private Texture2D bulletText;
         private List<Shot> shots = new List<Shot>();
@@ -20,14 +20,9 @@ namespace Schmup
             : base(game)
         {
             this.shotNb = shotNb;
-            this.direction = direction;
+            this.Direction = direction;
             this.angleBtwShotsDegrees = angleBtwShotsDegrees;
             this.bulletText = bulletText;
-        }
-
-        public void Direction(Vector2 direction)
-        {
-            this.direction = direction;
         }
 
         public override void Initialize()
@@ -55,7 +50,7 @@ namespace Schmup
             }
 
             double bigAngleRadian = Math.PI / 180 * (shotNb - 1) * angleBtwShotsDegrees;
-            Vector2 currentVector = direction;
+            Vector2 currentVector = Direction;
             currentVector = Vector2.Transform(currentVector, Matrix.CreateRotationZ((float)bigAngleRadian / 2));
 
             for (int i = 0; i < shotNb; i++)

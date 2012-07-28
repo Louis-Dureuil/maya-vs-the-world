@@ -18,7 +18,7 @@ namespace Schmup
 
         public void Shoot(Vector2 direction)
         {
-            this.Direction(direction);
+            this.Direction=direction;
             this.Shoot();
         }
     }

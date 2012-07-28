@@ -31,7 +31,7 @@ namespace Schmup
             Vector2 vect = new Vector2(0, 1);
             for (int i = 0; i < 10; i++)
             {
-                BigLockShotPattern bPatternTest2 = new BigLockShotPattern(this.LuxGame, i, 20, bulletTexture2, i+2, i, 2*i);
+                BigLockShotPattern bPatternTest2 = new BigLockShotPattern(this.LuxGame, i+2, 20, bulletTexture2, i, 1, (i+2)/2);
                 Game.Components.Add(bPatternTest2);
                 blspatterns.Add(bPatternTest2);
             }
