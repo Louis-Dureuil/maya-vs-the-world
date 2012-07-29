@@ -15,7 +15,7 @@ namespace Schmup
         private Texture2D bullet1Texture;
         private Texture2D bullet2Texture;
         private Texture2D enemyTexture;
-        List<RotatingEnemy> commonEnemies = new List<RotatingEnemy>(5);
+        List<RotatingEnemy> commonEnemies = new List<RotatingEnemy>(2);
 
         public MainScene(LuxGame game)
             : base(game)
@@ -37,13 +37,13 @@ namespace Schmup
             Vector2 rien = new Vector2(0,0);
             // Les creations de sprite doivent être dans Initialize.
             
-            // Instancions 20 ennemis communs et un boss.
-            for (int i = 0; i < 5; i++)
+            // Instancions 2 ennemis communs et un boss.
+            for (int i = 0; i < 2; i++)
             {
-                commonEnemies.Add(new RotatingEnemy(this.LuxGame, 1,1,1, null, 30, 3, new ShotPattern(this.LuxGame, 4, new Vector2(0,1), 30, bullet2Texture),100, 10, 36));
+                commonEnemies.Add(new RotatingEnemy(this.LuxGame, 1,1,1, null, 30, 3-6*i, new ShotPattern(this.LuxGame, 4, new Vector2(0,1), 30, bullet2Texture),100, 10, 36));
                 commonEnemies[i].Skin = new Sprite(commonEnemies[i], new List<Texture2D>() { enemyTexture }, null);
                 commonEnemies[i].Skin.SetAnimation(enemyTexture.Name);
-                commonEnemies[i].Position = new Vector2(i * 20, 300 - i * 20);
+                commonEnemies[i].Position = new Vector2(300 + i * 200, 100);
                 // Il faut appliquer "SetAnimation" au sprite pour qu'il affiche quelque chose.
                 Game.Components.Add(commonEnemies[i]);
             }

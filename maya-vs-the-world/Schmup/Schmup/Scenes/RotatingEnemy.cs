@@ -31,7 +31,7 @@ namespace Schmup
             this.angleBtwShotsDegrees = angleBtwShotsDegrees;
             this.spat = spat;
             this.timeMillisec = timeMillisec;
-            this.bulletTexture = this.Content.Load<Texture2D>("bullet002-1");
+            this.bulletTexture = this.Content.Load<Texture2D>("bullet001-1");
             this.patAngleBtwShotsDegrees = patAngleBtwShotsDegrees;
             this.patShotNb = patShotNb;
         }
