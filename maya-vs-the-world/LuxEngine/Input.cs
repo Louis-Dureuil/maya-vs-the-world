@@ -204,7 +204,11 @@ namespace LuxEngine
             Cancel, // Cancel a decision in menus.
             ShowMenu, // Go/Leave the menu.
             Pause, // Pause the game.
-            Debug //Show Debug Window.
+            Debug, //Show Debug Window.
+            // Shooting controls
+            Shoot, // Fire main weapon.
+            SpeedChange, // Change the speed of the character.
+            Power, // Uses the secondary weapon or a special power.
         }
 
         static Dictionary<Action, Keys> KeyBinding = new Dictionary<Action, Keys>();
@@ -221,13 +225,16 @@ namespace LuxEngine
         static public void Initialize()
         {
             // Initialize the controls.
-            KeyBinding.Add(Action.Up, Keys.Up);
-            KeyBinding.Add(Action.Left,Keys.Left);
-            KeyBinding.Add(Action.Right, Keys.Right);
-            KeyBinding.Add(Action.Down, Keys.Down);
+            KeyBinding.Add(Action.Up, Keys.Z);
+            KeyBinding.Add(Action.Left,Keys.Q);
+            KeyBinding.Add(Action.Right, Keys.D);
+            KeyBinding.Add(Action.Down, Keys.S);
             KeyBinding.Add(Action.Confirm, Keys.Enter);
             KeyBinding.Add(Action.Cancel, Keys.Escape);
             KeyBinding.Add(Action.Pause, Keys.P);
+            KeyBinding.Add(Action.Shoot, Keys.J);
+            KeyBinding.Add(Action.Power, Keys.K);
+            KeyBinding.Add(Action.SpeedChange, Keys.L);
 #if DEBUG
             KeyBinding.Add(Action.Debug, Keys.D);
 #endif

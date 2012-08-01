@@ -12,8 +12,8 @@ namespace Schmup
         private uint degat;
         //skin
 
-        public Missile(LuxGame game, uint invincibleTime)
-            : base(game, invincibleTime)
+        public Missile(LuxGame game, int invincibleTimeMillisec)
+            : base(game, invincibleTimeMillisec)
         {
         }
     }

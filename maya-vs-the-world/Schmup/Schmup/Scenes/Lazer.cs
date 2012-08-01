@@ -11,8 +11,8 @@ namespace Schmup
     {
         //hitbox
 
-        public Lazer(LuxGame game, uint invincibleTime)
-            : base(game, invincibleTime)
+        public Lazer(LuxGame game, int invincibleTimeMillisec)
+            : base(game, invincibleTimeMillisec)
         {
         }
     }

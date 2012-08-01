@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet003-1.xnb</Output>
-      <Time>2012-07-04T17:33:47.124+02:00</Time>
+      <Time>2012-07-30T20:53:01.114+02:00</Time>
     </Item>
     <Item>
       <Source>boss.png</Source>
@@ -162,6 +162,42 @@
       <Options>None</Options>
       <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-9.xnb</Output>
       <Time>2012-07-29T15:40:33.087+02:00</Time>
+    </Item>
+    <Item>
+      <Source>bullet004-1.png</Source>
+      <Name>bullet004-1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet004-1.xnb</Output>
+      <Time>2012-07-30T21:28:38.465+02:00</Time>
+    </Item>
+    <Item>
+      <Source>bomb.png</Source>
+      <Name>bomb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bomb.xnb</Output>
+      <Time>2012-07-31T18:49:30.541+02:00</Time>
+    </Item>
+    <Item>
+      <Source>bullet005-1.png</Source>
+      <Name>bullet005-1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet005-1.xnb</Output>
+      <Time>2012-08-01T12:35:10.908+02:00</Time>
+    </Item>
+    <Item>
+      <Source>bullet005-2.png</Source>
+      <Name>bullet005-2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet005-2.xnb</Output>
+      <Time>2012-08-01T12:35:40.645+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

@@ -10,11 +10,12 @@ namespace Schmup
 {
     class RotatingEnemy : Enemy
     {
+        private double elapsed;
         private int shotNb;
         private float angleBtwShotsDegrees;
         private ShotPattern spat;
         private int shotCnt;
-        private int timeMillisec;
+        private double waitTimeSec;
         private Texture2D bulletTexture;
         private int patShotNb;
         private int patAngleBtwShotsDegrees;
@@ -24,14 +25,26 @@ namespace Schmup
 
         private List<ShotPattern> spats = new List<ShotPattern>();
 
-        public RotatingEnemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin, int shotNb, float angleBtwShotsDegrees, ShotPattern spat, int timeMillisec, int patShotNb, int patAngleBtwShotsDegrees)
+        public RotatingEnemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin, int shotNb, float angleBtwShotsDegrees, ShotPattern spat, double waitTimeSec, int patShotNb, int patAngleBtwShotsDegrees)
             : base(game, life, takenDamageCollision, givenDamageCollision, skin)
         {
             this.shotNb = shotNb;
             this.angleBtwShotsDegrees = angleBtwShotsDegrees;
             this.spat = spat;
-            this.timeMillisec = timeMillisec;
+            this.waitTimeSec = waitTimeSec;
             this.bulletTexture = this.Content.Load<Texture2D>("bullet001-1");
+            this.patAngleBtwShotsDegrees = patAngleBtwShotsDegrees;
+            this.patShotNb = patShotNb;
+        }
+
+        public RotatingEnemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin, int shotNb, float angleBtwShotsDegrees, ShotPattern spat, double waitTimeSec, int patShotNb, int patAngleBtwShotsDegrees, Texture2D bulletTexture)
+            : base(game, life, takenDamageCollision, givenDamageCollision, skin)
+        {
+            this.shotNb = shotNb;
+            this.angleBtwShotsDegrees = angleBtwShotsDegrees;
+            this.spat = spat;
+            this.waitTimeSec = waitTimeSec;
+            this.bulletTexture = bulletTexture;
             this.patAngleBtwShotsDegrees = patAngleBtwShotsDegrees;
             this.patShotNb = patShotNb;
         }
@@ -61,8 +74,14 @@ namespace Schmup
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-
-            if (gameTime.TotalGameTime.Milliseconds.Equals(timeMillisec) && shotCnt < shotNb)
+            elapsed += gameTime.ElapsedGameTime.TotalSeconds;
+            if (elapsed >= waitTimeSec && shotCnt < shotNb)
+            {
+                elapsed = 0; // On réinitialise le compteur
+                Shoot();
+                shotCnt++;
+            }
+            if (gameTime.TotalGameTime.Milliseconds.Equals(waitTimeSec) && shotCnt < shotNb)
             {
                 Shoot();
             }

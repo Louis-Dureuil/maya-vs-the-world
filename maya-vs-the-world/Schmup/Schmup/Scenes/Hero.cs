@@ -29,39 +29,116 @@ namespace Schmup
         /// Détermine le type de vitesse
         /// </summary>
         private bool speedType;
-        private int shootNb;
-        private List<Shot> shots = new List<Shot>();
-        private Texture2D bulletText;
+        private static int weakShotNb = 30;
+        private static int strongShotNb = 10;
+        private List<HeroShot> weakShots = new List<HeroShot>(weakShotNb);
+        private List<HeroShot> strongShots = new List<HeroShot>(strongShotNb);
+        private Texture2D weakBulletText;
+        private Texture2D strongBulletText;
+        private bool powerActivated;
+        private HeroShot powerShot;
+        private Texture2D powerShotText;
 
         public Hero(LuxGame game, int life = 0, int takenDamageCollision = 0, int givenDamageCollision = 0, Sprite skin = null, int speed1 = 0, int speed2 = 0)
             : base(game, life, takenDamageCollision, givenDamageCollision, skin)
         {
             this.speed1 = speed1;
             this.speed2 = speed2;
-            this.bulletText = this.Content.Load<Texture2D>("bullet003-1");
+            this.weakBulletText = this.Content.Load<Texture2D>("bullet003-1");
+            this.strongBulletText = this.Content.Load<Texture2D>("bullet004-1");
+            this.powerShotText = this.Content.Load<Texture2D>("bomb");
         }
 
         public override void Initialize()
         {
-            //base.Initialize();
-            //Shot shot = new Shot(this.LuxGame, 0, null);
-            //Sprite shotSprite = new Sprite(shot, new List<Texture2D>() { bulletText }, null);
-            //shot.Speed = new Vector2(0, -10);
-            //shot.Position = this.Position;
-            //shot.Skin = shotSprite;
-            //shotSprite.SetAnimation("bullet003-1");
-            //Game.Components.Add(shot);
-            //Game.Components.Add(shotSprite);
+            base.Initialize();
+            for (int i = 0; i < weakShotNb; i++)
+            {
+                HeroShot shot = new HeroShot(this.LuxGame, 0, null);
+                Sprite shotSprite = new Sprite(shot, new List<Texture2D>() { weakBulletText }, null);
+                shot.Skin = shotSprite;
+                shotSprite.SetAnimation(weakBulletText.Name);
+                Game.Components.Add(shot);
+                Game.Components.Add(shotSprite);
+                weakShots.Add(shot);
+            }
+            for (int i = 0; i < strongShotNb; i++)
+            {
+                HeroShot shot = new HeroShot(this.LuxGame, 0, null);
+                Sprite shotSprite = new Sprite(shot, new List<Texture2D>() { strongBulletText }, null);
+                shot.Skin = shotSprite;
+                shotSprite.SetAnimation(strongBulletText.Name);
+                Game.Components.Add(shot);
+                Game.Components.Add(shotSprite);
+                strongShots.Add(shot);
+            }
+            powerShot = new HeroShot(this.LuxGame, 0, null);
+            Sprite powerShotSprite = new Sprite(powerShot, new List<Texture2D>() { powerShotText }, null);
+            powerShot.Skin = powerShotSprite;
+            powerShotSprite.SetAnimation(powerShotText.Name);
+            Game.Components.Add(powerShot);
+            Game.Components.Add(powerShotSprite);
         }
 
-        public void Shoot()
+        public void WeakShoot()
         {
+            int cnt = 0;
+            bool fini = false;
 
+            while (cnt < weakShotNb && !fini)
+            {
+                if (weakShots[cnt].IsOutOfRange == true)
+                {
+                    weakShots[cnt].Speed = new Vector2(0, -10);
+                    weakShots[cnt].Position = this.Position;
+                    weakShots[cnt].Shoot();
+                    fini = true;
+                }
+                else
+                {
+                    cnt++;
+                }
+            }
+        }
+
+        public void StrongShoot()
+        {
+            int cnt = 0;
+            bool fini = false;
+
+            while (cnt < strongShotNb && !fini)
+            {
+                if (strongShots[cnt].IsOutOfRange == true)
+                {
+                    strongShots[cnt].Speed = new Vector2(0, -20);
+                    strongShots[cnt].Position = this.Position;
+                    strongShots[cnt].Shoot();
+                    fini = true;
+                }
+                else
+                {
+                    cnt++;
+                }
+            }
+        }
+
+        public void PowerShoot()
+        {
+            if (powerShot.IsOutOfRange == true)
+            {
+                powerShot.Accel = new Vector2(0, -1);
+                powerShot.Speed = new Vector2(0, 0);
+                powerShot.Position = this.Position;
+                powerShot.Shoot();
+            }
         }
 
         public override void Update(GameTime gameTime)
         {
-            if (Input.isActionDone(Input.Action.Cancel, true))
+            bool speedChange;
+
+            speedChange = Input.isActionDone(Input.Action.SpeedChange, false);
+            if (speedChange)
             {
                 if (speedType)
                 {
@@ -124,11 +201,44 @@ namespace Schmup
                 Position.X += speed;
             }
 
+            // Gestion des bordures
+
+            if (Position.X < 0)
+            {
+                Position.X = 0;
+            }
+            if (Position.Y < 0)
+            {
+                Position.Y = 0;
+            }
+            if (Position.X > 800)
+            {
+                Position.X = 800;
+            }
+            if (Position.Y > 480)
+            {
+                Position.Y = 480;
+            }
+
             // Gestion des tirs
 
-            if (Input.isActionDone(Input.Action.Confirm, true))
+            if (Input.isActionDone(Input.Action.Shoot, true))
             {
-                Shoot();
+                if (speedType)
+                {
+                    WeakShoot();
+                }
+                else
+                {
+                    StrongShoot();
+                }
+            }
+
+            // Gestion des pouvoirs
+
+            if (Input.isActionDone(Input.Action.Power, true))
+            {
+                PowerShoot();
             }
 
             // Mise à jour de la position pour les ennemis
