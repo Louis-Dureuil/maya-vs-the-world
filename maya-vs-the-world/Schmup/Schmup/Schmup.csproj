@@ -117,6 +117,9 @@
     <Compile Include="Scenes\BigBoss.cs" />
     <Compile Include="Scenes\Common.cs" />
     <Compile Include="Scenes\Boss3.cs" />
+    <Compile Include="Scenes\EasyBoss.cs" />
+    <Compile Include="Scenes\HeroLazer.cs" />
+    <Compile Include="Scenes\HeroPower.cs" />
     <Compile Include="Scenes\HeroShot.cs" />
     <Compile Include="Scenes\HomingMissile.cs" />
     <Compile Include="Scenes\Character.cs" />
@@ -133,6 +136,7 @@
     <Compile Include="Scenes\ShotPattern.cs" />
     <Compile Include="Scenes\ShotPattern2.cs" />
     <Compile Include="Scenes\SimpleMissile.cs" />
+    <Compile Include="Scenes\TechnicalHero.cs" />
     <Compile Include="Scenes\TestEnemy.cs" />
   </ItemGroup>
   <ItemGroup>

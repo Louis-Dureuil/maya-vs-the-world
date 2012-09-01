@@ -10,6 +10,7 @@ namespace Schmup
     class Character : LuxEngine.Scene
     {
         private int life;
+        private int lifeStart;
         private int takenDamageCollision;
         private int givenDamageCollision;
         // hurtbox a definir
@@ -21,6 +22,7 @@ namespace Schmup
             : base(game)
         {
             this.life = life;
+            this.lifeStart = life;
             this.takenDamageCollision = takenDamageCollision;
             this.givenDamageCollision = givenDamageCollision;
             this.skin = skin;
@@ -38,8 +40,32 @@ namespace Schmup
             }
         }
 
+        public void Hurt()
+        {
+            life -= 1;
+        }
+
+        public void LifeChange(int lifeMinus)
+        {
+            // a été fait par manque d'organisation
+            // sert pour le boss, dont on ne tient pas compte des blessures à chaque fois
+            life = lifeStart - lifeMinus;
+        }
+
+        public void Die()
+        {
+            // a corriger éventuellement
+            // N'efface pas les balles
+            Position = new Vector2(-400, -400);
+            Enabled = false;
+        }
+
         public override void Update(GameTime gameTime)
         {
+            if (life < 0)
+            {
+                Die();
+            }
             base.Update(gameTime);
         }
 

@@ -15,8 +15,8 @@ namespace Schmup
         private int shootNb;
         private Texture2D bulletTexture;
 
-        public LockingEnemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin = null)
-            : base(game, life, takenDamageCollision, givenDamageCollision, null)
+        public LockingEnemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, int shotNb, Sprite skin = null)
+            : base(game, life, takenDamageCollision, givenDamageCollision, shotNb, null)
         {
             this.bulletTexture = this.Content.Load<Texture2D>("bullet002-1");
         }

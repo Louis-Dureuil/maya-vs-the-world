@@ -86,3 +86,9 @@ C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup
 C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bomb.xnb
 C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet005-1.xnb
 C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet005-2.xnb
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\lazermoche.xnb
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bigbullet001-1.xnb
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bigbullet001-2.xnb
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bigbullet001-3.xnb
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bigbullet001-4.xnb
+C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\warning.xnb

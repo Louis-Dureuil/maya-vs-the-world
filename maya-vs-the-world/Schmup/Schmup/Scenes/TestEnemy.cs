@@ -22,7 +22,7 @@ namespace Schmup
         private Texture2D bulletTexture;
 
         public TestEnemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, bool shootsHero, int waitTimeFrames, Sprite skin)
-            : base(game, life, takenDamageCollision, givenDamageCollision, skin)
+            : base(game, life, takenDamageCollision, givenDamageCollision, 20, skin)
         {
             this.shootsHero = shootsHero;
             this.waitTimeFrames = waitTimeFrames;
@@ -31,7 +31,7 @@ namespace Schmup
 
 
         public TestEnemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, bool shootsHero, int waitTimeFrames, Sprite skin, Texture2D bulletTexture)
-            : base(game, life, takenDamageCollision, givenDamageCollision, skin)
+            : base(game, life, takenDamageCollision, givenDamageCollision, 20, skin)
         {
             this.shootsHero = shootsHero;
             this.waitTimeFrames = waitTimeFrames;

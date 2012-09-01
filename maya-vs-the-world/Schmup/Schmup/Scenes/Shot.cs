@@ -9,14 +9,40 @@ namespace Schmup
 {
     class Shot : Scene
     {
-        //private uint hitboxHeight;
-        //private uint hitboxWidth;
+        private int hitbox;
         private int invincibleTimeMillisec;
         private Vector2 speed;
         private Vector2 accel;
         private Sprite skin;
+        private bool isOutOfRange;
+        private bool goesThrough;
+        private bool isABadShot;
 
-        // méthodes pour update, draw et destroy??
+        public bool GoesThrough
+        {
+            get
+            {
+                return goesThrough;
+            }
+            set
+            {
+                goesThrough = value;
+            }
+        }
+
+        public bool IsOutOfRange
+        {
+            get
+            {
+                return isOutOfRange;
+            }
+            set
+            {
+                isOutOfRange = value;
+            }
+        }
+
+
         public int InvincibleTimeMillisec
         {
             get
@@ -67,14 +93,94 @@ namespace Schmup
 
         public override void Initialize()
         {
-            accel = new Vector2(0, 0);
+            Position = new Vector2(-40, -40);
+            this.Enabled = false;
+            isOutOfRange = true;
+            goesThrough = false;
             base.Initialize();
+        }
+
+        public void Shoot()
+        {
+            isOutOfRange = false;
+            this.Enabled = true;
         }
 
         public override void Update(GameTime gameTime)
         {
-            Position += speed;
-            speed += accel;
+            if (isOutOfRange == true)
+            {
+                Position = new Vector2(-40, -40);
+            }
+            else
+            {
+
+                Position += speed;
+                speed += accel;
+                //if (speed.Length() < 1)
+                //{
+                //    accel = new Vector2(0,0);
+                //    speed = Vector2.Normalize(speed);
+                //}
+
+                // Gestion de l'atteinte aux bordures
+
+                if (this.Position.Y < -30)
+                {
+                    isOutOfRange = true;
+                }
+                if (this.Position.Y > 500)
+                {
+                    isOutOfRange = true;
+                }
+                if (this.Position.X < -30)
+                {
+                    isOutOfRange = true;
+                }
+                if (this.Position.X > 830)
+                {
+                    isOutOfRange = true;
+                }
+
+                //Gestion d'une collision avec le héros
+
+                if (Vector2.Distance(Position, Common.HeroPosition) < hitbox && isABadShot)
+                {
+                    Common.HeroHit++;
+                    System.Console.Write("Tu t'es fait frapper. Il te reste ");
+                    System.Console.Write(10 - Common.HeroHit);
+                    System.Console.WriteLine(" tentatives.");
+
+                    Position = new Vector2(-40, -40);
+                    speed = new Vector2(0, 0);
+                    accel = new Vector2(0, 0);
+                }
+
+                //Gestion d'une collision avec le pouvoir
+
+                if (Vector2.Distance(Position, Common.PowerPosition) < 22 && isABadShot)
+                {
+                    Common.PowerHit++;
+
+                    Position = new Vector2(-40, -40);
+                    speed = new Vector2(0, 0);
+                    accel = new Vector2(0, 0);
+                }
+
+                //Gestion d'une collision avec le boss
+
+                if (Vector2.Distance(Position, Common.BossPosition) < 60 && !isABadShot)
+                {
+                    Common.BossHit++;
+
+                    if (!goesThrough)
+                    {
+                        Position = new Vector2(-40, -40);
+                        speed = new Vector2(0, 0);
+                        accel = new Vector2(0, 0);
+                    }
+                }
+            }
             base.Update(gameTime);
         }
 
@@ -88,6 +194,26 @@ namespace Schmup
         {
             this.invincibleTimeMillisec = invincibleTimeMillisec;
             this.skin = skin;
+            this.isABadShot = true;
+            this.hitbox = 3;
+        }
+
+        public Shot(LuxGame game, int invincibleTimeMillisec, bool isAGoodShot, int hitbox, Sprite skin = null)
+            : base(game)
+        {
+            this.invincibleTimeMillisec = invincibleTimeMillisec;
+            this.skin = skin;
+            this.isABadShot = !isAGoodShot;
+            this.hitbox = hitbox;
+        }
+
+        public Shot(LuxGame game, int invincibleTimeMillisec, int hitbox, Sprite skin = null)
+            : base(game)
+        {
+            this.invincibleTimeMillisec = invincibleTimeMillisec;
+            this.skin = skin;
+            this.isABadShot = true;
+            this.hitbox = hitbox;
         }
     }
 }

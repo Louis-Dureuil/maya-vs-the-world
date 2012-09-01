@@ -13,10 +13,9 @@ namespace Schmup
         private double elapsed;
         private int shotNb;
         private float angleBtwShotsDegrees;
-        private ShotPattern spat;
+        private Vector2 direction;
         private int shotCnt;
         private double waitTimeSec;
-        private Texture2D bulletTexture;
         private int patShotNb;
         private int patAngleBtwShotsDegrees;
 
@@ -25,26 +24,46 @@ namespace Schmup
 
         private List<ShotPattern> spats = new List<ShotPattern>();
 
-        public RotatingEnemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin, int shotNb, float angleBtwShotsDegrees, ShotPattern spat, double waitTimeSec, int patShotNb, int patAngleBtwShotsDegrees)
-            : base(game, life, takenDamageCollision, givenDamageCollision, skin)
+        public RotatingEnemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin, int shotNb, float angleBtwShotsDegrees, Vector2 direction, double waitTimeSec, int patShotNb, int patAngleBtwShotsDegrees, int bulletNumber)
+            : base(game, life, takenDamageCollision, givenDamageCollision, bulletNumber, skin)
         {
             this.shotNb = shotNb;
             this.angleBtwShotsDegrees = angleBtwShotsDegrees;
-            this.spat = spat;
+            this.direction = direction;
             this.waitTimeSec = waitTimeSec;
-            this.bulletTexture = this.Content.Load<Texture2D>("bullet001-1");
             this.patAngleBtwShotsDegrees = patAngleBtwShotsDegrees;
             this.patShotNb = patShotNb;
         }
 
-        public RotatingEnemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin, int shotNb, float angleBtwShotsDegrees, ShotPattern spat, double waitTimeSec, int patShotNb, int patAngleBtwShotsDegrees, Texture2D bulletTexture)
-            : base(game, life, takenDamageCollision, givenDamageCollision, skin)
+        public RotatingEnemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin, int shotNb, float angleBtwShotsDegrees, Vector2 direction, double waitTimeSec, int patShotNb, int patAngleBtwShotsDegrees, Texture2D bulletTexture, int bulletNumber, int shotHitbox)
+            : base(game, life, takenDamageCollision, givenDamageCollision, bulletNumber, skin, bulletTexture, shotHitbox)
         {
             this.shotNb = shotNb;
             this.angleBtwShotsDegrees = angleBtwShotsDegrees;
-            this.spat = spat;
+            this.direction = direction;
             this.waitTimeSec = waitTimeSec;
-            this.bulletTexture = bulletTexture;
+            this.patAngleBtwShotsDegrees = patAngleBtwShotsDegrees;
+            this.patShotNb = patShotNb;
+        }
+
+        public RotatingEnemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin, int shotNb, float angleBtwShotsDegrees, Vector2 direction, double waitTimeSec, int patShotNb, int patAngleBtwShotsDegrees, Texture2D bulletTexture, int shotHitbox)
+            : base(game, life, takenDamageCollision, givenDamageCollision, shotNb * patShotNb, skin, bulletTexture, shotHitbox)
+        {
+            this.shotNb = shotNb;
+            this.angleBtwShotsDegrees = angleBtwShotsDegrees;
+            this.direction = direction;
+            this.waitTimeSec = waitTimeSec;
+            this.patAngleBtwShotsDegrees = patAngleBtwShotsDegrees;
+            this.patShotNb = patShotNb;
+        }
+
+        public RotatingEnemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin, int shotNb, float angleBtwShotsDegrees, Vector2 direction, double waitTimeSec, int patShotNb, int patAngleBtwShotsDegrees)
+            : base(game, life, takenDamageCollision, givenDamageCollision, shotNb * patShotNb, skin)
+        {
+            this.shotNb = shotNb;
+            this.angleBtwShotsDegrees = angleBtwShotsDegrees;
+            this.direction = direction;
+            this.waitTimeSec = waitTimeSec;
             this.patAngleBtwShotsDegrees = patAngleBtwShotsDegrees;
             this.patShotNb = patShotNb;
         }
@@ -53,22 +72,15 @@ namespace Schmup
         {
             base.Initialize();
             shotCnt = 0;
-            currentVector = spat.Direction;
-            for (int i = 0; i < shotNb; i++)
-            {
-                ShotPattern spattern = new ShotPattern(this.LuxGame, patShotNb, spat.Direction, patAngleBtwShotsDegrees, bulletTexture);
-                Game.Components.Add(spattern);
-                spats.Add(spattern);
-            }
+            currentVector = direction;
         }
 
-        public void Shoot()
+        public void Reset()
         {
-            spats[shotCnt].Position = this.Position;
-            spats[shotCnt].Direction = currentVector; 
-            spats[shotCnt].Shoot();
-            shotCnt++;
-            currentVector = Vector2.Transform(currentVector, Matrix.CreateRotationZ((float)Math.PI/180*angleBtwShotsDegrees));
+            elapsed = 0;
+            shotCnt = 0;
+            Enabled = false;
+            currentVector = direction;
         }
 
         public override void Update(GameTime gameTime)
@@ -78,12 +90,9 @@ namespace Schmup
             if (elapsed >= waitTimeSec && shotCnt < shotNb)
             {
                 elapsed = 0; // On réinitialise le compteur
-                Shoot();
+                PatternShoot(currentVector, patShotNb, patAngleBtwShotsDegrees);
+                currentVector = Vector2.Transform(currentVector, Matrix.CreateRotationZ((float)Math.PI / 180 * angleBtwShotsDegrees));
                 shotCnt++;
-            }
-            if (gameTime.TotalGameTime.Milliseconds.Equals(waitTimeSec) && shotCnt < shotNb)
-            {
-                Shoot();
             }
         }
     }

@@ -17,7 +17,7 @@ namespace Schmup
         private Texture2D bulletTexture2;
 
         public Boss3(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, bool shootsHero, int waitTimeFrames, Sprite skin)
-            : base(game, life, takenDamageCollision, givenDamageCollision, skin)
+            : base(game, life, takenDamageCollision, givenDamageCollision, 20, skin)
         {
             // A AMELIORER
             this.bulletTexture = this.Content.Load<Texture2D>("bullet001-1");

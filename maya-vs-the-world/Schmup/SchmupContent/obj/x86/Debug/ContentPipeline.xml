@@ -199,6 +199,60 @@
       <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet005-2.xnb</Output>
       <Time>2012-08-01T12:35:40.645+02:00</Time>
     </Item>
+    <Item>
+      <Source>lazermoche.png</Source>
+      <Name>lazermoche</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\lazermoche.xnb</Output>
+      <Time>2012-08-03T15:26:59.427+02:00</Time>
+    </Item>
+    <Item>
+      <Source>bigbullet001-1.png</Source>
+      <Name>bigbullet001-1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bigbullet001-1.xnb</Output>
+      <Time>2012-08-10T15:05:30.534+02:00</Time>
+    </Item>
+    <Item>
+      <Source>bigbullet001-2.png</Source>
+      <Name>bigbullet001-2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bigbullet001-2.xnb</Output>
+      <Time>2012-08-10T15:05:30.539+02:00</Time>
+    </Item>
+    <Item>
+      <Source>bigbullet001-3.png</Source>
+      <Name>bigbullet001-3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bigbullet001-3.xnb</Output>
+      <Time>2012-08-10T15:05:30.563+02:00</Time>
+    </Item>
+    <Item>
+      <Source>bigbullet001-4.png</Source>
+      <Name>bigbullet001-4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bigbullet001-4.xnb</Output>
+      <Time>2012-08-10T15:05:30.558+02:00</Time>
+    </Item>
+    <Item>
+      <Source>warning.png</Source>
+      <Name>warning</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\warning.xnb</Output>
+      <Time>2012-08-28T19:55:40.854+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

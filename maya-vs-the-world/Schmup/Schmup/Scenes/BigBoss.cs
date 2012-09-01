@@ -12,19 +12,16 @@ namespace Schmup
     {
         private int shootNb;
         private Texture2D bulletTexture;
-        private List<RandomShotPattern> rspatterns = new List<RandomShotPattern>();
-        private List<BigLockShotPattern> blspatterns = new List<BigLockShotPattern>();
         private Texture2D bulletTexture2;
         private Texture2D bulletTexture3;
         private Texture2D enemyTexture;
         private double elapsed;
-        List<RotatingEnemy> commonEnemies = new List<RotatingEnemy>(2);
-        Boss bossAlt;
-        Boss3 bossFinal;
-        LockingEnemy enemy;
+        private double midElapsed;
+        List<RotatingEnemy> commonEnemies = new List<RotatingEnemy>(6);
+        Enemy shooter;
 
-        public BigBoss(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, bool shootsHero, int waitTimeFrames, Sprite skin)
-            : base(game, life, takenDamageCollision, givenDamageCollision, skin)
+        public BigBoss(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, bool shootsHero, int waitTimeFrames, Sprite skin, Texture2D bulletText)
+            : base(game, life, takenDamageCollision, givenDamageCollision, 650, skin, bulletText, 8)
         {
             // A AMELIORER
             this.bulletTexture = this.Content.Load<Texture2D>("bullet001-1");
@@ -37,109 +34,148 @@ namespace Schmup
         {
             base.Initialize();
             shootNb = 0;
-            Vector2 vect = new Vector2(0, 1);
-            for (int i = 0; i < 10; i++)
-            {
-                BigLockShotPattern bPatternTest2 = new BigLockShotPattern(this.LuxGame, i+2, 20, bulletTexture2, i, 1, (i+2)/2);
-                Game.Components.Add(bPatternTest2);
-                blspatterns.Add(bPatternTest2);
-            }
-            RandomShotPattern bPatternTestFinal = new RandomShotPattern(this.LuxGame, 120, 4 * vect, 3, bulletTexture, 15);
-            Game.Components.Add(bPatternTestFinal);
-            rspatterns.Add(bPatternTestFinal);
+            shooter = new Enemy(this.LuxGame, 10, 10, 10, 300, null, bulletTexture, 8);
+            shooter.Skin = new Sprite(shooter, new List<Texture2D>() { enemyTexture }, null);
+            shooter.Skin.SetAnimation(enemyTexture.Name);
+            shooter.Position = new Vector2(400, 100);
+            Game.Components.Add(shooter);
+            Vector2 vect = Vector2.Normalize(new Vector2(Common.Rand.Next(-2, 2), 10));
             for (int i = 0; i < 2; i++)
             {
-                commonEnemies.Add(new RotatingEnemy(this.LuxGame, 1, 1, 1, null, 60, -10 + 20 * i, new ShotPattern(this.LuxGame, 4, new Vector2(0, 1), 30, bulletTexture2), 0.2, 4, 90));
+                commonEnemies.Add(new RotatingEnemy(this.LuxGame, 1, 1, 1, null, 50, -10 + 20 * i, vect, 0.2, 4, 90, 150));
                 commonEnemies[i].Skin = new Sprite(commonEnemies[i], new List<Texture2D>() { enemyTexture }, null);
                 commonEnemies[i].Skin.SetAnimation(enemyTexture.Name);
                 commonEnemies[i].Position = new Vector2(300 + i * 200, 100);
                 // Il faut appliquer "SetAnimation" au sprite pour qu'il affiche quelque chose.
                 Game.Components.Add(commonEnemies[i]);
             }
-            bossAlt = new Boss(this.LuxGame, 10, 10, 10, false, 1, null);
-            bossAlt.Skin = new Sprite(bossAlt, new List<string>() { "boss" });
-            bossAlt.Skin.SetAnimation("boss");
-            bossAlt.Position = new Vector2(400, 50);
-            bossAlt.Enabled = false;
-            bossFinal = new Boss3(this.LuxGame, 10, 10, 10, false, 1, null);
-            bossFinal.Skin = new Sprite(bossFinal, new List<string>() { "boss" });
-            bossFinal.Skin.SetAnimation("boss");
-            bossFinal.Position = new Vector2(400, 50);
-            bossFinal.Enabled = false;
-            Game.Components.Add(bossAlt);
-            Game.Components.Add(bossFinal);
+            vect = new Vector2(0, 1);
             for (int i = 2; i < 4; i++)
             {
-                commonEnemies.Add(new RotatingEnemy(this.LuxGame, 1, 1, 1, null, 90, 11 - 22 * (i-2), new ShotPattern(this.LuxGame, 4, new Vector2(0, (float)1.21), 30, bulletTexture2), 0.2, 4, 90));
+                commonEnemies.Add(new RotatingEnemy(this.LuxGame, 1, 1, 1, null, 90, 11 - 22 * (i - 2), (float)1.5 * vect, 0.2, 4, 90, 100));
                 commonEnemies[i].Skin = new Sprite(commonEnemies[i], new List<Texture2D>() { enemyTexture }, null);
                 commonEnemies[i].Skin.SetAnimation(enemyTexture.Name);
-                commonEnemies[i].Position = new Vector2(280 + (i-2) * 240, 100);
-                commonEnemies[i].Enabled = false;
+                commonEnemies[i].Position = new Vector2(300 + (i - 2) * 200, 100);
                 // Il faut appliquer "SetAnimation" au sprite pour qu'il affiche quelque chose.
                 Game.Components.Add(commonEnemies[i]);
             }
-            for (int i= 4 ; i < 6; i++)
+            for (int i = 4; i < 6; i++)
             {
                 int horiz = Common.Rand.Next(1, 4);
-                commonEnemies.Add(new RotatingEnemy(this.LuxGame, 1, 1, 1, null, 260, 2*(9 - 18 * (i-4))/5, new ShotPattern(this.LuxGame, 4, (float)2.5*Vector2.Normalize(new Vector2(horiz *(1-2*(i-4)), 10)), 30, bulletTexture3), 0.05, 2, 180, bulletTexture3));
+                commonEnemies.Add(new RotatingEnemy(this.LuxGame, 1, 1, 1, null, 260, 2 * (9 - 18 * (i - 4)) / 5, (float)2.5 * Vector2.Normalize(new Vector2(horiz * (1 - 2 * (i - 4)), 10)), 0.05, 2, 180, bulletTexture3, 120, 5));
                 commonEnemies[i].Skin = new Sprite(commonEnemies[i], new List<Texture2D>() { enemyTexture }, null);
                 commonEnemies[i].Skin.SetAnimation(enemyTexture.Name);
                 commonEnemies[i].Position = new Vector2(400, 80);
-                commonEnemies[i].Enabled = false;
                 // Il faut appliquer "SetAnimation" au sprite pour qu'il affiche quelque chose.
                 Game.Components.Add(commonEnemies[i]);
             }
-            enemy = new LockingEnemy(this.LuxGame, 1, 1, 1, null);
-            enemy.Skin = new Sprite(enemy, new List<Texture2D>() { enemyTexture }, null);
-            enemy.Skin.SetAnimation(enemyTexture.Name);
-            enemy.Position = new Vector2(400, 80);
-            enemy.Enabled = false;
-            Game.Components.Add(enemy);
         }
 
-        public void Shoot()
+        public void RandomShoot()
         {
-            if (shootNb < 10)
+            if (shootNb > 11 && shootNb < 611)
             {
-                blspatterns[(int)shootNb].Position = this.Position;
-                blspatterns[(int)shootNb].Shoot(Common.HeroPosition - this.Position);
+                shootNb++;
+                Vector2 vect = new Vector2(Common.Rand.Next(-30, 30), Common.Rand.Next(-20, 20));
+                RandomPatternShoot(this.Position + vect, (1 + (float)0.1 * Common.Rand.Next(0, 3)) * Vector2.Normalize(vect), new Vector2(0, 0), 180, 2, 180);
             }
-            else
+        }
+
+        public void Shooting()
+        {
+            if (shootNb % 30 == 0 && shootNb < 601)
             {
-                rspatterns[0].Position = this.Position;
-                rspatterns[0].Shoot();
+                shooter.Shoot(7 * Vector2.Normalize(Common.HeroPosition - shooter.Position));
+            }
+        }
+
+        public void DoubleShoot()
+        {
+            if (midElapsed >= 1 && shootNb > 611 && shootNb < 622)
+            {
+                midElapsed = 0;
+                shootNb++;
+                shooter.RandomPatternShoot(this.Position, new Vector2(3, 0), new Vector2(0, 0), 5, 72, 5);
+                BigPatternShoot(Common.HeroPosition - this.Position, 5, Common.Rand.Next(2, 10), 2, (float)4.8, (float)5.2);
+            }
+            if (midElapsed >= 1 && shootNb == 622)
+            {
+                shootNb++;
+                shooter.RandomPatternShoot(this.Position, new Vector2(4, 0), new Vector2(0, 0), 3, 120, 3);
+            }
+        }
+
+        public void LockingShoot()
+        {
+            if (midElapsed >= 0.6 && shootNb > 622 && shootNb < 626)
+            {
+                midElapsed = 0;
+                shootNb++;
+                BigPatternShoot(Common.HeroPosition - this.Position, 5, 4, (shootNb - 622)+1, (float)3.5, (float)3.5 + (shootNb - 622));
+                BigPatternShoot(Common.HeroPosition - this.Position, 4, 4, (shootNb - 622), 4, 4 + (shootNb - 623));
             }
         }
 
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
         {
             base.Update(gameTime);
-            //this.Position += new Vector2(0,1);
-
-            if (gameTime.TotalGameTime.Milliseconds.Equals(100) && shootNb < 11)
+            elapsed += gameTime.ElapsedGameTime.TotalSeconds;
+            midElapsed += gameTime.ElapsedGameTime.TotalSeconds;
+            for (int i = 0; i < 11; i++)
             {
-                Shoot();
+                if (elapsed >= i + 0.1 && shootNb == i)
+                {
+                    BigPatternShoot(Common.HeroPosition - this.Position, shootNb + 1, 20, shootNb - 1, 1, (float)shootNb / (float)2);
+                    shootNb++;
+                }
+            }
+            if (elapsed >= 11.1 && shootNb == 11)
+            {
+                shooter.RandomPatternShoot(this.Position, new Vector2(0, 4), new Vector2(0, 0), 3, 120, 3);
                 shootNb++;
             }
-            elapsed += gameTime.ElapsedGameTime.TotalSeconds;
-            if (elapsed >= 14)
+
+            commonEnemies[0].Create();
+            commonEnemies[1].Create();
+            if (elapsed >= 15.5)
             {
-                bossAlt.Enabled = true;
+                RandomShoot();
+                Shooting();
             }
-            if (elapsed >= 26)
+            if (elapsed >= 24.7 && shootNb == 611)
             {
-                bossFinal.Enabled = true;
+                shooter.RandomPatternShoot(this.Position, new Vector2(0, 4), new Vector2(0, 0), 3, 120, 3);
+                shootNb++;
             }
-            if (elapsed >= 40)
+            if (elapsed >= 32)
+            {
+                DoubleShoot();
+            }
+            if (elapsed >= 45)
             {
                 for (int i = 2; i < 6; i++)
                 {
-                    commonEnemies[i].Enabled = true;
+                    commonEnemies[i].Create();
                 }
             }
-            if (elapsed >= 48)
+            if (elapsed >= 60)
             {
-                enemy.Enabled = true;
+                LockingShoot();
+            }
+            if (elapsed >= 62 && shootNb == 626)
+            {
+                shootNb++;
+                shooter.RandomPatternShoot(this.Position, new Vector2(1, 0), new Vector2(0, (float)0.07), 5, 72, 5);
+                shooter.RandomPatternShoot(this.Position, new Vector2(0, 4), new Vector2(0, 0), 4, 90, 4);
+            }
+            if (elapsed >= 65)
+            {
+                elapsed = 0;
+                shootNb = 0;
+                for (int i = 0; i < 6; i++)
+                {
+                    commonEnemies[i].Reset();
+                }
             }
         }
     }
