@@ -48,3 +48,13 @@ C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Rpg\Rp
 C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\obj\x86\Debug\Rpg.exe
 C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\obj\x86\Debug\Rpg.pdb
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\bin\x86\Debug\Rpg.exe
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\bin\x86\Debug\Rpg.pdb
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\bin\x86\Debug\Data.dll
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\bin\x86\Debug\LuxEngine.dll
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\bin\x86\Debug\Data.pdb
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\bin\x86\Debug\LuxEngine.pdb
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\obj\x86\Debug\Rpg.exe
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\obj\x86\Debug\Rpg.pdb

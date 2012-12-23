@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\carre.xnb</Output>
-      <Time>2012-05-12T20:53:10.256+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\carre.xnb</Output>
+      <Time>2012-10-12T21:24:32.9633634+02:00</Time>
     </Item>
     <Item>
       <Source>bullet001-1.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet001-1.xnb</Output>
-      <Time>2012-07-25T17:40:15.389+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet001-1.xnb</Output>
+      <Time>2012-10-12T21:24:32.9533628+02:00</Time>
     </Item>
     <Item>
       <Source>bullet001-2.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet001-2.xnb</Output>
-      <Time>2012-05-13T21:13:50.4407463+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet001-2.xnb</Output>
+      <Time>2012-10-12T21:24:32.9543629+02:00</Time>
     </Item>
     <Item>
       <Source>hero.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\hero.xnb</Output>
-      <Time>2012-06-25T17:26:56.7927276+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\hero.xnb</Output>
+      <Time>2012-10-12T21:24:32.9643634+02:00</Time>
     </Item>
     <Item>
       <Source>bullet003-1.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet003-1.xnb</Output>
-      <Time>2012-07-30T20:53:01.114+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet003-1.xnb</Output>
+      <Time>2012-10-12T21:24:32.957363+02:00</Time>
     </Item>
     <Item>
       <Source>boss.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\boss.xnb</Output>
-      <Time>2012-07-24T13:40:02.4447343+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\boss.xnb</Output>
+      <Time>2012-10-12T21:24:32.9533628+02:00</Time>
     </Item>
     <Item>
       <Source>commonEnemy.png</Source>
@@ -61,26 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\commonEnemy.xnb</Output>
-      <Time>2012-07-24T13:40:02.4507343+02:00</Time>
-    </Item>
-    <Item>
-      <Source>SchmupFont.spritefont</Source>
-      <Name>SchmupFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\SchmupFont.xnb</Output>
-      <Time>2012-05-12T20:53:10.177+02:00</Time>
-    </Item>
-    <Item>
-      <Source>afterimageeffect.fx</Source>
-      <Name>afterimageeffect</Name>
-      <Importer>EffectImporter</Importer>
-      <Processor>EffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\afterimageeffect.xnb</Output>
-      <Time>2012-05-12T20:53:10.216+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\commonEnemy.xnb</Output>
+      <Time>2012-10-12T21:24:32.9633634+02:00</Time>
     </Item>
     <Item>
       <Source>bullet002-1.png</Source>
@@ -88,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-1.xnb</Output>
-      <Time>2012-07-26T13:07:33.142+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-1.xnb</Output>
+      <Time>2012-10-12T21:24:32.9543629+02:00</Time>
     </Item>
     <Item>
       <Source>bullet002-2.png</Source>
@@ -97,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-2.xnb</Output>
-      <Time>2012-07-29T15:36:28.922+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-2.xnb</Output>
+      <Time>2012-10-12T21:24:32.9543629+02:00</Time>
     </Item>
     <Item>
       <Source>bullet002-3.png</Source>
@@ -106,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-3.xnb</Output>
-      <Time>2012-07-29T15:37:18.124+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-3.xnb</Output>
+      <Time>2012-10-12T21:24:32.9553629+02:00</Time>
     </Item>
     <Item>
       <Source>bullet002-4.png</Source>
@@ -115,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-4.xnb</Output>
-      <Time>2012-07-29T15:38:12.763+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-4.xnb</Output>
+      <Time>2012-10-12T21:24:32.9553629+02:00</Time>
     </Item>
     <Item>
       <Source>bullet002-5.png</Source>
@@ -124,8 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-5.xnb</Output>
-      <Time>2012-07-29T15:38:48.575+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-5.xnb</Output>
+      <Time>2012-10-12T21:24:32.956363+02:00</Time>
     </Item>
     <Item>
       <Source>bullet002-6.png</Source>
@@ -133,8 +115,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-6.xnb</Output>
-      <Time>2012-07-29T15:39:13.728+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-6.xnb</Output>
+      <Time>2012-10-12T21:24:32.956363+02:00</Time>
     </Item>
     <Item>
       <Source>bullet002-7.png</Source>
@@ -142,8 +124,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-7.xnb</Output>
-      <Time>2012-07-29T15:39:45.341+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-7.xnb</Output>
+      <Time>2012-10-12T21:24:32.956363+02:00</Time>
     </Item>
     <Item>
       <Source>bullet002-8.png</Source>
@@ -151,8 +133,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-8.xnb</Output>
-      <Time>2012-07-29T15:40:11.386+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-8.xnb</Output>
+      <Time>2012-10-12T21:24:32.957363+02:00</Time>
     </Item>
     <Item>
       <Source>bullet002-9.png</Source>
@@ -160,8 +142,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-9.xnb</Output>
-      <Time>2012-07-29T15:40:33.087+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet002-9.xnb</Output>
+      <Time>2012-10-12T21:24:32.957363+02:00</Time>
     </Item>
     <Item>
       <Source>bullet004-1.png</Source>
@@ -169,8 +151,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet004-1.xnb</Output>
-      <Time>2012-07-30T21:28:38.465+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet004-1.xnb</Output>
+      <Time>2012-10-12T21:24:32.9583631+02:00</Time>
     </Item>
     <Item>
       <Source>bomb.png</Source>
@@ -178,8 +160,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bomb.xnb</Output>
-      <Time>2012-07-31T18:49:30.541+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bomb.xnb</Output>
+      <Time>2012-10-12T21:24:32.9513627+02:00</Time>
     </Item>
     <Item>
       <Source>bullet005-1.png</Source>
@@ -187,8 +169,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet005-1.xnb</Output>
-      <Time>2012-08-01T12:35:10.908+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet005-1.xnb</Output>
+      <Time>2012-10-12T21:24:32.9583631+02:00</Time>
     </Item>
     <Item>
       <Source>bullet005-2.png</Source>
@@ -196,8 +178,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet005-2.xnb</Output>
-      <Time>2012-08-01T12:35:40.645+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bullet005-2.xnb</Output>
+      <Time>2012-10-12T21:24:32.9583631+02:00</Time>
     </Item>
     <Item>
       <Source>lazermoche.png</Source>
@@ -205,8 +187,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\lazermoche.xnb</Output>
-      <Time>2012-08-03T15:26:59.427+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\lazermoche.xnb</Output>
+      <Time>2012-10-12T21:24:32.9643634+02:00</Time>
     </Item>
     <Item>
       <Source>bigbullet001-1.png</Source>
@@ -214,8 +196,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bigbullet001-1.xnb</Output>
-      <Time>2012-08-10T15:05:30.534+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bigbullet001-1.xnb</Output>
+      <Time>2012-10-12T21:24:32.9493626+02:00</Time>
     </Item>
     <Item>
       <Source>bigbullet001-2.png</Source>
@@ -223,8 +205,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bigbullet001-2.xnb</Output>
-      <Time>2012-08-10T15:05:30.539+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bigbullet001-2.xnb</Output>
+      <Time>2012-10-12T21:24:32.9503626+02:00</Time>
     </Item>
     <Item>
       <Source>bigbullet001-3.png</Source>
@@ -232,8 +214,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bigbullet001-3.xnb</Output>
-      <Time>2012-08-10T15:05:30.563+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bigbullet001-3.xnb</Output>
+      <Time>2012-10-12T21:24:32.9503626+02:00</Time>
     </Item>
     <Item>
       <Source>bigbullet001-4.png</Source>
@@ -241,8 +223,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bigbullet001-4.xnb</Output>
-      <Time>2012-08-10T15:05:30.558+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\bigbullet001-4.xnb</Output>
+      <Time>2012-10-12T21:24:32.9503626+02:00</Time>
     </Item>
     <Item>
       <Source>warning.png</Source>
@@ -250,8 +232,71 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\warning.xnb</Output>
-      <Time>2012-08-28T19:55:40.854+02:00</Time>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\warning.xnb</Output>
+      <Time>2012-10-12T21:24:32.9773642+02:00</Time>
+    </Item>
+    <Item>
+      <Source>SchmupFont.spritefont</Source>
+      <Name>SchmupFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\SchmupFont.xnb</Output>
+      <Time>2012-10-12T21:24:32.9323616+02:00</Time>
+    </Item>
+    <Item>
+      <Source>afterimageeffect.fx</Source>
+      <Name>afterimageeffect</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\afterimageeffect.xnb</Output>
+      <Time>2012-10-12T21:24:32.9493626+02:00</Time>
+    </Item>
+    <Item>
+      <Source>heroWeakShot.wav</Source>
+      <Name>heroWeakShot</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\heroWeakShot.xnb</Output>
+      <Time>2012-10-19T17:06:28.5748806+02:00</Time>
+    </Item>
+    <Item>
+      <Source>VGbossthemefirst.wav</Source>
+      <Name>VGbossthemefirst</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\VGbossthemefirst.xnb</Output>
+      <Time>2012-10-19T17:06:28.6060807+02:00</Time>
+    </Item>
+    <Item>
+      <Source>VGbossthemeloop.wav</Source>
+      <Name>VGbossthemeloop</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\VGbossthemeloop.xnb</Output>
+      <Time>2012-10-19T17:06:28.6996808+02:00</Time>
+    </Item>
+    <Item>
+      <Source>VGpower.wav</Source>
+      <Name>VGpower</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\VGpower.xnb</Output>
+      <Time>2012-10-19T17:06:28.7308809+02:00</Time>
+    </Item>
+    <Item>
+      <Source>VGstrongshot.wav</Source>
+      <Name>VGstrongshot</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\VGstrongshot.xnb</Output>
+      <Time>2012-10-19T17:06:28.7308809+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -259,39 +304,39 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\SchmupContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\SchmupContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\SchmupContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\SchmupContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Schmup\Schmup\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2010-08-23T13:41:18+02:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
-        <Value>2010-08-23T13:41:18+02:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2010-08-23T13:41:18+02:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2010-08-23T13:41:18+02:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2010-08-23T13:41:18+02:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
-        <Value>2010-08-23T13:41:18+02:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2012-03-23T17:27:09.931+01:00</Value>
+        <Value>2012-10-12T21:40:39.1426257+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

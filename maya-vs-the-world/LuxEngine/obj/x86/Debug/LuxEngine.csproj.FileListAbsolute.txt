@@ -58,3 +58,9 @@ C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\LuxEng
 C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\LuxEngine.dll
 C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\LuxEngine.pdb
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\LuxEngine\bin\x86\Debug\LuxEngine.dll
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\LuxEngine\bin\x86\Debug\LuxEngine.pdb
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\LuxEngine.dll
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\LuxEngine\obj\x86\Debug\LuxEngine.pdb

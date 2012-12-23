@@ -41,6 +41,7 @@ namespace Schmup
         private HeroLazer lazer;
         private Texture2D lazerText;
         private int powerNumberOfUses;
+        private World world;
 
         public bool SpeedType
         {
@@ -54,15 +55,16 @@ namespace Schmup
             }
         }
 
-        public Hero(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, int speed1, int speed2, Sprite skin = null)
+        public Hero(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision, int speed1, int speed2, Sprite skin = null)
             : base(game, life, takenDamageCollision, givenDamageCollision, skin)
         {
+            this.world = world;
             this.speed1 = speed1;
             this.speed2 = speed2;
-            this.weakBulletText = this.Content.Load<Texture2D>("bullet003-1");
-            this.strongBulletText = this.Content.Load<Texture2D>("bullet004-1");
-            this.powerShotText = this.Content.Load<Texture2D>("bomb");
-            this.lazerText = this.Content.Load<Texture2D>("lazermoche");
+            //this.weakBulletText = this.Content.Load<Texture2D>("bullet003-1");
+            //this.strongBulletText = this.Content.Load<Texture2D>("bullet004-1");
+            //this.powerShotText = this.Content.Load<Texture2D>("bomb");
+            //this.lazerText = this.Content.Load<Texture2D>("lazermoche");
         }
 
         public override void Initialize()
@@ -71,7 +73,7 @@ namespace Schmup
             powerNumberOfUses = 0;
             for (int i = 0; i < weakShotNb; i++)
             {
-                HeroShot shot = new HeroShot(this.LuxGame, 0, null);
+                HeroShot shot = new HeroShot(this.LuxGame, world, 0, null);
                 Sprite shotSprite = new Sprite(shot, new List<Texture2D>() { weakBulletText }, null);
                 shot.Skin = shotSprite;
                 shotSprite.SetAnimation(weakBulletText.Name);
@@ -81,7 +83,7 @@ namespace Schmup
             }
             for (int i = 0; i < strongShotNb; i++)
             {
-                HeroShot shot = new HeroShot(this.LuxGame, 0, null);
+                HeroShot shot = new HeroShot(this.LuxGame, world, 0, null);
                 Sprite shotSprite = new Sprite(shot, new List<Texture2D>() { strongBulletText }, null);
                 shot.Skin = shotSprite;
                 shotSprite.SetAnimation(strongBulletText.Name);
@@ -89,7 +91,7 @@ namespace Schmup
                 Game.Components.Add(shotSprite);
                 strongShots.Add(shot);
             }
-            lazer = new HeroLazer(this.LuxGame, 10, 20, null);
+            lazer = new HeroLazer(this.LuxGame, world, 10, 20, null);
             Sprite lazerSprite = new Sprite(lazer, new List<string>() { "lazermoche" });
             lazer.Skin = lazerSprite;
             lazerSprite.SetAnimation("lazermoche");
@@ -97,7 +99,7 @@ namespace Schmup
             Game.Components.Add(lazer);
             Game.Components.Add(lazerSprite);
 
-            powerShot = new HeroPower(this.LuxGame, 0, null);
+            powerShot = new HeroPower(this.LuxGame, world, 0, null);
             Sprite powerShotSprite = new Sprite(powerShot, new List<Texture2D>() { powerShotText }, null);
             powerShot.Skin = powerShotSprite;
             powerShotSprite.SetAnimation(powerShotText.Name);
@@ -288,10 +290,10 @@ namespace Schmup
                 PowerShoot();
             }
 
-            Common.PowerPosition = powerShot.Position;
+            //Common.PowerPosition = powerShot.Position;
 
             // Mise à jour de la position pour les ennemis
-            Common.HeroPosition = this.Position;
+            //world.GetHero().Position = this.Position;
 
             // Possibilité de sommaire
             if (Input.isActionDone(Input.Action.Confirm, false))

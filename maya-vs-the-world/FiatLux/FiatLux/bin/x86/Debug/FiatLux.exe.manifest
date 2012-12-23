@@ -100,7 +100,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>PLiJjTJYws0CixJWO7I1iryaw+U=</dsig:DigestValue>
+        <dsig:DigestValue>ZFr8kOmKXmi27Oa3WDvt4JCwges=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -112,7 +112,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>8kNZl3BXydIyTyQxQO5sh1auzAU=</dsig:DigestValue>
+        <dsig:DigestValue>gt0fU+PdwWGL3OEk3z8yuiErHCU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -124,17 +124,17 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Uwr6qVgTwUC4SWdV0IExq11MAoU=</dsig:DigestValue>
+        <dsig:DigestValue>SrCRx1ScBF46v9WFEgzcZVSfETE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Content\afterimageeffect.xnb" size="850">
+  <file name="Content\afterimageeffect.xnb" size="832">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>xk/0MUULHQaz7l2UcQpDxnjX5FY=</dsig:DigestValue>
+      <dsig:DigestValue>k6HNs7xvB9fCHJK1g/Q/cHPIcAY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\arrow.xnb" size="244">
@@ -164,13 +164,13 @@
       <dsig:DigestValue>qgdwYadd720groLUp3tEZd4PyEU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\barEffect.xnb" size="1062">
+  <file name="Content\barEffect.xnb" size="1048">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>lvyOIBUMYqrWy7NGHXGqI7j1olE=</dsig:DigestValue>
+      <dsig:DigestValue>D34BxLVgRtY44nCdXDkqKbq6fpQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Circle.xnb" size="418">
@@ -209,13 +209,13 @@
       <dsig:DigestValue>1CK99CmtzN7NK/ZEj1XN9My6W5U=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Distorsion.xnb" size="2352">
+  <file name="Content\Distorsion.xnb" size="2336">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>rqBK94skkA4vgAa1SCqsvFaoQeo=</dsig:DigestValue>
+      <dsig:DigestValue>wkBd0nUcEP5bc8p0ySFHNC9bRjU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\etoileactive.xnb" size="522">
@@ -245,22 +245,22 @@
       <dsig:DigestValue>QgcLXweuH6wE/W3wExlgJR57keU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Fog.xnb" size="1640">
+  <file name="Content\Fog.xnb" size="1626">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>RKa7fJj3hjislO7kEaWsORP7jQM=</dsig:DigestValue>
+      <dsig:DigestValue>NTPHzijJgecezUStaH66KBtOBVc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\FontEffects.xnb" size="1096">
+  <file name="Content\FontEffects.xnb" size="1076">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>dSzBHwQ1lUvlBCs+PNHdL2zNezw=</dsig:DigestValue>
+      <dsig:DigestValue>jsB03af7TtuzUaBwFyBo+NkZb8c=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\FontTest.xnb" size="6510">

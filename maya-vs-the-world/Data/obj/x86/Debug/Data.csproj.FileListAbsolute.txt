@@ -28,3 +28,9 @@ C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Data\o
 C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Data.dll
 C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Data.pdb
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Data\bin\x86\Debug\Data.dll
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Data\bin\x86\Debug\Data.pdb
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Data.dll
+C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Data\obj\x86\Debug\Data.pdb

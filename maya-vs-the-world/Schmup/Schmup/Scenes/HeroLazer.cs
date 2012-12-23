@@ -16,8 +16,8 @@ namespace Schmup
         private List<Texture2D> texture;
         private List<Vector2> vectors;
 
-        public HeroLazer(LuxGame game, int invincibleTimeMillisec, int spriteNb, Sprite skin)
-            : base(game, invincibleTimeMillisec, true, 10, skin)
+        public HeroLazer(LuxGame game, World world, int invincibleTimeMillisec, int spriteNb, Sprite skin)
+            : base(game, invincibleTimeMillisec, true, world, 10, skin)
         {
             this.spriteNb = spriteNb;
             texture = new List<Texture2D>(spriteNb);
@@ -33,17 +33,17 @@ namespace Schmup
             lazers = new List<Shot>(spriteNb);
             vectors = new List<Vector2>(spriteNb);
             currentLazerPart = 0;
-            for (int i = 0; i < spriteNb; i++)
-            {
-                Vector2 vect = new Vector2(0, 0);
-                vectors.Add(vect);
-                Shot shot = new Shot(this.LuxGame, 0, true, 10, null);
-                shot.Skin = new Sprite(shot, new List<Texture2D>() { texture[i] }, null);
-                shot.Skin.SetAnimation(texture[i].Name);
-                Game.Components.Add(shot);
-                Game.Components.Add(shot.Skin);
-                lazers.Add(shot);
-            }
+            //for (int i = 0; i < spriteNb; i++)
+            //{
+            //    Vector2 vect = new Vector2(0, 0);
+            //    vectors.Add(vect);
+            //    Shot shot = new Shot(this.LuxGame, 0, true, 10, null);
+            //    shot.Skin = new Sprite(shot, new List<Texture2D>() { texture[i] }, null);
+            //    shot.Skin.SetAnimation(texture[i].Name);
+            //    Game.Components.Add(shot);
+            //    Game.Components.Add(shot.Skin);
+            //    lazers.Add(shot);
+            //}
             base.Initialize();
         }
 

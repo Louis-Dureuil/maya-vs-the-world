@@ -17,7 +17,7 @@ namespace Schmup
         }
         // Positions générales servant pour à peu près toutes les classes
         // a enlever une fois les collisions codées?
-        public static Vector2 HeroPosition;
+        //public static Vector2 HeroPosition;
         public static Vector2 PowerPosition;
         public static Vector2 BossPosition;
         // Entiers servant pour le jeu

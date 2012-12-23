@@ -17,6 +17,7 @@ namespace Schmup
         private bool isOutOfRange;
         private bool goesThrough;
         private bool isABadShot;
+        private World world;
 
         public bool GoesThrough
         {
@@ -144,7 +145,7 @@ namespace Schmup
 
                 //Gestion d'une collision avec le héros
 
-                if (Vector2.Distance(Position, Common.HeroPosition) < hitbox && isABadShot)
+                if (Vector2.Distance(Position, world.GetHero().Position) < hitbox && isABadShot)
                 {
                     Common.HeroHit++;
                     System.Console.Write("Tu t'es fait frapper. Il te reste ");
@@ -189,31 +190,35 @@ namespace Schmup
             base.Draw(gameTime);
         }
 
-        public Shot(LuxGame game, int invincibleTimeMillisec, Sprite skin = null)
+        public Shot(LuxGame game, World world, int invincibleTimeMillisec, Sprite skin = null)
             : base(game)
         {
+            this.world = world;
             this.invincibleTimeMillisec = invincibleTimeMillisec;
             this.skin = skin;
             this.isABadShot = true;
             this.hitbox = 3;
+
         }
 
-        public Shot(LuxGame game, int invincibleTimeMillisec, bool isAGoodShot, int hitbox, Sprite skin = null)
+        public Shot(LuxGame game, int invincibleTimeMillisec, bool isAGoodShot, World world, int hitbox, Sprite skin = null)
             : base(game)
         {
             this.invincibleTimeMillisec = invincibleTimeMillisec;
             this.skin = skin;
             this.isABadShot = !isAGoodShot;
             this.hitbox = hitbox;
+            this.world = world;
         }
 
-        public Shot(LuxGame game, int invincibleTimeMillisec, int hitbox, Sprite skin = null)
+        public Shot(LuxGame game, int invincibleTimeMillisec, int hitbox, World world, Sprite skin = null)
             : base(game)
         {
             this.invincibleTimeMillisec = invincibleTimeMillisec;
             this.skin = skin;
             this.isABadShot = true;
             this.hitbox = hitbox;
+            this.world = world;
         }
     }
 }
