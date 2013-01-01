@@ -145,7 +145,7 @@ namespace Schmup
 
                 //Gestion d'une collision avec le héros
 
-                if (Vector2.Distance(Position, world.GetHero().Position) < hitbox && isABadShot)
+                if (Vector2.Distance(Position, world.Hero.Position) < hitbox && isABadShot)
                 {
                     Common.HeroHit++;
                     System.Console.Write("Tu t'es fait frapper. Il te reste ");
@@ -157,30 +157,7 @@ namespace Schmup
                     accel = new Vector2(0, 0);
                 }
 
-                //Gestion d'une collision avec le pouvoir
 
-                if (Vector2.Distance(Position, Common.PowerPosition) < 22 && isABadShot)
-                {
-                    Common.PowerHit++;
-
-                    Position = new Vector2(-40, -40);
-                    speed = new Vector2(0, 0);
-                    accel = new Vector2(0, 0);
-                }
-
-                //Gestion d'une collision avec le boss
-
-                if (Vector2.Distance(Position, Common.BossPosition) < 60 && !isABadShot)
-                {
-                    Common.BossHit++;
-
-                    if (!goesThrough)
-                    {
-                        Position = new Vector2(-40, -40);
-                        speed = new Vector2(0, 0);
-                        accel = new Vector2(0, 0);
-                    }
-                }
             }
             base.Update(gameTime);
         }

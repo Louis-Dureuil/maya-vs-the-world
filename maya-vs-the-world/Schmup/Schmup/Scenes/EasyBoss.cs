@@ -29,12 +29,10 @@ namespace Schmup
         private Vector2 currentDirectionVector;
         private Vector2 currentAccelVector;
         private float rotationAngle;
-        private World world;
 
         public EasyBoss(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin, Texture2D bulletText, int shotHitbox)
-            : base(game, life, takenDamageCollision, givenDamageCollision, 600, skin, bulletText, shotHitbox)
+            : base(game, world, life, takenDamageCollision, givenDamageCollision, 600, skin, bulletText, shotHitbox)
         {
-            this.world = world;
             this.bigBulletText = this.Game.Content.Load<Texture2D>("bigbullet001-1");
             this.enemyTexture = this.Game.Content.Load<Texture2D>("commonEnemy");
             this.warningTexture = this.Game.Content.Load<Texture2D>("warning");
@@ -45,16 +43,16 @@ namespace Schmup
             elapsed = 0;
             shootOrder = 0;
             rank = 0;
-            shooter = new Enemy(this.LuxGame, 0, 0, 0, 600, null);
+            shooter = new Enemy(LuxGame, World, 0, 0, 0, 600, null);
             shooter.Skin = new Sprite(shooter, new List<Texture2D>() { enemyTexture }, null);
             shooter.Skin.SetAnimation(enemyTexture.Name);
             Game.Components.Add(shooter);
-            warning = new Enemy(this.LuxGame, 0, 0, 0, 0, null);
+            warning = new Enemy(LuxGame, World, 0, 0, 0, 0, null);
             warning.Skin = new Sprite(warning, new List<Texture2D>() { warningTexture }, null);
             warning.Skin.SetAnimation(warningTexture.Name);
             warning.Position = new Vector2(-40, -40);
             Game.Components.Add(warning);
-            bigShooter = new Enemy(this.LuxGame, 0, 0, 0, 20, null, bigBulletText, 20);
+            bigShooter = new Enemy(LuxGame, World, 0, 0, 0, 20, null, bigBulletText, 20);
             bigShooter.Skin = new Sprite(bigShooter, new List<Texture2D>() { enemyTexture }, null);
             bigShooter.Skin.SetAnimation(enemyTexture.Name);
             for (int i = 0; i < 20; i++)
@@ -127,11 +125,11 @@ namespace Schmup
             {
                 for (int i = 0; i < 2; i++)
                 {
-                    shooter.RandomPatternShoot(this.Position + new Vector2(40 - 80 * i, 0), (5 + rank) * Vector2.Normalize(world.GetHero().Position - this.Position - new Vector2(40 - 80 * i, 0)), -(float)0.015 * Vector2.Normalize(world.GetHero().Position - this.Position - new Vector2(40 - 80 * i, 0)), 25, 5, 0);
+                    shooter.RandomPatternShoot(this.Position + new Vector2(40 - 80 * i, 0), (5 + rank) * Vector2.Normalize(World.Hero.Position - this.Position - new Vector2(40 - 80 * i, 0)), -(float)0.015 * Vector2.Normalize(World.Hero.Position - this.Position - new Vector2(40 - 80 * i, 0)), 25, 5, 0);
                 }
                 for (int i = 0; i < 2; i++)
                 {
-                    shooter.RandomPatternShoot(this.Position + new Vector2(40 - 80 * i, 0), (5 + rank) * Vector2.Normalize(world.GetHero().Position - this.Position - new Vector2(40 - 80 * i, 0)), -(float)0.005 * Vector2.Normalize(world.GetHero().Position - this.Position - new Vector2(40 - 80 * i, 0)), 1, 6*rank, 0);
+                    shooter.RandomPatternShoot(this.Position + new Vector2(40 - 80 * i, 0), (5 + rank) * Vector2.Normalize(World.Hero.Position - this.Position - new Vector2(40 - 80 * i, 0)), -(float)0.005 * Vector2.Normalize(World.Hero.Position - this.Position - new Vector2(40 - 80 * i, 0)), 1, 6*rank, 0);
                 }
                 shootOrder++;
             }
@@ -159,7 +157,7 @@ namespace Schmup
                     shootOrder++;
                     if (rank > 1 && shootOrder % 10 == 0 && shootOrder < 40 && shootOrder > 0)
                     {
-                        shooter.BigPatternShoot(world.GetHero().Position - this.Position, 10, 1, 2, 5, (float)5.2);
+                        shooter.BigPatternShoot(World.Hero.Position - this.Position, 10, 1, 2, 5, (float)5.2);
                     }
                 }
             }

@@ -36,15 +36,13 @@ namespace Schmup
         private Vector2 currentDirectionVector;
         private Vector2 currentDirectionVector2;
         private float rotationAngle;
-        private World world;
 
         public FastBoss(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin, Texture2D bulletText, World world, int shotHitbox)
-            : base(game, life, takenDamageCollision, givenDamageCollision, 600, skin, bulletText, shotHitbox)
+            : base(game, world, life, takenDamageCollision, givenDamageCollision, 600, skin, bulletText, shotHitbox)
         {
             this.bigBulletText = this.Game.Content.Load<Texture2D>("bigbullet001-1");
             this.enemyTexture = this.Game.Content.Load<Texture2D>("commonEnemy");
             this.warningTexture = this.Game.Content.Load<Texture2D>("warning");
-            this.world = world;
         }
 
         public override void Initialize()
@@ -53,16 +51,16 @@ namespace Schmup
             shootOrder = 0;
             secondShootOrder = 0;
             rank = 0;
-            shooter = new Enemy(this.LuxGame, 0, 0, 0, 600, null);
+            shooter = new Enemy(LuxGame, World, 0, 0, 0, 600, null);
             shooter.Skin = new Sprite(shooter, new List<Texture2D>() { enemyTexture }, null);
             shooter.Skin.SetAnimation(enemyTexture.Name);
             Game.Components.Add(shooter);
-            warning = new Enemy(this.LuxGame, 0, 0, 0, 0, null);
+            warning = new Enemy(LuxGame, World, 0, 0, 0, 0, null);
             warning.Skin = new Sprite(warning, new List<Texture2D>() { warningTexture }, null);
             warning.Skin.SetAnimation(warningTexture.Name);
             warning.Position = new Vector2(-40, -40);
             Game.Components.Add(warning);
-            bigShooter = new Enemy(this.LuxGame, 0, 0, 0, 200, null, bigBulletText, 20);
+            bigShooter = new Enemy(LuxGame, World, 0, 0, 0, 200, null, bigBulletText, 20);
             bigShooter.Skin = new Sprite(bigShooter, new List<Texture2D>() { enemyTexture }, null);
             bigShooter.Skin.SetAnimation(enemyTexture.Name);
             for (int i = 0; i < 20; i++)
@@ -76,7 +74,7 @@ namespace Schmup
             }
             for (int i = 0; i < 15; i++)
             {
-                RotatingShot rotatingShot = new RotatingShot(this.LuxGame, world, 0, false, (float)0.02, 20, null);
+                RotatingShot rotatingShot = new RotatingShot(this.LuxGame, World, 0, false, (float)0.02, 20, null);
                 rotatingShot.Skin = new Sprite(rotatingShot, new List<Texture2D>() { bigBulletText }, null);
                 rotatingShot.Skin.SetAnimation(bigBulletText.Name);
                 Game.Components.Add(rotatingShot);
@@ -192,7 +190,7 @@ namespace Schmup
                         for (int j = 0; j < 2; j++)
                         {
                             shooter.RandomPatternShoot(Position + new Vector2(-30 + 60 * j, -20),
-                                (3 + (float)0.05 * shootOrder) * Vector2.Normalize(world.GetHero().Position - Position - new Vector2(-30 + 60 * j, -20)),
+                                (3 + (float)0.05 * shootOrder) * Vector2.Normalize(this.World.Hero.Position - Position - new Vector2(-30 + 60 * j, -20)),
                                 new Vector2(0, 0), 4 - (float)0.01 * shootOrder, 7, 0);
                         }
                     }
@@ -219,8 +217,8 @@ namespace Schmup
                         for (int j = 0; j < 15; j++)
                         {
                             SuperShoot(rotatingShots[j].Position,
-                                2* Vector2.Normalize(world.GetHero().Position - rotatingShots[j].Position),
-                                (float)0.03 * Vector2.Normalize(world.GetHero().Position - rotatingShots[j].Position));
+                                2* Vector2.Normalize(this.World.Hero.Position - rotatingShots[j].Position),
+                                (float)0.03 * Vector2.Normalize(this.World.Hero.Position - rotatingShots[j].Position));
                         }
                     }
                     if (shootOrder % 9 == 5)
@@ -281,11 +279,11 @@ namespace Schmup
                     secondShootOrder++;
                     if (secondShootOrder % 8 == 0)
                     {
-                        currentDirectionVector2 = 5 * Vector2.Normalize(world.GetHero().Position - Position - new Vector2(20, 20));
+                        currentDirectionVector2 = 5 * Vector2.Normalize(this.World.Hero.Position - Position - new Vector2(20, 20));
                     }
                     else if (secondShootOrder % 8 == 4)
                     {
-                        currentDirectionVector2 = 5 * Vector2.Normalize(world.GetHero().Position - Position - new Vector2(-20, 20));
+                        currentDirectionVector2 = 5 * Vector2.Normalize(this.World.Hero.Position - Position - new Vector2(-20, 20));
                     }
                     if (secondShootOrder % 8 < 4)
                     {

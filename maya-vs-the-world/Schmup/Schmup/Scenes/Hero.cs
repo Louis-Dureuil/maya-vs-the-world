@@ -41,6 +41,8 @@ namespace Schmup
         private HeroLazer lazer;
         private Texture2D lazerText;
         private int powerNumberOfUses;
+        
+        
         private World world;
 
         public bool SpeedType
@@ -61,10 +63,10 @@ namespace Schmup
             this.world = world;
             this.speed1 = speed1;
             this.speed2 = speed2;
-            //this.weakBulletText = this.Content.Load<Texture2D>("bullet003-1");
-            //this.strongBulletText = this.Content.Load<Texture2D>("bullet004-1");
-            //this.powerShotText = this.Content.Load<Texture2D>("bomb");
-            //this.lazerText = this.Content.Load<Texture2D>("lazermoche");
+            this.weakBulletText = this.Content.Load<Texture2D>("bullet003-1");
+            this.strongBulletText = this.Content.Load<Texture2D>("bullet004-1");
+            this.powerShotText = this.Content.Load<Texture2D>("bomb");
+            this.lazerText = this.Content.Load<Texture2D>("lazermoche");
         }
 
         public override void Initialize()
@@ -80,6 +82,7 @@ namespace Schmup
                 Game.Components.Add(shot);
                 Game.Components.Add(shotSprite);
                 weakShots.Add(shot);
+                world.GoodShots.Add(shot);
             }
             for (int i = 0; i < strongShotNb; i++)
             {
@@ -90,6 +93,7 @@ namespace Schmup
                 Game.Components.Add(shot);
                 Game.Components.Add(shotSprite);
                 strongShots.Add(shot);
+                world.GoodShots.Add(shot);
             }
             lazer = new HeroLazer(this.LuxGame, world, 10, 20, null);
             Sprite lazerSprite = new Sprite(lazer, new List<string>() { "lazermoche" });
@@ -105,6 +109,7 @@ namespace Schmup
             powerShotSprite.SetAnimation(powerShotText.Name);
             Game.Components.Add(powerShot);
             Game.Components.Add(powerShotSprite);
+            world.GoodShots.Add(powerShot);
         }
 
         public void WeakShoot()
@@ -293,7 +298,7 @@ namespace Schmup
             //Common.PowerPosition = powerShot.Position;
 
             // Mise à jour de la position pour les ennemis
-            //world.GetHero().Position = this.Position;
+            //world.Hero.Position = this.Position;
 
             // Possibilité de sommaire
             if (Input.isActionDone(Input.Action.Confirm, false))

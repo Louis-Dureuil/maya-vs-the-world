@@ -17,23 +17,35 @@ namespace Schmup
         // avec la même hitbox
         private int shotHitbox;
 
+        private World world;
+
+        public World World
+        {
+            get
+            {
+                return world;
+            }
+        }
+
         // Si rien n'est spécifié, il charge les tirs de base
-        public Enemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision,
+        public Enemy(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision,
             int shotNb, Sprite skin)
             : base(game, life, takenDamageCollision, givenDamageCollision, skin)
         {
             this.shotNb = shotNb;
             this.bulletText = this.Content.Load<Texture2D>("bullet001-1");
             this.shotHitbox = 8;
+            this.world = world;
         }
 
-        public Enemy(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, int shotNb,
+        public Enemy(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision, int shotNb,
             Sprite skin, Texture2D bulletText, int shotHitbox)
             : base(game, life, takenDamageCollision, givenDamageCollision, skin)
         {
             this.shotNb = shotNb;
             this.bulletText = bulletText;
             this.shotHitbox = shotHitbox;
+            this.world = world;
         }
 
         public override void Initialize()

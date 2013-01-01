@@ -19,13 +19,11 @@ namespace Schmup
         private double midElapsed;
         //List<RotatingEnemy> commonEnemies = new List<RotatingEnemy>(6);
         Enemy shooter;
-        private World world;
 
         public BigBoss(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision, bool shootsHero, int waitTimeFrames, Sprite skin, Texture2D bulletText)
-            : base(game, life, takenDamageCollision, givenDamageCollision, 650, skin, bulletText, 8)
+            : base(game, world, life, takenDamageCollision, givenDamageCollision, 650, skin, bulletText, 8)
         {
             // A AMELIORER
-            this.world = world;
             this.bulletTexture = this.Content.Load<Texture2D>("bullet001-1");
             this.bulletTexture2 = this.Content.Load<Texture2D>("bullet002-1");
             this.bulletTexture3 = this.Content.Load<Texture2D>("bullet005-1");
@@ -36,7 +34,7 @@ namespace Schmup
         {
             base.Initialize();
             shootNb = 0;
-            shooter = new Enemy(this.LuxGame, 10, 10, 10, 300, null, bulletTexture, 8);
+            shooter = new Enemy(LuxGame, World, 10, 10, 10, 300, null, bulletTexture, 8);
             shooter.Skin = new Sprite(shooter, new List<Texture2D>() { enemyTexture }, null);
             shooter.Skin.SetAnimation(enemyTexture.Name);
             shooter.Position = new Vector2(400, 100);
@@ -87,7 +85,7 @@ namespace Schmup
         {
             if (shootNb % 30 == 0 && shootNb < 601)
             {
-                shooter.Shoot(7 * Vector2.Normalize(world.GetHero().Position - shooter.Position));
+                shooter.Shoot(7 * Vector2.Normalize(World.Hero.Position - shooter.Position));
             }
         }
 
@@ -98,7 +96,7 @@ namespace Schmup
                 midElapsed = 0;
                 shootNb++;
                 shooter.RandomPatternShoot(this.Position, new Vector2(3, 0), new Vector2(0, 0), 5, 72, 5);
-                BigPatternShoot(world.GetHero().Position - this.Position, 5, Common.Rand.Next(2, 10), 2, (float)4.8, (float)5.2);
+                BigPatternShoot(World.Hero.Position - this.Position, 5, Common.Rand.Next(2, 10), 2, (float)4.8, (float)5.2);
             }
             if (midElapsed >= 1 && shootNb == 622)
             {
@@ -113,8 +111,8 @@ namespace Schmup
             {
                 midElapsed = 0;
                 shootNb++;
-                BigPatternShoot(world.GetHero().Position - this.Position, 5, 4, (shootNb - 622)+1, (float)3.5, (float)3.5 + (shootNb - 622));
-                BigPatternShoot(world.GetHero().Position - this.Position, 4, 4, (shootNb - 622), 4, 4 + (shootNb - 623));
+                BigPatternShoot(World.Hero.Position - this.Position, 5, 4, (shootNb - 622)+1, (float)3.5, (float)3.5 + (shootNb - 622));
+                BigPatternShoot(World.Hero.Position - this.Position, 4, 4, (shootNb - 622), 4, 4 + (shootNb - 623));
             }
         }
 
@@ -127,7 +125,7 @@ namespace Schmup
             {
                 if (elapsed >= i + 0.1 && shootNb == i)
                 {
-                    BigPatternShoot(world.GetHero().Position - this.Position, shootNb + 1, 20, shootNb - 1, 1, (float)shootNb / (float)2);
+                    BigPatternShoot(World.Hero.Position - this.Position, shootNb + 1, 20, shootNb - 1, 1, (float)shootNb / (float)2);
                     shootNb++;
                 }
             }
