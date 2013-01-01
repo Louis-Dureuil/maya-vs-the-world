@@ -10,22 +10,25 @@ namespace Schmup
     class Character : LuxEngine.Scene
     {
         private int life;
-        private int lifeStart;
+
+        // Les deux int qui suivent désignent les dommages qu'un type peut causer, et ceux qu'il peut encaisser lors d'une collision.
+        // Exemple : Un gros vaisseau en métal va pas avoir mal lors d'une collision,
+        // Mais c'est pas pour autant qu'il va vous démolir! Il y a plein d'autres exemples.
         private int takenDamageCollision;
         private int givenDamageCollision;
+
         // hurtbox a definir
         // animation mort
-        // skin
         private Sprite skin;
 
-        public Character(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin)
-            : base(game)
+        private World world;
+
+        public World World
         {
-            this.life = life;
-            this.lifeStart = life;
-            this.takenDamageCollision = takenDamageCollision;
-            this.givenDamageCollision = givenDamageCollision;
-            this.skin = skin;
+            get
+            {
+                return world;
+            }
         }
 
         public Sprite Skin
@@ -40,23 +43,25 @@ namespace Schmup
             }
         }
 
+
+        public Character(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin)
+            : base(game)
+        {
+            this.life = life;
+            this.takenDamageCollision = takenDamageCollision;
+            this.givenDamageCollision = givenDamageCollision;
+            this.skin = skin;
+            this.world = world;
+        }
+
         public void Hurt()
         {
             life -= 1;
         }
 
-        public void LifeChange(int lifeMinus)
-        {
-            // a été fait par manque d'organisation
-            // sert pour le boss, dont on ne tient pas compte des blessures à chaque fois
-            life = lifeStart - lifeMinus;
-        }
-
         public void Die()
         {
-            // a corriger éventuellement
-            // N'efface pas les balles
-            Position = new Vector2(-400, -400);
+            // TODO : Ajouter l'animation de mort
             Enabled = false;
         }
 
