@@ -188,10 +188,6 @@ namespace Schmup
                 System.Console.Write("Charge tirée ");
                 System.Console.Write(0);
                 System.Console.WriteLine(" fois");
-                System.Console.Write("Nombre de tirs encaissés : ");
-                System.Console.WriteLine(Common.HeroHit);
-                System.Console.Write("Score : ");
-                System.Console.WriteLine(Common.PowerHit);
             }
 
             base.Update(gameTime);

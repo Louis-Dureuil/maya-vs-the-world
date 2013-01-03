@@ -9,8 +9,9 @@ namespace Schmup
 {
     class Shot : Scene
     {
-        private int hitbox;
-        private int invincibleTimeMillisec;
+        private float hitbox;
+        private double invincibleTimeSec;
+        private int damage;
         private Vector2 speed;
         private Vector2 accel;
         private Sprite skin;
@@ -25,10 +26,6 @@ namespace Schmup
             {
                 return goesThrough;
             }
-            set
-            {
-                goesThrough = value;
-            }
         }
 
         public bool IsOutOfRange
@@ -37,22 +34,14 @@ namespace Schmup
             {
                 return isOutOfRange;
             }
-            set
-            {
-                isOutOfRange = value;
-            }
         }
 
 
-        public int InvincibleTimeMillisec
+        public double InvincibleTimeSec
         {
             get
             {
-                return invincibleTimeMillisec;
-            }
-            set
-            {
-                invincibleTimeMillisec = value;
+                return invincibleTimeSec;
             }
         }
 
@@ -92,12 +81,27 @@ namespace Schmup
             }
         }
 
+        public float Hitbox
+        {
+            get
+            {
+                return hitbox;
+            }
+        }
+
+        public int Damage
+        {
+            get
+            {
+                return damage;
+            }
+        }
+
         public override void Initialize()
         {
             Position = new Vector2(-40, -40);
             this.Enabled = false;
             isOutOfRange = true;
-            goesThrough = false;
             base.Initialize();
         }
 
@@ -125,39 +129,24 @@ namespace Schmup
                 //}
 
                 // Gestion de l'atteinte aux bordures
+                // TODO : Mettre des variables globales
 
-                if (this.Position.Y < -30)
+                if (this.Position.Y < -hitbox)
                 {
                     isOutOfRange = true;
                 }
-                if (this.Position.Y > 500)
+                if (this.Position.Y > 480 + hitbox)
                 {
                     isOutOfRange = true;
                 }
-                if (this.Position.X < -30)
+                if (this.Position.X < -hitbox)
                 {
                     isOutOfRange = true;
                 }
-                if (this.Position.X > 830)
+                if (this.Position.X > 800 + hitbox)
                 {
                     isOutOfRange = true;
                 }
-
-                //Gestion d'une collision avec le héros
-
-                if (Vector2.Distance(Position, world.Hero.Position) < hitbox && isABadShot)
-                {
-                    Common.HeroHit++;
-                    System.Console.Write("Tu t'es fait frapper. Il te reste ");
-                    System.Console.Write(10 - Common.HeroHit);
-                    System.Console.WriteLine(" tentatives.");
-
-                    Position = new Vector2(-40, -40);
-                    speed = new Vector2(0, 0);
-                    accel = new Vector2(0, 0);
-                }
-
-
             }
             base.Update(gameTime);
         }
@@ -171,19 +160,19 @@ namespace Schmup
             : base(game)
         {
             this.world = world;
-            this.invincibleTimeMillisec = invincibleTimeMillisec;
+            this.invincibleTimeSec = invincibleTimeMillisec;
             this.skin = skin;
             this.isABadShot = true;
             this.hitbox = 3;
-
         }
 
-        public Shot(LuxGame game, int invincibleTimeMillisec, bool isAGoodShot, World world, int hitbox, Sprite skin = null)
+        public Shot(LuxGame game, int invincibleTimeMillisec, bool isAGoodShot, bool goesThrough, World world, int hitbox, Sprite skin = null)
             : base(game)
         {
-            this.invincibleTimeMillisec = invincibleTimeMillisec;
+            this.invincibleTimeSec = invincibleTimeMillisec;
             this.skin = skin;
             this.isABadShot = !isAGoodShot;
+            this.goesThrough = goesThrough;
             this.hitbox = hitbox;
             this.world = world;
         }
@@ -191,7 +180,7 @@ namespace Schmup
         public Shot(LuxGame game, int invincibleTimeMillisec, int hitbox, World world, Sprite skin = null)
             : base(game)
         {
-            this.invincibleTimeMillisec = invincibleTimeMillisec;
+            this.invincibleTimeSec = invincibleTimeMillisec;
             this.skin = skin;
             this.isABadShot = true;
             this.hitbox = hitbox;
