@@ -100,7 +100,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>O7WJzpwInuHXAtsazslF7UITCPA=</dsig:DigestValue>
+        <dsig:DigestValue>tI0OppBL4EQxCVIJTotT+ZHpvBs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -112,19 +112,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>3QZy2wiXgWd8wYh5xbCuf32ZyUw=</dsig:DigestValue>
+        <dsig:DigestValue>s5AHvl6qfkrM4ALF2oQniWR+pDM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LuxEngine.dll" size="39936">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LuxEngine.dll" size="40448">
       <assemblyIdentity name="LuxEngine" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>cCawSCicNoxezrS/BADJFUNZL08=</dsig:DigestValue>
+        <dsig:DigestValue>0fLyjewLKNCUV/Bi8FaUGkyYOcw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
