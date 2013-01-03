@@ -18,7 +18,7 @@ namespace Schmup
         private double elapsed;
 
         public World(LuxGame game, Hero hero, List<Enemy> enemies, List<Shot> badShots, List<Shot> goodShots)
-            :base(game)
+            : base(game)
         {
             this.hero = hero;
             this.enemies = enemies;
@@ -87,6 +87,54 @@ namespace Schmup
         {
             base.Update(gameTime);
             elapsed += gameTime.ElapsedGameTime.TotalSeconds;
+
+            // Gestion Heros -- Balles ennemies
+            foreach (Shot badShot in badShots)
+            {
+                if (Vector2.Distance(badShot.Position, hero.Position) < badShot.Hitbox)
+                {
+                    System.Console.Write("Tu t'es fait frapper. Il te reste ");
+                    System.Console.Write(hero.Life);
+                    System.Console.WriteLine(" points de vie.");
+
+                    //TODO : Changer ça peut-être?
+                    badShot.Position = new Vector2(-40, -40);
+                    badShot.Speed = new Vector2(0, 0);
+                    badShot.Accel = new Vector2(0, 0);
+                }
+            }
+
+            // Gestion Ennemis -- Balles du heros
+            foreach (Enemy enemy in enemies)
+            {
+                foreach (Shot goodShot in goodShots)
+                {
+                    if (Vector2.Distance(goodShot.Position, enemy.Position) < goodShot.Hitbox)
+                    {
+                        System.Console.Write("Ennemi touchey");
+                        // L'ennemi a mal.
+                        enemy.Hurt(goodShot.Damage);
+
+                        // La balle disparait.
+                        // TODO : Changer ça peut-être?
+                        goodShot.Position = new Vector2(-40, -40);
+                        goodShot.Speed = new Vector2(0, 0);
+                        goodShot.Accel = new Vector2(0, 0);
+                    }
+                }
+            }
+
+            // Gestion Ennemis -- Heros
+            foreach (Enemy enemy in enemies)
+            {
+                // TODO : Trouver une hitbox pour le héros? Comment faire?
+                if (Vector2.Distance(hero.Position, enemy.Position) < 20)
+                {
+                    System.Console.WriteLine("Collision");
+                }
+            }
+
+            // Système de débug
             if (elapsed > 1)
             {
                 elapsed = 0;
@@ -107,6 +155,8 @@ namespace Schmup
                     System.Console.WriteLine(enemy.Position);
                 }
             }
+
+
         }
     }
 }

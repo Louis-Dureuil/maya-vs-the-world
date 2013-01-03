@@ -43,6 +43,13 @@ namespace Schmup
             }
         }
 
+        public int Life
+        {
+            get
+            {
+                return life;
+            }
+        }
 
         public Character(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin)
             : base(game)
@@ -54,9 +61,9 @@ namespace Schmup
             this.world = world;
         }
 
-        public void Hurt()
+        public void Hurt(int lifeMinus)
         {
-            life -= 1;
+            life -= lifeMinus;
         }
 
         public void Die()
