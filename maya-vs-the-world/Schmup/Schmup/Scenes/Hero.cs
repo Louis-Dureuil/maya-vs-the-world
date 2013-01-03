@@ -31,8 +31,8 @@ namespace Schmup
         private int speed2;
         private bool speedType;
 
-
         private World world;
+
 
         public bool SpeedType
         {
@@ -86,19 +86,13 @@ namespace Schmup
                 if (speedType)
                 {
                     speedType = false;
+                    speed = speed1;
                 }
                 else
                 {
                     speedType = true;
+                    speed = speed2;
                 }
-            }
-            if (speedType)
-            {
-                speed = speed1;
-            }
-            else
-            {
-                speed = speed2;
             }
 
             // Gestion du déplacement
