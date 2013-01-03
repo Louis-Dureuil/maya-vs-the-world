@@ -121,14 +121,14 @@ namespace LuxEngine
         public Scene(LuxGame game)
             : base(game)
         {
-            Content = new ContentManager(game.Services,"Content");
+            Content = game.GlobalContentManager;
             //this.Game.Components.Add(this);
         }
 
         public Scene(Scene parent)
             : base(parent.Game)
         {
-            Content = new ContentManager(parent.Game.Services,"Content");
+            Content = parent.Content;
             this.parent = parent;
             this.Enabled = parent.Enabled;
             this.Visible = parent.Visible;
@@ -137,7 +137,7 @@ namespace LuxEngine
         }
 
         public override void Initialize()
-        {   
+        {
             this.EnabledChanged += new EventHandler<EventArgs>(Scene_EnabledChanged);
             this.VisibleChanged += new EventHandler<EventArgs>(Scene_VisibleChanged);
             //this.DrawOrder = parent != null ? parent.DrawOrder+1 : 0;
