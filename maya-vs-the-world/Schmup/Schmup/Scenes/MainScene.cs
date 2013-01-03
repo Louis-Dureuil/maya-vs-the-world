@@ -12,9 +12,9 @@ namespace Schmup
     {
 
         // Textures utilisées pendant tout le combat.
-        private Texture2D bullet1Texture;
-        private Texture2D bullet2Texture;
-        private Texture2D enemyTexture;
+        //private Texture2D bullet1Texture;
+        //private Texture2D bullet2Texture;
+        //private Texture2D enemyTexture;
         // Commenter une des deux lignes pour obtenir un des deux boss
         // Puis, dans Initialize(), commenter une des deux lignes
         //private BigBoss boss;
@@ -41,11 +41,5 @@ namespace Schmup
         //        enemy.Create();
         //    }
         //}
-
-        public override void Update(GameTime gameTime)
-        {
-            base.Update(gameTime);
-            world.Update(gameTime);
-        }
     }
 }

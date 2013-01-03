@@ -19,8 +19,8 @@ namespace Schmup
 
         // hurtbox a definir
         // animation mort
-        private Sprite skin;
 
+        private Sprite skin;
         private World world;
 
         public World World
