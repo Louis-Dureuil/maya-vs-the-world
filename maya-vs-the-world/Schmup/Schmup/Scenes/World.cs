@@ -91,7 +91,7 @@ namespace Schmup
             // Gestion Heros -- Balles ennemies
             foreach (Shot badShot in badShots)
             {
-                if (Vector2.Distance(badShot.Position, hero.Position) < badShot.Hitbox + 4)
+                if (Vector2.Distance(badShot.Position, hero.Position) < badShot.Hitbox)
                 {
                     hero.Hurt(badShot.Damage);
                     System.Console.Write("Tu t'es fait frapper. Il te reste ");

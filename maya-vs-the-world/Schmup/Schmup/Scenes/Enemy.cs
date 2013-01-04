@@ -25,7 +25,7 @@ namespace Schmup
         {
             this.shotNb = shotNb;
             this.bulletText = this.Content.Load<Texture2D>("bullet001-1");
-            this.shotHitbox = 8;
+            shotHitbox = 8;
             damage = 5;
         }
 
