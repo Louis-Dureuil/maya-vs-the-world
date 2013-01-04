@@ -48,7 +48,7 @@ namespace Schmup
             // (ce nombre est spécifié par l'utilisateur)
             for (int i = 0; i < shotNb; i++)
             {
-                Shot shot = new Shot(this.LuxGame, World, 0, null);
+                Shot shot = new Shot(this.LuxGame, 0, shotHitbox, damage, World, null);
                 shot.Skin = new Sprite(shot, new List<Texture2D>() { bulletText }, null);
                 shot.Skin.SetAnimation(bulletText.Name);
                 Game.Components.Add(shot);
