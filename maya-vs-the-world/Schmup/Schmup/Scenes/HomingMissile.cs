@@ -14,8 +14,8 @@ namespace Schmup
         // rotation est l'angle limite (en radians) de rotation du tir par frame
         private float rotation;
 
-        public HomingMissile(LuxGame game, int invincibleTimeMillisec, bool isAGoodShot, float rotation, int hitbox, World world, Sprite skin = null)
-            : base(game, invincibleTimeMillisec, isAGoodShot, false, world, hitbox, null)
+        public HomingMissile(LuxGame game, int invincibleTimeMillisec, bool isAGoodShot, float rotation, int hitbox, int damage, World world, Sprite skin = null)
+            : base(game, invincibleTimeMillisec, isAGoodShot, false, world, hitbox, damage, null)
         {
             this.rotation = rotation;
         }

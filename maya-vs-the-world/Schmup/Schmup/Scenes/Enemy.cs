@@ -10,6 +10,7 @@ namespace Schmup
 {
     class Enemy : Character
     {
+        private int damage;
         private int shotNb;
         private List<Shot> shots;
         private Texture2D bulletText;
@@ -25,15 +26,17 @@ namespace Schmup
             this.shotNb = shotNb;
             this.bulletText = this.Content.Load<Texture2D>("bullet001-1");
             this.shotHitbox = 8;
+            damage = 5;
         }
 
         public Enemy(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision, int shotNb,
-            Sprite skin, Texture2D bulletText, int shotHitbox)
+            Sprite skin, Texture2D bulletText, int shotHitbox, int damage)
             : base(game, world, life, takenDamageCollision, givenDamageCollision, skin)
         {
             this.shotNb = shotNb;
             this.bulletText = bulletText;
             this.shotHitbox = shotHitbox;
+            this.damage = damage;
         }
 
         public override void Initialize()
@@ -45,12 +48,13 @@ namespace Schmup
             // (ce nombre est spécifié par l'utilisateur)
             for (int i = 0; i < shotNb; i++)
             {
-                Shot shot = new Shot(this.LuxGame, 0, shotHitbox, null);
+                Shot shot = new Shot(this.LuxGame, World, 0, null);
                 shot.Skin = new Sprite(shot, new List<Texture2D>() { bulletText }, null);
                 shot.Skin.SetAnimation(bulletText.Name);
                 Game.Components.Add(shot);
                 Game.Components.Add(shot.Skin);
                 shots.Add(shot);
+                World.BadShots.Add(shot);
             }
             this.Enabled = false;
         }

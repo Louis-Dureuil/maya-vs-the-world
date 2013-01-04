@@ -40,7 +40,7 @@ namespace Schmup
         private float rotationAngle;
 
         public FastBoss(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin, Texture2D bulletText, World world, int shotHitbox)
-            : base(game, world, life, takenDamageCollision, givenDamageCollision, 600, skin, bulletText, shotHitbox)
+            : base(game, world, life, takenDamageCollision, givenDamageCollision, 600, skin, bulletText, shotHitbox, 10)
         {
             this.bigBulletText = this.Game.Content.Load<Texture2D>("bigbullet001-1");
             this.enemyTexture = this.Game.Content.Load<Texture2D>("commonEnemy");
@@ -62,17 +62,18 @@ namespace Schmup
             warning.Skin.SetAnimation(warningTexture.Name);
             warning.Position = new Vector2(-40, -40);
             Game.Components.Add(warning);
-            bigShooter = new Enemy(LuxGame, World, 0, 0, 0, 200, null, bigBulletText, 20);
+            bigShooter = new Enemy(LuxGame, World, 0, 0, 0, 200, null, bigBulletText, 20, 40);
             bigShooter.Skin = new Sprite(bigShooter, new List<Texture2D>() { enemyTexture }, null);
             bigShooter.Skin.SetAnimation(enemyTexture.Name);
             for (int i = 0; i < 20; i++)
             {
-                HomingMissile homingShoot = new HomingMissile(this.LuxGame, 0, false, (float)0.05, 20, null);
+                HomingMissile homingShoot = new HomingMissile(this.LuxGame, 0, false, (float)0.05, 20, 7, World, null);
                 homingShoot.Skin = new Sprite(homingShoot, new List<Texture2D>() { bigBulletText }, null);
                 homingShoot.Skin.SetAnimation(bigBulletText.Name);
                 Game.Components.Add(homingShoot);
                 Game.Components.Add(homingShoot.Skin);
                 homingShots.Add(homingShoot);
+                World.BadShots.Add(homingShoot);
             }
             for (int i = 0; i < 15; i++)
             {
@@ -82,6 +83,7 @@ namespace Schmup
                 Game.Components.Add(rotatingShot);
                 Game.Components.Add(rotatingShot.Skin);
                 rotatingShots.Add(rotatingShot);
+                World.BadShots.Add(rotatingShot);
             }
             Game.Components.Add(bigShooter);
             rotationAngle = (float)0.02;

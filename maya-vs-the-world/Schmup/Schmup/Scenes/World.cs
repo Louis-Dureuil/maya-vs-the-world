@@ -60,23 +60,23 @@ namespace Schmup
             base.Initialize();
             //List<string> skinName = new List<string>(4);
             //Texture2D bullet1Texture = this.Content.Load<Texture2D>("bullet001-1");
-            //Texture2D bullet2Texture = this.Content.Load<Texture2D>("bullet002-1");
+            Texture2D bullet2Texture = this.Content.Load<Texture2D>("bullet002-1");
             //Texture2D enemyTexture = this.Content.Load<Texture2D>("commonEnemy");
             //skinName.Add("carre");
             //skinName.Add("bullet001-1");
             //skinName.Add("bullet001-2");
             //skinName.Add("hero");
-            hero = new Hero(this.LuxGame, this, 10, 1, 1, 5, 2, null);
+            hero = new Hero(this.LuxGame, this, 1000, 1, 1, 5, 2, null);
             Sprite heroSprite = new Sprite(hero, new List<String>() { "hero" });
             hero.Skin = heroSprite;
             hero.Position = new Vector2(400, 400);
-            //FastBoss boss = new FastBoss(this.LuxGame, 1000, 10, 10, null, bullet2Texture, this, 8);
-            //boss.Skin = new Sprite(boss, new List<string>() { "boss" });
-            //boss.Skin.SetAnimation("boss");
-            //boss.Position = new Vector2(400, 50);
-            //this.enemies.Add(boss);
+            FastBoss boss = new FastBoss(this.LuxGame, 1000, 10, 10, null, bullet2Texture, this, 8);
+            boss.Skin = new Sprite(boss, new List<string>() { "boss" });
+            boss.Skin.SetAnimation("boss");
+            boss.Position = new Vector2(400, 50);
+            this.enemies.Add(boss);
 
-            //Game.Components.Add(boss);
+            Game.Components.Add(boss);
             Game.Components.Add(hero);
             Game.Components.Add(heroSprite);
 
@@ -91,8 +91,9 @@ namespace Schmup
             // Gestion Heros -- Balles ennemies
             foreach (Shot badShot in badShots)
             {
-                if (Vector2.Distance(badShot.Position, hero.Position) < badShot.Hitbox)
+                if (Vector2.Distance(badShot.Position, hero.Position) < badShot.Hitbox + 4)
                 {
+                    hero.Hurt(badShot.Damage);
                     System.Console.Write("Tu t'es fait frapper. Il te reste ");
                     System.Console.Write(hero.Life);
                     System.Console.WriteLine(" points de vie.");
@@ -107,6 +108,7 @@ namespace Schmup
             // Gestion Ennemis -- Balles du heros
             foreach (Enemy enemy in enemies)
             {
+                enemy.Update(gameTime);
                 foreach (Shot goodShot in goodShots)
                 {
                     if (Vector2.Distance(goodShot.Position, enemy.Position) < goodShot.Hitbox)
@@ -135,7 +137,7 @@ namespace Schmup
             }
 
             // Système de débug
-            if (elapsed > 1)
+            if (elapsed > 1000)
             {
                 elapsed = 0;
                 System.Console.WriteLine(hero.Position);

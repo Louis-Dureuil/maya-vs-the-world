@@ -128,6 +128,7 @@
     <Compile Include="Scenes\RotatingEnemy.cs" />
     <Compile Include="Scenes\RotatingShot.cs" />
     <Compile Include="Scenes\Shot.cs" />
+    <Compile Include="Scenes\ShotPull.cs" />
     <Compile Include="Scenes\TechnicalHero.cs" />
     <Compile Include="Scenes\World.cs" />
   </ItemGroup>

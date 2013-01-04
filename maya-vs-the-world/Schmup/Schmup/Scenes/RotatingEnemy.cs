@@ -36,7 +36,7 @@ namespace Schmup
         }
 
         public RotatingEnemy(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin, int shotNb, float angleBtwShotsDegrees, Vector2 direction, double waitTimeSec, int patShotNb, int patAngleBtwShotsDegrees, Texture2D bulletTexture, int bulletNumber, int shotHitbox)
-            : base(game, world, life, takenDamageCollision, givenDamageCollision, bulletNumber, skin, bulletTexture, shotHitbox)
+            : base(game, world, life, takenDamageCollision, givenDamageCollision, bulletNumber, skin, bulletTexture, shotHitbox, 2)
         {
             this.shotNb = shotNb;
             this.angleBtwShotsDegrees = angleBtwShotsDegrees;
@@ -47,7 +47,7 @@ namespace Schmup
         }
 
         public RotatingEnemy(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin, int shotNb, float angleBtwShotsDegrees, Vector2 direction, double waitTimeSec, int patShotNb, int patAngleBtwShotsDegrees, Texture2D bulletTexture, int shotHitbox)
-            : base(game, world, life, takenDamageCollision, givenDamageCollision, shotNb * patShotNb, skin, bulletTexture, shotHitbox)
+            : base(game, world, life, takenDamageCollision, givenDamageCollision, shotNb * patShotNb, skin, bulletTexture, shotHitbox, 2)
         {
             this.shotNb = shotNb;
             this.angleBtwShotsDegrees = angleBtwShotsDegrees;

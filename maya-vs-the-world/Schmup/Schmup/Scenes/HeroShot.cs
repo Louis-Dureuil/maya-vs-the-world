@@ -12,8 +12,8 @@ namespace Schmup
     {
         // CLASSE NON VALIDEE!
 
-        public HeroShot(LuxGame game, World world, int invincibleTimeMillisec, bool goesThrough, Sprite skin = null)
-            : base(game, invincibleTimeMillisec, true, goesThrough, world, 1, null)
+        public HeroShot(LuxGame game, World world, int invincibleTimeMillisec, bool goesThrough, int damage, Sprite skin = null)
+            : base(game, invincibleTimeMillisec, true, goesThrough, world, 1, damage, null)
         {
         }
 

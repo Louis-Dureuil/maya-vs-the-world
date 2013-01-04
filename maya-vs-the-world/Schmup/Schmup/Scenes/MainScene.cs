@@ -41,5 +41,11 @@ namespace Schmup
         //        enemy.Create();
         //    }
         //}
+
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+            world.Update(gameTime);
+        }
     }
 }

@@ -16,8 +16,8 @@ namespace Schmup
         private int scoreTotal;
         private bool powerIsShot;
 
-        public HeroPower(LuxGame game, World world, int invincibleTimeMillisec, Sprite skin = null)
-            : base(game, world, invincibleTimeMillisec, true, null)
+        public HeroPower(LuxGame game, World world, int invincibleTimeMillisec, int damage, Sprite skin = null)
+            : base(game, world, invincibleTimeMillisec, true, damage, null)
         {
         }
 

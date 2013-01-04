@@ -164,9 +164,10 @@ namespace Schmup
             this.skin = skin;
             this.isABadShot = true;
             this.hitbox = 3;
+            this.damage = 1;
         }
 
-        public Shot(LuxGame game, int invincibleTimeMillisec, bool isAGoodShot, bool goesThrough, World world, int hitbox, Sprite skin = null)
+        public Shot(LuxGame game, int invincibleTimeMillisec, bool isAGoodShot, bool goesThrough, World world, int hitbox, int damage, Sprite skin = null)
             : base(game)
         {
             this.invincibleTimeSec = invincibleTimeMillisec;
@@ -175,9 +176,10 @@ namespace Schmup
             this.goesThrough = goesThrough;
             this.hitbox = hitbox;
             this.world = world;
+            this.damage = damage;
         }
 
-        public Shot(LuxGame game, int invincibleTimeMillisec, int hitbox, World world, Sprite skin = null)
+        public Shot(LuxGame game, int invincibleTimeMillisec, int hitbox, int damage, World world, Sprite skin = null)
             : base(game)
         {
             this.invincibleTimeSec = invincibleTimeMillisec;
@@ -185,6 +187,7 @@ namespace Schmup
             this.isABadShot = true;
             this.hitbox = hitbox;
             this.world = world;
+            this.damage = damage;
         }
     }
 }

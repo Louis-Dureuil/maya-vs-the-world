@@ -23,7 +23,7 @@ namespace Schmup
         Enemy shooter;
 
         public BigBoss(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision, bool shootsHero, int waitTimeFrames, Sprite skin, Texture2D bulletText)
-            : base(game, world, life, takenDamageCollision, givenDamageCollision, 650, skin, bulletText, 8)
+            : base(game, world, life, takenDamageCollision, givenDamageCollision, 650, skin, bulletText, 8, 30)
         {
             // A AMELIORER
             this.bulletTexture = this.Content.Load<Texture2D>("bullet001-1");
@@ -36,7 +36,7 @@ namespace Schmup
         {
             base.Initialize();
             shootNb = 0;
-            shooter = new Enemy(LuxGame, World, 10, 10, 10, 300, null, bulletTexture, 8);
+            shooter = new Enemy(LuxGame, World, 10, 10, 10, 300, null, bulletTexture, 8, 10);
             shooter.Skin = new Sprite(shooter, new List<Texture2D>() { enemyTexture }, null);
             shooter.Skin.SetAnimation(enemyTexture.Name);
             shooter.Position = new Vector2(400, 100);
