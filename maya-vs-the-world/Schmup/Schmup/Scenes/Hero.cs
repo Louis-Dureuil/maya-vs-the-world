@@ -17,7 +17,7 @@ namespace Schmup
         // Besoin d'un marqueur pour donner l'arme courante du héros,
         // sa vitesse et son arme secondaire (le pouvoir)
         private int currentWeapon;
-        private int speed;
+        private int currentSpeed;
         private int currentPower;
 
         // Besoin de la liste d'armes dont le héros dispose
@@ -31,8 +31,8 @@ namespace Schmup
         private int speed2;
         private bool speedType;
 
-
         private World world;
+
 
         public bool SpeedType
         {
@@ -51,6 +51,7 @@ namespace Schmup
         {
             this.speed1 = speed1;
             this.speed2 = speed2;
+            this.currentSpeed = speed1;
         }
 
         public override void Initialize()
@@ -86,19 +87,13 @@ namespace Schmup
                 if (speedType)
                 {
                     speedType = false;
+                    currentSpeed = speed1;
                 }
                 else
                 {
                     speedType = true;
+                    currentSpeed = speed2;
                 }
-            }
-            if (speedType)
-            {
-                speed = speed1;
-            }
-            else
-            {
-                speed = speed2;
             }
 
             // Gestion du déplacement
@@ -106,43 +101,43 @@ namespace Schmup
             {
                 if (Input.isActionDone(Input.Action.Right, true))
                 {
-                    Position.X += speed / (float) Math.Sqrt(2);
-                    Position.Y -= speed / (float) Math.Sqrt(2);
+                    Position.X += currentSpeed / (float) Math.Sqrt(2);
+                    Position.Y -= currentSpeed / (float) Math.Sqrt(2);
                 }
                 else if (Input.isActionDone(Input.Action.Left, true))
                 {
-                    Position.X -= speed / (float) Math.Sqrt(2);
-                    Position.Y -= speed / (float) Math.Sqrt(2);
+                    Position.X -= currentSpeed / (float) Math.Sqrt(2);
+                    Position.Y -= currentSpeed / (float) Math.Sqrt(2);
                 }
                 else
                 {
-                    Position.Y -= speed;
+                    Position.Y -= currentSpeed;
                 }
             }
             else if (Input.isActionDone(Input.Action.Down, true))
             {
                 if (Input.isActionDone(Input.Action.Right, true))
                 {
-                    Position.X += speed / (float) Math.Sqrt(2);
-                    Position.Y += speed / (float) Math.Sqrt(2);
+                    Position.X += currentSpeed / (float) Math.Sqrt(2);
+                    Position.Y += currentSpeed / (float) Math.Sqrt(2);
                 }
                 else if (Input.isActionDone(Input.Action.Left, true))
                 {
-                    Position.X -= speed / (float) Math.Sqrt(2);
-                    Position.Y += speed / (float) Math.Sqrt(2);
+                    Position.X -= currentSpeed / (float) Math.Sqrt(2);
+                    Position.Y += currentSpeed / (float) Math.Sqrt(2);
                 }
                 else
                 {
-                    Position.Y += speed;
+                    Position.Y += currentSpeed;
                 }
             }
             else if (Input.isActionDone(Input.Action.Left, true))
             {
-                Position.X -= speed;
+                Position.X -= currentSpeed;
             }
             else if (Input.isActionDone(Input.Action.Right, true))
             {
-                Position.X += speed;
+                Position.X += currentSpeed;
             }
 
             // Gestion des bordures
