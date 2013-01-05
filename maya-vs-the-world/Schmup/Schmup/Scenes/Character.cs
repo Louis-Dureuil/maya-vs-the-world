@@ -23,6 +23,11 @@ namespace Schmup
         private Sprite skin;
         private World world;
 
+        // Temps d'invincibilité
+        // Peut exister pour certains ennemis coriaces
+
+        private double invincibleTimeSec;
+
         public World World
         {
             get
@@ -51,6 +56,23 @@ namespace Schmup
             }
         }
 
+        public int GivenDamageCollision
+        {
+            get
+            {
+                return givenDamageCollision;
+            }
+        }
+
+        public double InvincibleTimeSec
+        {
+            set
+            {
+                invincibleTimeSec = value;
+            }
+        }
+
+
         public Character(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin)
             : base(game)
         {
@@ -66,6 +88,16 @@ namespace Schmup
             life -= lifeMinus;
         }
 
+        public void Collide(int collisionDamage)
+        {
+            life -= Math.Min(collisionDamage, takenDamageCollision);
+        }
+
+        public bool IsInvincible()
+        {
+            return (invincibleTimeSec > 0);
+        }
+
         public void Die()
         {
             // TODO : Ajouter l'animation de mort
@@ -74,6 +106,11 @@ namespace Schmup
 
         public override void Update(GameTime gameTime)
         {
+            invincibleTimeSec -= gameTime.ElapsedGameTime.TotalSeconds;
+            if (invincibleTimeSec < 0)
+            {
+                invincibleTimeSec = 0;
+            }
             if (life < 0)
             {
                 Die();

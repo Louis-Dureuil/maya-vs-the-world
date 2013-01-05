@@ -13,7 +13,7 @@ namespace Schmup
 
         // Textures utilisées pendant tout le combat.
         //private Texture2D bullet1Texture;
-        //private Texture2D bullet2Texture;
+        private Texture2D bullet2Texture;
         //private Texture2D enemyTexture;
         // Commenter une des deux lignes pour obtenir un des deux boss
         // Puis, dans Initialize(), commenter une des deux lignes
@@ -29,8 +29,8 @@ namespace Schmup
 
         public override void Initialize()
         {
+            world = new World(LuxGame);
             base.Initialize();
-            world = new World(this.LuxGame);
             world.Initialize();
         }
 

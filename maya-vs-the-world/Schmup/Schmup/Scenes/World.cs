@@ -17,15 +17,6 @@ namespace Schmup
 
         private double elapsed;
 
-        public World(LuxGame game, Hero hero, List<Enemy> enemies, List<Shot> badShots, List<Shot> goodShots)
-            : base(game)
-        {
-            this.hero = hero;
-            this.enemies = enemies;
-            this.badShots = badShots;
-            this.goodShots = goodShots;
-        }
-
         public World(LuxGame game)
             : base(game)
         {
@@ -55,18 +46,19 @@ namespace Schmup
             }
         }
 
+        public List<Enemy> Enemies
+        {
+            get
+            {
+                return enemies;
+            }
+        }
+
         public override void Initialize()
         {
             base.Initialize();
-            //List<string> skinName = new List<string>(4);
-            //Texture2D bullet1Texture = this.Content.Load<Texture2D>("bullet001-1");
             Texture2D bullet2Texture = this.Content.Load<Texture2D>("bullet002-1");
-            //Texture2D enemyTexture = this.Content.Load<Texture2D>("commonEnemy");
-            //skinName.Add("carre");
-            //skinName.Add("bullet001-1");
-            //skinName.Add("bullet001-2");
-            //skinName.Add("hero");
-            hero = new Hero(this.LuxGame, this, 1000, 1, 1, 5, 2, null);
+            hero = new Hero(this.LuxGame, this, 200, 1, 1, 5, 2, null);
             Sprite heroSprite = new Sprite(hero, new List<String>() { "hero" });
             hero.Skin = heroSprite;
             hero.Position = new Vector2(400, 400);
@@ -74,7 +66,7 @@ namespace Schmup
             boss.Skin = new Sprite(boss, new List<string>() { "boss" });
             boss.Skin.SetAnimation("boss");
             boss.Position = new Vector2(400, 50);
-            this.enemies.Add(boss);
+            enemies.Add(boss);
 
             Game.Components.Add(boss);
             Game.Components.Add(hero);
@@ -132,6 +124,8 @@ namespace Schmup
                 // TODO : Trouver une hitbox pour le héros? Comment faire?
                 if (Vector2.Distance(hero.Position, enemy.Position) < 20)
                 {
+                    hero.Collide(enemy.GivenDamageCollision);
+                    enemy.Collide(hero.GivenDamageCollision);
                     System.Console.WriteLine("Collision");
                 }
             }

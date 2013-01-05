@@ -33,7 +33,6 @@ namespace Schmup
 
         private World world;
 
-
         public bool SpeedType
         {
             get
