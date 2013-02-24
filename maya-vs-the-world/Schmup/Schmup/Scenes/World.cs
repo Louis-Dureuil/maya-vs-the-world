@@ -15,6 +15,9 @@ namespace Schmup
         private List<Shot> badShots = new List<Shot>();
         private List<Shot> goodShots = new List<Shot>();
 
+        // Pour le test!
+        private ShotPull shots;
+
         private double elapsed;
 
         public World(LuxGame game)
@@ -72,6 +75,10 @@ namespace Schmup
             Game.Components.Add(hero);
             Game.Components.Add(heroSprite);
 
+            // Phase de test
+            shots = new ShotPull(LuxGame, this);
+            Game.Components.Add(shots);
+
             heroSprite.SetAnimation("hero");
         }
 
@@ -128,6 +135,17 @@ namespace Schmup
                     enemy.Collide(hero.GivenDamageCollision);
                     System.Console.WriteLine("Collision");
                 }
+            }
+
+            if (elapsed % 1 < 0.1)
+            {
+                if (elapsed > 5)
+                {
+                    shots.Check();
+                    elapsed = 0;
+                }
+                shots.Shoot(1,1,1,1,1,1,false,false,false);
+                shots.Print();
             }
 
             // Système de débug

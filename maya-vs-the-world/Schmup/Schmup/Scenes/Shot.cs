@@ -12,8 +12,8 @@ namespace Schmup
         private float hitbox;
         private double invincibleTimeSec;
         private int damage;
-        private Vector2 speed;
-        private Vector2 accel;
+        public Vector2 Speed;
+        public Vector2 Accel;
         private Sprite skin;
         private bool isOutOfRange;
         private bool goesThrough;
@@ -42,30 +42,6 @@ namespace Schmup
             get
             {
                 return invincibleTimeSec;
-            }
-        }
-
-        public Vector2 Speed
-        {
-            get
-            {
-                return speed;
-            }
-            set
-            {
-                speed = value;
-            }
-        }
-
-        public Vector2 Accel
-        {
-            get
-            {
-                return accel;
-            }
-            set
-            {
-                accel = value;
             }
         }
 
@@ -120,8 +96,8 @@ namespace Schmup
             else
             {
 
-                Position += speed;
-                speed += accel;
+                Position += Speed;
+                Speed += Accel;
                 //if (speed.Length() < 1)
                 //{
                 //    accel = new Vector2(0,0);

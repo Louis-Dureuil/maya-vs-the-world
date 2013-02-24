@@ -73,6 +73,17 @@ namespace Schmup
             base.Initialize();
         }
 
+        public override void Die()
+        {
+            bigShooter.Position.X = -40;
+            bigShooter.Position.Y = -40;
+            bigShooter.Die();
+            warning.Position.X = -40;
+            warning.Position.Y = -40;
+            warning.Die();
+            shooter.Die();
+            base.Die();
+        }
 
         public void HomingShoot(Vector2 position, Vector2 direction, Vector2 accel)
         {

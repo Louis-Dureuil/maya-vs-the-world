@@ -98,7 +98,7 @@ namespace Schmup
             return (invincibleTimeSec > 0);
         }
 
-        public void Die()
+        public virtual void Die()
         {
             // TODO : Ajouter l'animation de mort
             Enabled = false;
