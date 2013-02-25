@@ -12,7 +12,10 @@ namespace Schmup
     {
         // Sert pour savoir la quantité de tirs utilisés
         private int maxActiveShots;
+        // Nombre de tirs initialement utilisés
         private int shotNb;
+        // Nombre de tirs maximum acceptés sur l'écran
+        private int maxShotNb;
         private List<Shot> allShots;
         private List<Shot> activeShots;
         private List<Shot> nonActiveShots;
@@ -20,17 +23,39 @@ namespace Schmup
         private Texture2D bulletText;
         private int shotHitBox;
         private int damage;
-        bool isAGoodShot;
+        private bool isAGoodShot;
+        private bool goesThrough;
+        private double invincibleTimeSec;
 
         // Si rien n'est spécifié, les tirs auront une texture prédéfinie
         public ShotPull(LuxGame game, World world)
             : base(game)
         {
             this.world = world;
+            isAGoodShot = false;
+            goesThrough = false;
             maxActiveShots = 0;
             shotNb = 20;
+            maxShotNb = 100;
             shotHitBox = 8;
             bulletText = this.Content.Load<Texture2D>("bullet001-2");
+            allShots = new List<Shot>(shotNb);
+            activeShots = new List<Shot>(shotNb);
+            nonActiveShots = new List<Shot>(shotNb);
+        }
+
+        public ShotPull(LuxGame game, World world, bool isAGoodShot, bool goesThrough, double invincibleTimeSec, int shotNb, int maxShotNb, int shotHitBox, int damage, Texture2D bulletText, Sprite skin = null)
+            : base(game)
+        {
+            this.world = world;
+            this.isAGoodShot = isAGoodShot;
+            this.goesThrough = goesThrough;
+            this.invincibleTimeSec = invincibleTimeSec;
+            this.shotNb = shotNb;
+            this.maxShotNb = maxShotNb;
+            this.shotHitBox = shotHitBox;
+            this.damage = damage;
+            this.bulletText = bulletText;
             allShots = new List<Shot>(shotNb);
             activeShots = new List<Shot>(shotNb);
             nonActiveShots = new List<Shot>(shotNb);
@@ -41,7 +66,7 @@ namespace Schmup
             base.Initialize();
             for (int i = 0; i < shotNb; i++)
             {
-                Shot shot = new Shot(LuxGame, world, 1, null);
+                Shot shot = new Shot(LuxGame, invincibleTimeSec, isAGoodShot, goesThrough, world, shotHitBox, damage, null);
                 shot.Skin = new Sprite(shot, new List<Texture2D>() { bulletText }, null);
                 shot.Skin.SetAnimation(bulletText.Name);
                 Game.Components.Add(shot);
@@ -49,7 +74,6 @@ namespace Schmup
                 allShots.Add(shot);
                 nonActiveShots.Add(shot);
             }
-            System.Console.WriteLine("fin du modele");
         }
 
         private void activeShotsAdd(Shot shot)
@@ -99,7 +123,7 @@ namespace Schmup
             }
             else
             {
-                shot.Speed = new Vector2(speedX,speedY);
+                shot.Speed = new Vector2(speedX, speedY);
             }
             if (copyAccel)
             {
@@ -113,12 +137,28 @@ namespace Schmup
             shot.Shoot();
         }
 
+        /// <summary>
+        /// Tire une balle, la fait rentrer en compte dans le monde pour les collisions
+        /// </summary>
+        /// <param name="positionX"></param>
+        /// <param name="positionY"></param>
+        /// <param name="speedX"></param>
+        /// <param name="speedY"></param>
+        /// <param name="accelX"></param>
+        /// <param name="accelY"></param>
+        /// <param name="copyPosition"></param>
+        /// <param name="copySpeed"></param>
+        /// <param name="copyAccel"></param>
         public void Shoot(float positionX, float positionY,
             float speedX, float speedY, float accelX, float accelY,
             bool copyPosition, bool copySpeed, bool copyAccel)
         {
             if (shotNb == maxActiveShots)
             {
+                if (shotNb == maxShotNb)
+                {
+                    return;
+                }
                 shotNb++;
                 maxActiveShots++;
                 Shot shot = new Shot(LuxGame, world, 1, null);
@@ -128,11 +168,11 @@ namespace Schmup
                 Game.Components.Add(shot.Skin);
                 allShots.Add(shot);
                 activeShotsAdd(shot);
-                shoot(shot,positionX,positionY,speedX,speedY,accelX,accelY,copyPosition,copySpeed,copyAccel);
+                shoot(shot, positionX, positionY, speedX, speedY, accelX, accelY, copyPosition, copySpeed, copyAccel);
             }
             else
             {
-                shoot(nonActiveShots[0],positionX,positionY,speedX,speedY,accelX,accelY,copyPosition,copySpeed,copyAccel);
+                shoot(nonActiveShots[0], positionX, positionY, speedX, speedY, accelX, accelY, copyPosition, copySpeed, copyAccel);
                 activeShotsAdd(nonActiveShots[0]);
                 nonActiveShots.Remove(nonActiveShots[0]);
                 maxActiveShots++;
@@ -154,7 +194,6 @@ namespace Schmup
                     maxActiveShots--;
                 }
             }
-            System.Console.WriteLine("Avant triage");
         }
     }
 }

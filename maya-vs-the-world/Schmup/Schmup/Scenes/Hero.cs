@@ -31,6 +31,10 @@ namespace Schmup
         private int speed2;
         private bool speedType;
 
+        // Tirs dont le héros dispose
+        private ShotPull weakShots;
+        private ShotPull strongShots;
+
         private World world;
 
         public bool SpeedType
@@ -56,21 +60,30 @@ namespace Schmup
         public override void Initialize()
         {
             base.Initialize();
+            weakShots = new ShotPull(LuxGame, World, true, false, 0, 20, 20, 30, 20, this.Content.Load<Texture2D>("bullet004-1"));
+            strongShots = new ShotPull(LuxGame, World, true, false, 0, 30, 30, 30, 14, this.Content.Load<Texture2D>("bullet003-1"));
+            Game.Components.Add(weakShots);
+            Game.Components.Add(strongShots);
         }
 
         public void WeakShoot()
         {
-            return;
+            weakShots.Shoot(this.Position.X, this.Position.Y, 0, -15, 0, 0, false, false, false);
         }
 
         public void StrongShoot()
         {
-            return;
+            strongShots.Shoot(this.Position.X, this.Position.Y, 0, -10, 0, 0, false, false, false);
         }
 
         public void PowerShoot()
         {
             return;
+        }
+
+        public override void Die()
+        {
+            base.Die();
         }
 
         public override void Update(GameTime gameTime)
@@ -189,6 +202,10 @@ namespace Schmup
                 System.Console.Write(0);
                 System.Console.WriteLine(" fois");
             }
+
+            // Gestion des armes
+            weakShots.Check();
+            strongShots.Check();
 
             base.Update(gameTime);
         }

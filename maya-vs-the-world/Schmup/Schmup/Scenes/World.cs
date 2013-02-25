@@ -65,7 +65,7 @@ namespace Schmup
             Sprite heroSprite = new Sprite(hero, new List<String>() { "hero" });
             hero.Skin = heroSprite;
             hero.Position = new Vector2(400, 400);
-            FastBoss boss = new FastBoss(this.LuxGame, 1000, 10, 10, null, bullet2Texture, this, 8);
+            FastBoss boss = new FastBoss(this.LuxGame, 20000, 10, 10, null, bullet2Texture, this, 8);
             boss.Skin = new Sprite(boss, new List<string>() { "boss" });
             boss.Skin.SetAnimation("boss");
             boss.Position = new Vector2(400, 50);
@@ -105,14 +105,13 @@ namespace Schmup
             }
 
             // Gestion Ennemis -- Balles du heros
-            foreach (Enemy enemy in enemies)
+            foreach (Enemy enemy in enemies.ToList<Enemy>())
             {
                 enemy.Update(gameTime);
                 foreach (Shot goodShot in goodShots)
                 {
                     if (Vector2.Distance(goodShot.Position, enemy.Position) < goodShot.Hitbox)
                     {
-                        System.Console.Write("Ennemi touchey");
                         // L'ennemi a mal.
                         enemy.Hurt(goodShot.Damage);
 
@@ -137,16 +136,16 @@ namespace Schmup
                 }
             }
 
-            if (elapsed % 1 < 0.1)
-            {
-                if (elapsed > 5)
-                {
-                    shots.Check();
-                    elapsed = 0;
-                }
-                shots.Shoot(1,1,1,1,1,1,false,false,false);
-                shots.Print();
-            }
+            //if (elapsed % 1 < 0.1)
+            //{
+            //    if (elapsed > 5)
+            //    {
+            //        shots.Check();
+            //        elapsed = 0;
+            //    }
+            //    shots.Shoot(1,1,1,1,1,1,false,false,false);
+            //    shots.Print();
+            //}
 
             // Système de débug
             if (elapsed > 1000)

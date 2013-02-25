@@ -134,8 +134,15 @@ namespace Schmup
             }
         }
 
+        public override void Die()
+        {
+            shooter.Die();
+            base.Die();
+        }
+
         public override void Update(GameTime gameTime)
         {
+            base.Update(gameTime);
             // elapsed est incrémenté à chaque frame
             elapsed += gameTime.ElapsedGameTime.TotalSeconds;
             midElapsed += gameTime.ElapsedGameTime.TotalSeconds;
@@ -299,8 +306,6 @@ namespace Schmup
                     }
                 }
             }
-
-            base.Update(gameTime);
         }
     }
 }

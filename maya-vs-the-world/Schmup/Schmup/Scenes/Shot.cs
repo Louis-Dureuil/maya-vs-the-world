@@ -132,7 +132,7 @@ namespace Schmup
             base.Draw(gameTime);
         }
 
-        public Shot(LuxGame game, World world, int invincibleTimeSec, Sprite skin = null)
+        public Shot(LuxGame game, World world, double invincibleTimeSec, Sprite skin = null)
             : base(game)
         {
             this.world = world;
@@ -143,7 +143,7 @@ namespace Schmup
             this.damage = 1;
         }
 
-        public Shot(LuxGame game, int invincibleTimeSec, bool isAGoodShot, bool goesThrough, World world, int hitbox, int damage, Sprite skin = null)
+        public Shot(LuxGame game, double invincibleTimeSec, bool isAGoodShot, bool goesThrough, World world, int hitbox, int damage, Sprite skin = null)
             : base(game)
         {
             this.invincibleTimeSec = invincibleTimeSec;
@@ -155,7 +155,7 @@ namespace Schmup
             this.damage = damage;
         }
 
-        public Shot(LuxGame game, int invincibleTimeSec, int hitbox, int damage, World world, Sprite skin = null)
+        public Shot(LuxGame game, double invincibleTimeSec, int hitbox, int damage, World world, Sprite skin = null)
             : base(game)
         {
             this.invincibleTimeSec = invincibleTimeSec;

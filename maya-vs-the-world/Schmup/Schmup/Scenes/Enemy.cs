@@ -59,6 +59,12 @@ namespace Schmup
             this.Enabled = false;
         }
 
+        public override void Die()
+        {
+            World.Enemies.Remove(this);
+            base.Die();
+        }
+
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
