@@ -27,6 +27,14 @@ namespace Schmup
         private bool goesThrough;
         private double invincibleTimeSec;
 
+        public List<Shot> ActiveShots
+        {
+            get
+            {
+                return activeShots;
+            }
+        }
+
         // Si rien n'est spécifié, les tirs auront une texture prédéfinie
         public ShotPull(LuxGame game, World world)
             : base(game)
@@ -35,21 +43,28 @@ namespace Schmup
             isAGoodShot = false;
             goesThrough = false;
             maxActiveShots = 0;
-            shotNb = 20;
-            maxShotNb = 100;
+            invincibleTimeSec = 0.1;
+            // TODO : BAISSER CE CHIFFRE
+            // Créer d'autres constructeurs plus utiles
+            shotNb = 400;
+            maxShotNb = 400;
             shotHitBox = 8;
-            bulletText = this.Content.Load<Texture2D>("bullet001-2");
+            damage = 10;
+            bulletText = this.Content.Load<Texture2D>("bullet001-1");
             allShots = new List<Shot>(shotNb);
             activeShots = new List<Shot>(shotNb);
             nonActiveShots = new List<Shot>(shotNb);
         }
 
-        public ShotPull(LuxGame game, World world, bool isAGoodShot, bool goesThrough, double invincibleTimeSec, int shotNb, int maxShotNb, int shotHitBox, int damage, Texture2D bulletText, Sprite skin = null)
+        public ShotPull(LuxGame game, World world, bool isAGoodShot, bool goesThrough,
+            double invincibleTimeSec, int shotNb, int maxShotNb, int shotHitBox,
+            int damage, Texture2D bulletText, Sprite skin = null)
             : base(game)
         {
             this.world = world;
             this.isAGoodShot = isAGoodShot;
             this.goesThrough = goesThrough;
+            maxActiveShots = 0;
             this.invincibleTimeSec = invincibleTimeSec;
             this.shotNb = shotNb;
             this.maxShotNb = maxShotNb;
@@ -59,6 +74,14 @@ namespace Schmup
             allShots = new List<Shot>(shotNb);
             activeShots = new List<Shot>(shotNb);
             nonActiveShots = new List<Shot>(shotNb);
+        }
+
+        // TODO : Implémenter un pseudo constructeur par recopie
+        public ShotPull(LuxGame game, World world, Shot shot, int shotNb, int maxShotNb, Sprite skin = null)
+            : base(game)
+        {
+            this.world = world;
+            // A COMPLETER
         }
 
         public override void Initialize()
@@ -194,6 +217,25 @@ namespace Schmup
                     maxActiveShots--;
                 }
             }
+        }
+
+        public void Clear()
+        {
+            foreach (Shot shot in activeShots.ToList<Shot>())
+            {
+                shoot(shot, -40, -40, 0, 0, 0, 0, false, false, false);
+                activeShotsRemove(shot);
+                maxActiveShots--;
+            }
+        }
+
+        public override void Update(GameTime gameTime)
+        {
+            if (Input.isActionDone(Input.Action.Confirm, false))
+            {
+                System.Console.WriteLine("Etat des balles : " + maxActiveShots + "/" + shotNb + "/" + maxShotNb);
+            }
+            base.Update(gameTime);
         }
     }
 }

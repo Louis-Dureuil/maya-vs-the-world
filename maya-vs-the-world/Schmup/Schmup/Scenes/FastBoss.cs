@@ -15,6 +15,8 @@ namespace Schmup
         // elapsed sert de chronomètre
         private double elapsed;
         private Texture2D bigBulletText;
+        private Texture2D bulletText;
+        private int shotHitBox;
         // Liste de tirs à tête chercheuse
         private List<HomingMissile> homingShots = new List<HomingMissile>(20);
         // Liste de tirs rotatifs
@@ -31,20 +33,19 @@ namespace Schmup
         // On prend d'autres ennemis pour avoir des tirs différents
         private Enemy shooter;
         private Enemy bigShooter;
-        private Enemy warning;
         private Texture2D enemyTexture;
-        private Texture2D warningTexture;
         // Sert pour la salve spirale et la premiere
         private Vector2 currentDirectionVector;
         private Vector2 currentDirectionVector2;
         private float rotationAngle;
 
-        public FastBoss(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin, Texture2D bulletText, World world, int shotHitbox)
-            : base(game, world, life, takenDamageCollision, givenDamageCollision, 600, skin, bulletText, shotHitbox, 10)
+        public FastBoss(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin, Texture2D bulletText, World world, int shotHitBox)
+            : base(game, world, life, takenDamageCollision, givenDamageCollision, skin)
         {
+            this.bulletText = bulletText;
+            this.shotHitBox = shotHitBox;
             this.bigBulletText = this.Game.Content.Load<Texture2D>("bigbullet001-1");
             this.enemyTexture = this.Game.Content.Load<Texture2D>("commonEnemy");
-            this.warningTexture = this.Game.Content.Load<Texture2D>("warning");
         }
 
         public override void Initialize()
@@ -53,18 +54,20 @@ namespace Schmup
             shootOrder = 0;
             secondShootOrder = 0;
             rank = 0;
-            shooter = new Enemy(LuxGame, World, 0, 0, 0, 600, null);
+            ShotPull redShots = new ShotPull(LuxGame, World, false, false, 0.3, 100, 100, shotHitBox, 15, bulletText, null);
+            Game.Components.Add(redShots);
+            ShotsOfType.Add(redShots);
+            ShotPull blueShots = new ShotPull(LuxGame, World);
+            shooter = new Enemy(LuxGame, World, 0, 0, 0, new List<ShotPull>() {blueShots}, null);
             shooter.Skin = new Sprite(shooter, new List<Texture2D>() { enemyTexture }, null);
             shooter.Skin.SetAnimation(enemyTexture.Name);
+            Game.Components.Add(blueShots);
             Game.Components.Add(shooter);
-            warning = new Enemy(LuxGame, World, 0, 0, 0, 0, null);
-            warning.Skin = new Sprite(warning, new List<Texture2D>() { warningTexture }, null);
-            warning.Skin.SetAnimation(warningTexture.Name);
-            warning.Position = new Vector2(-40, -40);
-            Game.Components.Add(warning);
-            bigShooter = new Enemy(LuxGame, World, 0, 0, 0, 200, null, bigBulletText, 20, 40);
+            ShotPull bigShots = new ShotPull(LuxGame, World, false, false, 1.5, 150, 200, 20, 50, bigBulletText, null);
+            bigShooter = new Enemy(LuxGame, World, 0, 0, 0, new List<ShotPull>() {bigShots}, null);
             bigShooter.Skin = new Sprite(bigShooter, new List<Texture2D>() { enemyTexture }, null);
             bigShooter.Skin.SetAnimation(enemyTexture.Name);
+            Game.Components.Add(bigShots);
             for (int i = 0; i < 20; i++)
             {
                 HomingMissile homingShoot = new HomingMissile(this.LuxGame, 0, false, (float)0.05, 20, 7, World, null);
@@ -77,7 +80,7 @@ namespace Schmup
             }
             for (int i = 0; i < 15; i++)
             {
-                RotatingShot rotatingShot = new RotatingShot(this.LuxGame, World, 0, false, (float)0.02, 20, null);
+                RotatingShot rotatingShot = new RotatingShot(this.LuxGame, World, 0, false, (float)0.02, 10, null);
                 rotatingShot.Skin = new Sprite(rotatingShot, new List<Texture2D>() { bigBulletText }, null);
                 rotatingShot.Skin.SetAnimation(bigBulletText.Name);
                 Game.Components.Add(rotatingShot);
@@ -137,12 +140,25 @@ namespace Schmup
         public override void Die()
         {
             shooter.Die();
+            Position = new Vector2(-200, -200);
+            ShotsOfType[0].Clear();
+            shooter.ShotsOfType[0].Clear();
+            bigShooter.ShotsOfType[0].Clear();
             base.Die();
         }
 
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
+            
+            // Précautions de départ
+            // TODO : a améliorer
+            if (elapsed == 0)
+            {
+                shooter.Activate();
+                bigShooter.Activate();
+            }
+
             // elapsed est incrémenté à chaque frame
             elapsed += gameTime.ElapsedGameTime.TotalSeconds;
             midElapsed += gameTime.ElapsedGameTime.TotalSeconds;
@@ -156,7 +172,7 @@ namespace Schmup
                     shootOrder++;
                     for (int j = 0; j < 15; j++)
                     {
-                        SuperShoot(rotatingShots[j].Position, rotatingShots[j].GiveDirection(), new Vector2(0, 0));
+                        SuperShoot(0, rotatingShots[j].Position, rotatingShots[j].GiveDirection(), new Vector2(0, 0));
                     }
                     if (shootOrder % 10 == 0)
                     {
@@ -173,7 +189,7 @@ namespace Schmup
             {
                 if (midElapsed >= remainingTime && secondShootOrder == i)
                 {
-                    shooter.RandomPatternShoot(Position, currentDirectionVector, new Vector2(0, 0), 45, 8, 0);
+                    shooter.RandomPatternShoot(0, Position, currentDirectionVector, new Vector2(0, 0), 45, 8, 0);
                     midElapsed = 0;
                     remainingTimeDeterminer++;
                     remainingTime = 0.15 * Math.Cos(0.2 * remainingTimeDeterminer);
@@ -195,12 +211,12 @@ namespace Schmup
                 {
                     currentDirectionVector = Vector2.Transform(currentDirectionVector, Matrix.CreateRotationZ(rotationAngle));
                     rotationAngle += (float)0.004;
-                    bigShooter.RandomPatternShoot(this.Position, currentDirectionVector, new Vector2(0, 0), 120, 3, 0);
+                    bigShooter.RandomPatternShoot(0, this.Position, currentDirectionVector, new Vector2(0, 0), 120, 3, 0);
                     if (shootOrder % 30 == 10)
                     {
                         for (int j = 0; j < 2; j++)
                         {
-                            shooter.RandomPatternShoot(Position + new Vector2(-30 + 60 * j, -20),
+                            shooter.RandomPatternShoot(0, Position + new Vector2(-30 + 60 * j, -20),
                                 (3 + (float)0.05 * shootOrder) * Vector2.Normalize(this.World.Hero.Position - Position - new Vector2(-30 + 60 * j, -20)),
                                 new Vector2(0, 0), 4 - (float)0.01 * shootOrder, 7, 0);
                         }
@@ -227,7 +243,7 @@ namespace Schmup
                     {
                         for (int j = 0; j < 15; j++)
                         {
-                            SuperShoot(rotatingShots[j].Position,
+                            SuperShoot(0, rotatingShots[j].Position,
                                 2* Vector2.Normalize(this.World.Hero.Position - rotatingShots[j].Position),
                                 (float)0.03 * Vector2.Normalize(this.World.Hero.Position - rotatingShots[j].Position));
                         }
@@ -247,7 +263,7 @@ namespace Schmup
             {
                 if (midElapsed >= remainingTime && secondShootOrder == i+250 && shootOrder > 249)
                 {
-                    shooter.RandomPatternShoot(Position, currentDirectionVector, new Vector2(0, 0), 45, 8, 0);
+                    shooter.RandomPatternShoot(0, Position, currentDirectionVector, new Vector2(0, 0), 45, 8, 0);
                     midElapsed = 0;
                     remainingTimeDeterminer++;
                     remainingTime = 0.3 * Math.Cos(0.2 * remainingTimeDeterminer);
@@ -274,10 +290,10 @@ namespace Schmup
                     for (int j = 0; j<4; j++)
                     {
                         Vector2 vect = (float)(4 + j) / 3 * Vector2.Transform(currentDirectionVector, Matrix.CreateRotationZ((float)j * (float)0.1));
-                        shooter.SuperShoot(Position, vect, new Vector2(0, 0));
-                        shooter.SuperShoot(Position, new Vector2(-vect.X,vect.Y), new Vector2(0, 0));
-                        shooter.SuperShoot(Position, new Vector2(-vect.X, -vect.Y), new Vector2(0, 0));
-                        shooter.SuperShoot(Position, new Vector2(vect.X, -vect.Y), new Vector2(0, 0));
+                        shooter.SuperShoot(0, Position, vect, new Vector2(0, 0));
+                        shooter.SuperShoot(0, Position, new Vector2(-vect.X,vect.Y), new Vector2(0, 0));
+                        shooter.SuperShoot(0, Position, new Vector2(-vect.X, -vect.Y), new Vector2(0, 0));
+                        shooter.SuperShoot(0, Position, new Vector2(vect.X, -vect.Y), new Vector2(0, 0));
                     }
                 }
             }
@@ -298,11 +314,11 @@ namespace Schmup
                     }
                     if (secondShootOrder % 8 < 4)
                     {
-                        SuperShoot(Position + new Vector2(20, 20), currentDirectionVector2, new Vector2(0, 0));
+                        SuperShoot(0, Position + new Vector2(20, 20), currentDirectionVector2, new Vector2(0, 0));
                     }
                     else 
                     {
-                        SuperShoot(Position + new Vector2(-20, 20), currentDirectionVector2, new Vector2(0, 0));
+                        SuperShoot(0, Position + new Vector2(-20, 20), currentDirectionVector2, new Vector2(0, 0));
                     }
                 }
             }

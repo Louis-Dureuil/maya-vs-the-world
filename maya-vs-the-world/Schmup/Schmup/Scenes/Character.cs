@@ -17,7 +17,8 @@ namespace Schmup
         private int takenDamageCollision;
         private int givenDamageCollision;
 
-        // hurtbox a definir
+        // hurtbox a améliorer
+        private int hurtBox;
         // animation mort
 
         private Sprite skin;
@@ -68,11 +69,23 @@ namespace Schmup
         {
             set
             {
-                invincibleTimeSec = value;
+                if (invincibleTimeSec == 0)
+                {
+                    invincibleTimeSec = value;
+                }
+            }
+        }
+
+        public int HurtBox
+        {
+            get
+            {
+                return hurtBox;
             }
         }
 
 
+        // INTEGRER LA HURTBOX DANS LE CONSTRUCTEUR;
         public Character(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin)
             : base(game)
         {

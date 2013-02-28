@@ -65,7 +65,7 @@ namespace Schmup
             Sprite heroSprite = new Sprite(hero, new List<String>() { "hero" });
             hero.Skin = heroSprite;
             hero.Position = new Vector2(400, 400);
-            FastBoss boss = new FastBoss(this.LuxGame, 20000, 10, 10, null, bullet2Texture, this, 8);
+            FastBoss boss = new FastBoss(this.LuxGame, 30000, 10, 10, null, bullet2Texture, this, 8);
             boss.Skin = new Sprite(boss, new List<string>() { "boss" });
             boss.Skin.SetAnimation("boss");
             boss.Position = new Vector2(400, 50);
@@ -88,19 +88,23 @@ namespace Schmup
             elapsed += gameTime.ElapsedGameTime.TotalSeconds;
 
             // Gestion Heros -- Balles ennemies
-            foreach (Shot badShot in badShots)
+            if (!hero.IsInvincible())
             {
-                if (Vector2.Distance(badShot.Position, hero.Position) < badShot.Hitbox)
+                foreach (Shot badShot in badShots)
                 {
-                    hero.Hurt(badShot.Damage);
-                    System.Console.Write("Tu t'es fait frapper. Il te reste ");
-                    System.Console.Write(hero.Life);
-                    System.Console.WriteLine(" points de vie.");
+                    if (Vector2.Distance(badShot.Position, hero.Position) < badShot.Hitbox + hero.HurtBox && !hero.IsInvincible())
+                    {
+                        hero.Hurt(badShot.Damage);
+                        hero.InvincibleTimeSec = badShot.InvincibleTimeSec;
+                        System.Console.Write("Tu t'es fait frapper. Il te reste ");
+                        System.Console.Write(hero.Life);
+                        System.Console.WriteLine(" points de vie.");
 
-                    //TODO : Changer ça peut-être?
-                    badShot.Position = new Vector2(-40, -40);
-                    badShot.Speed = new Vector2(0, 0);
-                    badShot.Accel = new Vector2(0, 0);
+                        //TODO : Changer ça peut-être?
+                        badShot.Position = new Vector2(-40, -40);
+                        badShot.Speed = new Vector2(0, 0);
+                        badShot.Accel = new Vector2(0, 0);
+                    }
                 }
             }
 
@@ -110,14 +114,14 @@ namespace Schmup
                 enemy.Update(gameTime);
                 foreach (Shot goodShot in goodShots)
                 {
-                    if (Vector2.Distance(goodShot.Position, enemy.Position) < goodShot.Hitbox)
+                    if (Vector2.Distance(goodShot.Position, enemy.Position) < goodShot.Hitbox + enemy.HurtBox)
                     {
                         // L'ennemi a mal.
                         enemy.Hurt(goodShot.Damage);
 
                         // La balle disparait.
-                        // TODO : Changer ça peut-être?
-                        goodShot.Position = new Vector2(-40, -40);
+                        // TODO : Changer ça! Implémenter une méthode qui fasse disparaitre la balle!
+                        goodShot.Position = new Vector2(-150, -150);
                         goodShot.Speed = new Vector2(0, 0);
                         goodShot.Accel = new Vector2(0, 0);
                     }
@@ -128,7 +132,7 @@ namespace Schmup
             foreach (Enemy enemy in enemies)
             {
                 // TODO : Trouver une hitbox pour le héros? Comment faire?
-                if (Vector2.Distance(hero.Position, enemy.Position) < 20)
+                if (Vector2.Distance(hero.Position, enemy.Position) < enemy.HurtBox + hero.HurtBox - 10)
                 {
                     hero.Collide(enemy.GivenDamageCollision);
                     enemy.Collide(hero.GivenDamageCollision);

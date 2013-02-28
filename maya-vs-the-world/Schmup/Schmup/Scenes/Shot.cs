@@ -91,18 +91,13 @@ namespace Schmup
         {
             if (isOutOfRange == true)
             {
-                Position = new Vector2(-40, -40);
+                Position = new Vector2(-160, -160);
             }
             else
             {
 
                 Position += Speed;
                 Speed += Accel;
-                //if (speed.Length() < 1)
-                //{
-                //    accel = new Vector2(0,0);
-                //    speed = Vector2.Normalize(speed);
-                //}
 
                 // Gestion de l'atteinte aux bordures
                 // TODO : Mettre des variables globales

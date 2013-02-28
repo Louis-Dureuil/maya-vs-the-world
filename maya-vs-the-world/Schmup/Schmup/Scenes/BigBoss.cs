@@ -22,8 +22,9 @@ namespace Schmup
         //List<RotatingEnemy> commonEnemies = new List<RotatingEnemy>(6);
         Enemy shooter;
 
+        // PAS CORRIGE, A FAIRE!
         public BigBoss(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision, bool shootsHero, int waitTimeFrames, Sprite skin, Texture2D bulletText)
-            : base(game, world, life, takenDamageCollision, givenDamageCollision, 650, skin, bulletText, 8, 30)
+            : base(game, world, life, takenDamageCollision, givenDamageCollision, skin)
         {
             // A AMELIORER
             this.bulletTexture = this.Content.Load<Texture2D>("bullet001-1");
@@ -36,7 +37,7 @@ namespace Schmup
         {
             base.Initialize();
             shootNb = 0;
-            shooter = new Enemy(LuxGame, World, 10, 10, 10, 300, null, bulletTexture, 8, 10);
+            shooter = new Enemy(LuxGame, World, 10, 10, 10, null);
             shooter.Skin = new Sprite(shooter, new List<Texture2D>() { enemyTexture }, null);
             shooter.Skin.SetAnimation(enemyTexture.Name);
             shooter.Position = new Vector2(400, 100);
@@ -79,7 +80,7 @@ namespace Schmup
             {
                 shootNb++;
                 Vector2 vect = new Vector2(Common.Rand.Next(-30, 30), Common.Rand.Next(-20, 20));
-                RandomPatternShoot(this.Position + vect, (1 + (float)0.1 * Common.Rand.Next(0, 3)) * Vector2.Normalize(vect), new Vector2(0, 0), 180, 2, 180);
+                RandomPatternShoot(0, this.Position + vect, (1 + (float)0.1 * Common.Rand.Next(0, 3)) * Vector2.Normalize(vect), new Vector2(0, 0), 180, 2, 180);
             }
         }
 
@@ -87,7 +88,7 @@ namespace Schmup
         {
             if (shootNb % 30 == 0 && shootNb < 601)
             {
-                shooter.Shoot(7 * Vector2.Normalize(World.Hero.Position - shooter.Position));
+                shooter.Shoot(0, 7 * Vector2.Normalize(World.Hero.Position - shooter.Position));
             }
         }
 
@@ -97,13 +98,13 @@ namespace Schmup
             {
                 midElapsed = 0;
                 shootNb++;
-                shooter.RandomPatternShoot(this.Position, new Vector2(3, 0), new Vector2(0, 0), 5, 72, 5);
-                BigPatternShoot(World.Hero.Position - this.Position, 5, Common.Rand.Next(2, 10), 2, (float)4.8, (float)5.2);
+                shooter.RandomPatternShoot(0, this.Position, new Vector2(3, 0), new Vector2(0, 0), 5, 72, 5);
+                BigPatternShoot(0, World.Hero.Position - this.Position, 5, Common.Rand.Next(2, 10), 2, (float)4.8, (float)5.2);
             }
             if (midElapsed >= 1 && shootNb == 622)
             {
                 shootNb++;
-                shooter.RandomPatternShoot(this.Position, new Vector2(4, 0), new Vector2(0, 0), 3, 120, 3);
+                shooter.RandomPatternShoot(0, this.Position, new Vector2(4, 0), new Vector2(0, 0), 3, 120, 3);
             }
         }
 
@@ -113,8 +114,8 @@ namespace Schmup
             {
                 midElapsed = 0;
                 shootNb++;
-                BigPatternShoot(World.Hero.Position - this.Position, 5, 4, (shootNb - 622)+1, (float)3.5, (float)3.5 + (shootNb - 622));
-                BigPatternShoot(World.Hero.Position - this.Position, 4, 4, (shootNb - 622), 4, 4 + (shootNb - 623));
+                BigPatternShoot(0, World.Hero.Position - this.Position, 5, 4, (shootNb - 622)+1, (float)3.5, (float)3.5 + (shootNb - 622));
+                BigPatternShoot(0, World.Hero.Position - this.Position, 4, 4, (shootNb - 622), 4, 4 + (shootNb - 623));
             }
         }
 
@@ -127,13 +128,13 @@ namespace Schmup
             {
                 if (elapsed >= i + 0.1 && shootNb == i)
                 {
-                    BigPatternShoot(World.Hero.Position - this.Position, shootNb + 1, 20, shootNb - 1, 1, (float)shootNb / (float)2);
+                    BigPatternShoot(0, World.Hero.Position - this.Position, shootNb + 1, 20, shootNb - 1, 1, (float)shootNb / (float)2);
                     shootNb++;
                 }
             }
             if (elapsed >= 11.1 && shootNb == 11)
             {
-                shooter.RandomPatternShoot(this.Position, new Vector2(0, 4), new Vector2(0, 0), 3, 120, 3);
+                shooter.RandomPatternShoot(0, this.Position, new Vector2(0, 4), new Vector2(0, 0), 3, 120, 3);
                 shootNb++;
             }
 
@@ -146,7 +147,7 @@ namespace Schmup
             }
             if (elapsed >= 24.7 && shootNb == 611)
             {
-                shooter.RandomPatternShoot(this.Position, new Vector2(0, 4), new Vector2(0, 0), 3, 120, 3);
+                shooter.RandomPatternShoot(0, this.Position, new Vector2(0, 4), new Vector2(0, 0), 3, 120, 3);
                 shootNb++;
             }
             if (elapsed >= 32)
@@ -167,8 +168,8 @@ namespace Schmup
             if (elapsed >= 62 && shootNb == 626)
             {
                 shootNb++;
-                shooter.RandomPatternShoot(this.Position, new Vector2(1, 0), new Vector2(0, (float)0.07), 5, 72, 5);
-                shooter.RandomPatternShoot(this.Position, new Vector2(0, 4), new Vector2(0, 0), 4, 90, 4);
+                shooter.RandomPatternShoot(0, this.Position, new Vector2(1, 0), new Vector2(0, (float)0.07), 5, 72, 5);
+                shooter.RandomPatternShoot(0, this.Position, new Vector2(0, 4), new Vector2(0, 0), 4, 90, 4);
             }
             if (elapsed >= 65)
             {
