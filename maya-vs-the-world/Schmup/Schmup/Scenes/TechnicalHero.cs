@@ -11,11 +11,13 @@ namespace Schmup
 {
     class TechnicalHero : Hero
     {
+        // CLASSE NON VALIDEE!
+
         private double elapsed;
         private double shootTime;
 
-        public TechnicalHero (LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, int speed1, int speed2, Sprite skin = null)
-            : base(game, life, takenDamageCollision, givenDamageCollision, speed1, speed2, null)
+        public TechnicalHero (LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision, int speed1, int speed2, Sprite skin = null)
+            : base(game, world, life, takenDamageCollision, givenDamageCollision, speed1, speed2, null)
         {
 
         }

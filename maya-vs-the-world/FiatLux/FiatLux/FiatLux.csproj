@@ -256,55 +256,85 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Data\Local\Classes.fr.resx" />
+    <EmbeddedResource Include="Data\Local\Classes.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data\Local\Classes.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Classes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Local\CaracNames.fr.resx" />
+    <EmbeddedResource Include="Data\Local\CaracNames.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data\Local\CaracNames.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CaracNames.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Local\Chara.fr.resx" />
+    <EmbeddedResource Include="Data\Local\Chara.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data\Local\Chara.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Chara.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Local\Ennemies.fr.resx" />
+    <EmbeddedResource Include="Data\Local\Ennemies.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data\Local\Ennemies.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Ennemies.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Local\MenuInfo.fr.resx" />
+    <EmbeddedResource Include="Data\Local\MenuInfo.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data\Local\MenuInfo.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MenuInfo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Local\MenuOptions.fr.resx" />
+    <EmbeddedResource Include="Data\Local\MenuOptions.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data\Local\MenuOptions.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MenuOptions.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Local\Skills.fr.resx" />
+    <EmbeddedResource Include="Data\Local\Skills.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data\Local\Skills.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Skills.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Local\StatLongNames.fr.resx" />
+    <EmbeddedResource Include="Data\Local\StatLongNames.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data\Local\StatLongNames.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>StatLongNames.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Local\StatNames.fr.resx" />
+    <EmbeddedResource Include="Data\Local\StatNames.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data\Local\StatNames.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>StatNames.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Local\Tutorial.fr.resx" />
+    <EmbeddedResource Include="Data\Local\Tutorial.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data\Local\Tutorial.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Tutorial.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

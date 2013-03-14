@@ -10,12 +10,14 @@ namespace Schmup
 {
     class HeroPower : HeroShot
     {
+        // CLASSE NON VALIDEE!
+
         private int score;
         private int scoreTotal;
         private bool powerIsShot;
 
-        public HeroPower(LuxGame game, int invincibleTimeMillisec, Sprite skin = null)
-            : base(game, invincibleTimeMillisec, null)
+        public HeroPower(LuxGame game, World world, int invincibleTimeMillisec, int damage, Sprite skin = null)
+            : base(game, world, invincibleTimeMillisec, damage, null)
         {
         }
 
@@ -25,7 +27,6 @@ namespace Schmup
             scoreTotal = 0;
             powerIsShot = false;
             base.Initialize();
-            GoesThrough = true;
         }
 
         public override void Update(GameTime gameTime)
@@ -34,17 +35,15 @@ namespace Schmup
             {
                 powerIsShot = true;
                 score = 0;
-                Common.PowerHit = 0;
             }
             if (powerIsShot && IsOutOfRange)
             {
                 powerIsShot = false;
-                for (int i = 0; i < Common.PowerHit; i++)
+                for (int i = 0; i < 3; i++)
                 {
                     score += i + 1;
                 }
                 scoreTotal += score;
-                Common.PowerHit = scoreTotal;
             }
             base.Update(gameTime);
         }

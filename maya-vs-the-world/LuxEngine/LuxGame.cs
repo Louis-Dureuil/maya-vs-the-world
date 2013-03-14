@@ -29,6 +29,7 @@ namespace LuxEngine
         public AudioEngine engine;
         public SoundBank soundBank;
         public WaveBank waveBank;
+        private ContentManager contentManager;
         
 
         public LuxGame()
@@ -38,11 +39,17 @@ namespace LuxEngine
             Content.RootDirectory = "Content";
         }
 
+        public ContentManager GlobalContentManager
+        {
+            get { return contentManager; }
+        }
+
         protected override void Initialize()
         {
             this.IsMouseVisible = true;
             graphics.GraphicsProfile = GraphicsProfile.Reach;
             spriteBatch = new SpriteBatch(this.GraphicsDevice);
+            contentManager = new ContentManager(this.Services, "Content");
             
             //Initialize Input
             Input.Initialize();

@@ -112,32 +112,25 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Scenes\BigLockShotPattern.cs" />
-    <Compile Include="Scenes\Boss.cs" />
     <Compile Include="Scenes\BigBoss.cs" />
     <Compile Include="Scenes\Common.cs" />
-    <Compile Include="Scenes\Boss3.cs" />
+    <Compile Include="Scenes\Character.cs" />
     <Compile Include="Scenes\EasyBoss.cs" />
+    <Compile Include="Scenes\Enemy.cs" />
+    <Compile Include="Scenes\FastBoss.cs" />
+    <Compile Include="Scenes\Hero.cs" />
     <Compile Include="Scenes\HeroLazer.cs" />
     <Compile Include="Scenes\HeroPower.cs" />
     <Compile Include="Scenes\HeroShot.cs" />
     <Compile Include="Scenes\HomingMissile.cs" />
-    <Compile Include="Scenes\Character.cs" />
-    <Compile Include="Scenes\Enemy.cs" />
-    <Compile Include="Scenes\Hero.cs" />
     <Compile Include="Scenes\Lazer.cs" />
-    <Compile Include="Scenes\LockingEnemy.cs" />
-    <Compile Include="Scenes\LockShotPattern.cs" />
     <Compile Include="Scenes\MainScene.cs" />
-    <Compile Include="Scenes\Missile.cs" />
-    <Compile Include="Scenes\RandomShotPattern.cs" />
     <Compile Include="Scenes\RotatingEnemy.cs" />
+    <Compile Include="Scenes\RotatingShot.cs" />
     <Compile Include="Scenes\Shot.cs" />
-    <Compile Include="Scenes\ShotPattern.cs" />
-    <Compile Include="Scenes\ShotPattern2.cs" />
-    <Compile Include="Scenes\SimpleMissile.cs" />
+    <Compile Include="Scenes\ShotPull.cs" />
     <Compile Include="Scenes\TechnicalHero.cs" />
-    <Compile Include="Scenes\TestEnemy.cs" />
+    <Compile Include="Scenes\World.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

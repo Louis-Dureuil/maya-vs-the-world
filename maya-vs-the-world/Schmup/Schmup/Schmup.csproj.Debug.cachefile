@@ -5,8 +5,6 @@ Content\hero.xnb
 Content\bullet003-1.xnb
 Content\boss.xnb
 Content\commonEnemy.xnb
-Content\SchmupFont.xnb
-Content\afterimageeffect.xnb
 Content\bullet002-1.xnb
 Content\bullet002-2.xnb
 Content\bullet002-3.xnb
@@ -26,3 +24,10 @@ Content\bigbullet001-2.xnb
 Content\bigbullet001-3.xnb
 Content\bigbullet001-4.xnb
 Content\warning.xnb
+Content\SchmupFont.xnb
+Content\afterimageeffect.xnb
+Content\heroWeakShot.xnb
+Content\VGbossthemefirst.xnb
+Content\VGbossthemeloop.xnb
+Content\VGpower.xnb
+Content\VGstrongshot.xnb

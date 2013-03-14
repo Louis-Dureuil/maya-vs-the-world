@@ -9,11 +9,13 @@ namespace Schmup
 {
     class HomingMissile : Shot
     {
+        // CLASSE NON VALIDEE!
+
         // rotation est l'angle limite (en radians) de rotation du tir par frame
         private float rotation;
 
-        public HomingMissile(LuxGame game, int invincibleTimeMillisec, bool isAGoodShot, float rotation, int hitbox, Sprite skin = null)
-            : base(game, invincibleTimeMillisec, isAGoodShot, hitbox, null)
+        public HomingMissile(LuxGame game, int invincibleTimeMillisec, bool isAGoodShot, float rotation, int hitbox, int damage, World world, Sprite skin = null)
+            : base(game, invincibleTimeMillisec, isAGoodShot, world, hitbox, damage, null)
         {
             this.rotation = rotation;
         }
@@ -63,7 +65,7 @@ namespace Schmup
 
         public override void Update(GameTime gameTime)
         {
-            float angle = AngleBetweenRadians(Speed, Common.HeroPosition - Position);
+            float angle = AngleBetweenRadians(Speed, - Position);
             if (angle > rotation)
             {
                 angle = rotation;

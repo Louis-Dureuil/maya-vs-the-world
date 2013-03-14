@@ -7,15 +7,15 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Rpg\RpgContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Rpg\RpgContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Alexis\PROJETMvstW\projetalt\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Rpg\RpgContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Rpg\RpgContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Alexis\projetmaya\maya-vs-the-world\maya-vs-the-world\Rpg\Rpg\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2012-03-23T17:27:09.931+01:00</Value>
+        <Value>2012-10-12T21:40:39.1426257+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

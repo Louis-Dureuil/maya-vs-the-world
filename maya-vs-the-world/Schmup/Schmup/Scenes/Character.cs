@@ -10,22 +10,31 @@ namespace Schmup
     class Character : LuxEngine.Scene
     {
         private int life;
-        private int lifeStart;
+
+        // Les deux int qui suivent désignent les dommages qu'un type peut causer, et ceux qu'il peut encaisser lors d'une collision.
+        // Exemple : Un gros vaisseau en métal va pas avoir mal lors d'une collision,
+        // Mais c'est pas pour autant qu'il va vous démolir! Il y a plein d'autres exemples.
         private int takenDamageCollision;
         private int givenDamageCollision;
-        // hurtbox a definir
-        // animation mort
-        // skin
-        private Sprite skin;
 
-        public Character(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin)
-            : base(game)
+        // hurtbox a améliorer
+        private int hurtBox;
+        // animation mort
+
+        private Sprite skin;
+        private World world;
+
+        // Temps d'invincibilité
+        // Peut exister pour certains ennemis coriaces
+
+        private double invincibleTimeSec;
+
+        public World World
         {
-            this.life = life;
-            this.lifeStart = life;
-            this.takenDamageCollision = takenDamageCollision;
-            this.givenDamageCollision = givenDamageCollision;
-            this.skin = skin;
+            get
+            {
+                return world;
+            }
         }
 
         public Sprite Skin
@@ -40,28 +49,81 @@ namespace Schmup
             }
         }
 
-        public void Hurt()
+        public int Life
         {
-            life -= 1;
+            get
+            {
+                return life;
+            }
         }
 
-        public void LifeChange(int lifeMinus)
+        public int GivenDamageCollision
         {
-            // a été fait par manque d'organisation
-            // sert pour le boss, dont on ne tient pas compte des blessures à chaque fois
-            life = lifeStart - lifeMinus;
+            get
+            {
+                return givenDamageCollision;
+            }
         }
 
-        public void Die()
+        public double InvincibleTimeSec
         {
-            // a corriger éventuellement
-            // N'efface pas les balles
-            Position = new Vector2(-400, -400);
+            set
+            {
+                if (invincibleTimeSec == 0)
+                {
+                    invincibleTimeSec = value;
+                }
+            }
+        }
+
+        public int HurtBox
+        {
+            get
+            {
+                return hurtBox;
+            }
+        }
+
+
+        // INTEGRER LA HURTBOX DANS LE CONSTRUCTEUR;
+        public Character(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin)
+            : base(game)
+        {
+            this.life = life;
+            this.takenDamageCollision = takenDamageCollision;
+            this.givenDamageCollision = givenDamageCollision;
+            this.skin = skin;
+            this.world = world;
+        }
+
+        public void Hurt(int lifeMinus)
+        {
+            life -= lifeMinus;
+        }
+
+        public void Collide(int collisionDamage)
+        {
+            life -= Math.Min(collisionDamage, takenDamageCollision);
+        }
+
+        public bool IsInvincible()
+        {
+            return (invincibleTimeSec > 0);
+        }
+
+        public virtual void Die()
+        {
+            // TODO : Ajouter l'animation de mort
             Enabled = false;
         }
 
         public override void Update(GameTime gameTime)
         {
+            invincibleTimeSec -= gameTime.ElapsedGameTime.TotalSeconds;
+            if (invincibleTimeSec < 0)
+            {
+                invincibleTimeSec = 0;
+            }
             if (life < 0)
             {
                 Die();

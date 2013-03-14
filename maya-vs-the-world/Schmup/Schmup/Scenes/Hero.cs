@@ -12,35 +12,30 @@ namespace Schmup
 
     class Hero : Character
     {
-        private const float SQRT2 = 1.414f;
-
         private int mana;
-        private bool cannotShoot;
+
+        // Besoin d'un marqueur pour donner l'arme courante du héros,
+        // sa vitesse et son arme secondaire (le pouvoir)
         private int currentWeapon;
-        private int speed;
+        private int currentSpeed;
         private int currentPower;
+
+        // Besoin de la liste d'armes dont le héros dispose
         private List<int> weaponList;
         private List<int> speedList;
         private List<int> powerList;
-        private int invincibleTime;
+
+        // TODO : Améliorer le système de gestion des vitesses
+        // Pour l'instant, le héros dispose de deux vitesses
         private int speed1;
         private int speed2;
-        /// <summary>
-        /// Détermine le type de vitesse
-        /// </summary>
         private bool speedType;
-        private static int weakShotNb = 30;
-        private static int strongShotNb = 10;
-        private List<HeroShot> weakShots = new List<HeroShot>(weakShotNb);
-        private List<HeroShot> strongShots = new List<HeroShot>(strongShotNb);
-        private Texture2D weakBulletText;
-        private Texture2D strongBulletText;
-        private bool powerActivated;
-        private HeroShot powerShot;
-        private Texture2D powerShotText;
-        private HeroLazer lazer;
-        private Texture2D lazerText;
-        private int powerNumberOfUses;
+
+        // Tirs dont le héros dispose
+        private ShotPool weakShots;
+        private ShotPool strongShots;
+
+        private World world;
 
         public bool SpeedType
         {
@@ -54,129 +49,48 @@ namespace Schmup
             }
         }
 
-        public Hero(LuxGame game, int life, int takenDamageCollision, int givenDamageCollision, int speed1, int speed2, Sprite skin = null)
-            : base(game, life, takenDamageCollision, givenDamageCollision, skin)
+        public Hero(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision, int speed1, int speed2, Sprite skin = null)
+            : base(game, world, life, takenDamageCollision, givenDamageCollision, skin)
         {
             this.speed1 = speed1;
             this.speed2 = speed2;
-            this.weakBulletText = this.Content.Load<Texture2D>("bullet003-1");
-            this.strongBulletText = this.Content.Load<Texture2D>("bullet004-1");
-            this.powerShotText = this.Content.Load<Texture2D>("bomb");
-            this.lazerText = this.Content.Load<Texture2D>("lazermoche");
+            this.currentSpeed = speed1;
         }
 
         public override void Initialize()
         {
             base.Initialize();
-            powerNumberOfUses = 0;
-            for (int i = 0; i < weakShotNb; i++)
-            {
-                HeroShot shot = new HeroShot(this.LuxGame, 0, null);
-                Sprite shotSprite = new Sprite(shot, new List<Texture2D>() { weakBulletText }, null);
-                shot.Skin = shotSprite;
-                shotSprite.SetAnimation(weakBulletText.Name);
-                Game.Components.Add(shot);
-                Game.Components.Add(shotSprite);
-                weakShots.Add(shot);
-            }
-            for (int i = 0; i < strongShotNb; i++)
-            {
-                HeroShot shot = new HeroShot(this.LuxGame, 0, null);
-                Sprite shotSprite = new Sprite(shot, new List<Texture2D>() { strongBulletText }, null);
-                shot.Skin = shotSprite;
-                shotSprite.SetAnimation(strongBulletText.Name);
-                Game.Components.Add(shot);
-                Game.Components.Add(shotSprite);
-                strongShots.Add(shot);
-            }
-            lazer = new HeroLazer(this.LuxGame, 10, 20, null);
-            Sprite lazerSprite = new Sprite(lazer, new List<string>() { "lazermoche" });
-            lazer.Skin = lazerSprite;
-            lazerSprite.SetAnimation("lazermoche");
-            lazer.Position = new Vector2(30, 340);
-            Game.Components.Add(lazer);
-            Game.Components.Add(lazerSprite);
-
-            powerShot = new HeroPower(this.LuxGame, 0, null);
-            Sprite powerShotSprite = new Sprite(powerShot, new List<Texture2D>() { powerShotText }, null);
-            powerShot.Skin = powerShotSprite;
-            powerShotSprite.SetAnimation(powerShotText.Name);
-            Game.Components.Add(powerShot);
-            Game.Components.Add(powerShotSprite);
+            weakShots = new ShotPool(LuxGame, World, true, 0, 20, 20, 100, 25, this.Content.Load<Texture2D>("bullet004-1"));
+            strongShots = new ShotPool(LuxGame, World, true, 0, 30, 30, 100, 14, this.Content.Load<Texture2D>("bullet003-1"));
+            Game.Components.Add(weakShots);
+            Game.Components.Add(strongShots);
         }
 
         public void WeakShoot()
         {
-            int cnt = 0;
-            bool fini = false;
-
-            while (cnt < weakShotNb && !fini)
-            {
-                if (weakShots[cnt].IsOutOfRange == true)
-                {
-                    weakShots[cnt].Speed = new Vector2(0, -10);
-                    weakShots[cnt].Position = this.Position;
-                    weakShots[cnt].Shoot();
-                    fini = true;
-                }
-                else
-                {
-                    cnt++;
-                }
-            }
+            weakShots.Shoot(this.Position.X, this.Position.Y, 0, -15, 0, 0, false, false, false);
         }
 
         public void StrongShoot()
         {
-            int cnt = 0;
-            bool fini = false;
-
-            while (cnt < strongShotNb && !fini)
-            {
-                if (strongShots[cnt].IsOutOfRange == true)
-                {
-                    strongShots[cnt].Speed = new Vector2(0, -20);
-                    strongShots[cnt].Position = this.Position;
-                    strongShots[cnt].Shoot();
-                    fini = true;
-                }
-                else
-                {
-                    cnt++;
-                }
-            }
-        }
-
-        private Vector2 moveVect = new Vector2(0, -40);
-
-        public void LazerShoot()
-        {
-            lazer.Position = this.Position + moveVect;
-            lazer.Launch(0);
-            lazer.Enabled = true;
-        }
-
-        private static Vector2 hideVect = new Vector2(-32, -32);
-
-        public void LazerHide()
-        {
-            lazer.Position = hideVect;
+            strongShots.Shoot(this.Position.X, this.Position.Y, 0, -10, 0, 0, false, false, false);
         }
 
         public void PowerShoot()
         {
-            powerNumberOfUses++;
-            if (powerShot.IsOutOfRange == true)
-            {
-                powerShot.Accel = new Vector2(0, -1);
-                powerShot.Speed = new Vector2(0, 0);
-                powerShot.Position = this.Position;
-                powerShot.Shoot();
-            }
+            return;
+        }
+
+        public override void Die()
+        {
+            base.Die();
         }
 
         public override void Update(GameTime gameTime)
         {
+
+            // Gestion du changement de vitesse
+            // TODO : A améliorer! Celui qui a fait ça doit être en train de consommer du LSD.
             bool speedChange;
 
             speedChange = Input.isActionDone(Input.Action.SpeedChange, false);
@@ -185,65 +99,61 @@ namespace Schmup
                 if (speedType)
                 {
                     speedType = false;
+                    currentSpeed = speed1;
                 }
                 else
                 {
                     speedType = true;
+                    currentSpeed = speed2;
                 }
             }
-            if (speedType)
-            {
-                speed = speed1;
-            }
-            else
-            {
-                speed = speed2;
-            }
+
             // Gestion du déplacement
             if (Input.isActionDone(Input.Action.Up,true))
             {
                 if (Input.isActionDone(Input.Action.Right, true))
                 {
-                    Position.X += speed / SQRT2;
-                    Position.Y -= speed / SQRT2;
+                    Position.X += currentSpeed / (float) Math.Sqrt(2);
+                    Position.Y -= currentSpeed / (float) Math.Sqrt(2);
                 }
                 else if (Input.isActionDone(Input.Action.Left, true))
                 {
-                    Position.X -= speed / SQRT2;
-                    Position.Y -= speed / SQRT2;
+                    Position.X -= currentSpeed / (float) Math.Sqrt(2);
+                    Position.Y -= currentSpeed / (float) Math.Sqrt(2);
                 }
                 else
                 {
-                    Position.Y -= speed;
+                    Position.Y -= currentSpeed;
                 }
             }
             else if (Input.isActionDone(Input.Action.Down, true))
             {
                 if (Input.isActionDone(Input.Action.Right, true))
                 {
-                    Position.X += speed / SQRT2;
-                    Position.Y += speed / SQRT2;
+                    Position.X += currentSpeed / (float) Math.Sqrt(2);
+                    Position.Y += currentSpeed / (float) Math.Sqrt(2);
                 }
                 else if (Input.isActionDone(Input.Action.Left, true))
                 {
-                    Position.X -= speed / SQRT2;
-                    Position.Y += speed / SQRT2;
+                    Position.X -= currentSpeed / (float) Math.Sqrt(2);
+                    Position.Y += currentSpeed / (float) Math.Sqrt(2);
                 }
                 else
                 {
-                    Position.Y += speed;
+                    Position.Y += currentSpeed;
                 }
             }
             else if (Input.isActionDone(Input.Action.Left, true))
             {
-                Position.X -= speed;
+                Position.X -= currentSpeed;
             }
             else if (Input.isActionDone(Input.Action.Right, true))
             {
-                Position.X += speed;
+                Position.X += currentSpeed;
             }
 
             // Gestion des bordures
+            // TODO : Mettre des variables globales
 
             if (Position.X < 0)
             {
@@ -267,18 +177,12 @@ namespace Schmup
             {
                 if (speedType)
                 {
-                    //lazer.LazerDisable();
                     WeakShoot();
                 }
                 else
                 {
                     StrongShoot();
-                    //LazerShoot();
                 }
-            }
-            else
-            {
-                //lazer.LazerDisable();
             }
 
             // Gestion des pouvoirs
@@ -288,22 +192,20 @@ namespace Schmup
                 PowerShoot();
             }
 
-            Common.PowerPosition = powerShot.Position;
-
             // Mise à jour de la position pour les ennemis
-            Common.HeroPosition = this.Position;
+            //world.Hero.Position = this.Position;
 
             // Possibilité de sommaire
             if (Input.isActionDone(Input.Action.Confirm, false))
             {
                 System.Console.Write("Charge tirée ");
-                System.Console.Write(powerNumberOfUses);
+                System.Console.Write(0);
                 System.Console.WriteLine(" fois");
-                System.Console.Write("Nombre de tirs encaissés : ");
-                System.Console.WriteLine(Common.HeroHit);
-                System.Console.Write("Score : ");
-                System.Console.WriteLine(Common.PowerHit);
             }
+
+            // Gestion des armes
+            weakShots.Check();
+            strongShots.Check();
 
             base.Update(gameTime);
         }
