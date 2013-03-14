@@ -10,9 +10,9 @@ namespace Schmup
 {
     class Enemy : Character
     {
-        private List<ShotPull> shotsOfType;
+        private List<ShotPool> shotsOfType;
 
-        public List<ShotPull> ShotsOfType
+        public List<ShotPool> ShotsOfType
         {
             get
             {
@@ -23,11 +23,11 @@ namespace Schmup
         public Enemy(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision, Sprite skin)
             : base(game, world, life, takenDamageCollision, givenDamageCollision, skin)
         {
-            shotsOfType = new List<ShotPull>();
+            shotsOfType = new List<ShotPool>();
         }
 
         public Enemy(LuxGame game, World world, int life, int takenDamageCollision, int givenDamageCollision,
-            List<ShotPull> shotsOfType, Sprite skin)
+            List<ShotPool> shotsOfType, Sprite skin)
             : base(game, world, life, takenDamageCollision, givenDamageCollision, skin)
         {
             this.shotsOfType = shotsOfType;
@@ -54,7 +54,7 @@ namespace Schmup
         {
             // Check des balles
 
-            foreach (ShotPull shots in shotsOfType)
+            foreach (ShotPool shots in shotsOfType)
             {
                 shots.Check();
             }

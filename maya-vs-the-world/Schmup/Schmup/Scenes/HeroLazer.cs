@@ -19,7 +19,7 @@ namespace Schmup
         private List<Vector2> vectors;
 
         public HeroLazer(LuxGame game, World world, int invincibleTimeMillisec, int spriteNb, int damage, Sprite skin)
-            : base(game, invincibleTimeMillisec, true, false, world, 10, damage, skin)
+            : base(game, invincibleTimeMillisec, true, world, 10, damage, skin)
         {
             this.spriteNb = spriteNb;
             texture = new List<Texture2D>(spriteNb);

@@ -16,17 +16,8 @@ namespace Schmup
         public Vector2 Accel;
         private Sprite skin;
         private bool isOutOfRange;
-        private bool goesThrough;
         private bool isABadShot;
         private World world;
-
-        public bool GoesThrough
-        {
-            get
-            {
-                return goesThrough;
-            }
-        }
 
         public bool IsOutOfRange
         {
@@ -89,7 +80,7 @@ namespace Schmup
 
         public override void Update(GameTime gameTime)
         {
-            if (isOutOfRange == true)
+            if (isOutOfRange)
             {
                 Position = new Vector2(-160, -160);
             }
@@ -138,13 +129,12 @@ namespace Schmup
             this.damage = 1;
         }
 
-        public Shot(LuxGame game, double invincibleTimeSec, bool isAGoodShot, bool goesThrough, World world, int hitbox, int damage, Sprite skin = null)
+        public Shot(LuxGame game, double invincibleTimeSec, bool isAGoodShot, World world, int hitbox, int damage, Sprite skin = null)
             : base(game)
         {
             this.invincibleTimeSec = invincibleTimeSec;
             this.skin = skin;
             this.isABadShot = !isAGoodShot;
-            this.goesThrough = goesThrough;
             this.hitbox = hitbox;
             this.world = world;
             this.damage = damage;

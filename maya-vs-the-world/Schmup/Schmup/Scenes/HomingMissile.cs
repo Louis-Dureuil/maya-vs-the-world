@@ -15,7 +15,7 @@ namespace Schmup
         private float rotation;
 
         public HomingMissile(LuxGame game, int invincibleTimeMillisec, bool isAGoodShot, float rotation, int hitbox, int damage, World world, Sprite skin = null)
-            : base(game, invincibleTimeMillisec, isAGoodShot, false, world, hitbox, damage, null)
+            : base(game, invincibleTimeMillisec, isAGoodShot, world, hitbox, damage, null)
         {
             this.rotation = rotation;
         }

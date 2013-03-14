@@ -32,8 +32,8 @@ namespace Schmup
         private bool speedType;
 
         // Tirs dont le héros dispose
-        private ShotPull weakShots;
-        private ShotPull strongShots;
+        private ShotPool weakShots;
+        private ShotPool strongShots;
 
         private World world;
 
@@ -60,8 +60,8 @@ namespace Schmup
         public override void Initialize()
         {
             base.Initialize();
-            weakShots = new ShotPull(LuxGame, World, true, false, 0, 20, 20, 100, 25, this.Content.Load<Texture2D>("bullet004-1"));
-            strongShots = new ShotPull(LuxGame, World, true, false, 0, 30, 30, 100, 14, this.Content.Load<Texture2D>("bullet003-1"));
+            weakShots = new ShotPool(LuxGame, World, true, 0, 20, 20, 100, 25, this.Content.Load<Texture2D>("bullet004-1"));
+            strongShots = new ShotPool(LuxGame, World, true, 0, 30, 30, 100, 14, this.Content.Load<Texture2D>("bullet003-1"));
             Game.Components.Add(weakShots);
             Game.Components.Add(strongShots);
         }

@@ -54,17 +54,17 @@ namespace Schmup
             shootOrder = 0;
             secondShootOrder = 0;
             rank = 0;
-            ShotPull redShots = new ShotPull(LuxGame, World, false, false, 0.3, 100, 100, shotHitBox, 15, bulletText, null);
+            ShotPool redShots = new ShotPool(LuxGame, World, false, 0.3, 100, 100, shotHitBox, 15, bulletText, null);
             Game.Components.Add(redShots);
             ShotsOfType.Add(redShots);
-            ShotPull blueShots = new ShotPull(LuxGame, World);
-            shooter = new Enemy(LuxGame, World, 0, 0, 0, new List<ShotPull>() {blueShots}, null);
+            ShotPool blueShots = new ShotPool(LuxGame, World);
+            shooter = new Enemy(LuxGame, World, 0, 0, 0, new List<ShotPool>() {blueShots}, null);
             shooter.Skin = new Sprite(shooter, new List<Texture2D>() { enemyTexture }, null);
             shooter.Skin.SetAnimation(enemyTexture.Name);
             Game.Components.Add(blueShots);
             Game.Components.Add(shooter);
-            ShotPull bigShots = new ShotPull(LuxGame, World, false, false, 1.5, 150, 200, 20, 50, bigBulletText, null);
-            bigShooter = new Enemy(LuxGame, World, 0, 0, 0, new List<ShotPull>() {bigShots}, null);
+            ShotPool bigShots = new ShotPool(LuxGame, World, false, 1.5, 150, 200, 20, 50, bigBulletText, null);
+            bigShooter = new Enemy(LuxGame, World, 0, 0, 0, new List<ShotPool>() {bigShots}, null);
             bigShooter.Skin = new Sprite(bigShooter, new List<Texture2D>() { enemyTexture }, null);
             bigShooter.Skin.SetAnimation(enemyTexture.Name);
             Game.Components.Add(bigShots);
@@ -144,6 +144,10 @@ namespace Schmup
             ShotsOfType[0].Clear();
             shooter.ShotsOfType[0].Clear();
             bigShooter.ShotsOfType[0].Clear();
+            foreach (RotatingShot shot in rotatingShots)
+            {
+                shot.Position = new Vector2(-40, -40);
+            }
             base.Die();
         }
 

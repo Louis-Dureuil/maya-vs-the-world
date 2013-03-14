@@ -15,7 +15,7 @@ namespace Schmup
         private Vector2 direction;
 
         public RotatingShot(LuxGame game, World world, int invincibleTimeMillisec, bool isAGoodShot, float rotation, int hitbox, Sprite skin = null)
-            : base(game, invincibleTimeMillisec, isAGoodShot, false, world, hitbox, 2, null)
+            : base(game, invincibleTimeMillisec, isAGoodShot, world, hitbox, 2, null)
         {
             this.rotation = rotation;
         }
