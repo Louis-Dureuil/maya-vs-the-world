@@ -71,6 +71,11 @@ namespace Schmup
             boss.Position = new Vector2(400, 50);
             enemies.Add(boss);
 
+            ShotPool shots = new ShotPool(LuxGame, this, false, 0.2, 150,150, 8, 4, bullet2Texture, null);
+            ShootsHero shooterTest = new ShootsHero(this.LuxGame, this, shots, boss);
+
+            Game.Components.Add(shots);
+            Game.Components.Add(shooterTest);
             Game.Components.Add(boss);
             Game.Components.Add(hero);
             Game.Components.Add(heroSprite);
