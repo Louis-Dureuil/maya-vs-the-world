@@ -118,6 +118,7 @@
     <Compile Include="Scenes\EasyBoss.cs" />
     <Compile Include="Scenes\Enemy.cs" />
     <Compile Include="Scenes\FastBoss.cs" />
+    <Compile Include="Scenes\GenericEnemy.cs" />
     <Compile Include="Scenes\Hero.cs" />
     <Compile Include="Scenes\HeroLazer.cs" />
     <Compile Include="Scenes\HeroPower.cs" />
@@ -127,8 +128,10 @@
     <Compile Include="Scenes\MainScene.cs" />
     <Compile Include="Scenes\RotatingEnemy.cs" />
     <Compile Include="Scenes\RotatingShot.cs" />
+    <Compile Include="Scenes\ShootingPattern.cs" />
+    <Compile Include="Scenes\ShootsHero.cs" />
     <Compile Include="Scenes\Shot.cs" />
-    <Compile Include="Scenes\ShotPull.cs" />
+    <Compile Include="Scenes\ShotPool.cs" />
     <Compile Include="Scenes\TechnicalHero.cs" />
     <Compile Include="Scenes\World.cs" />
   </ItemGroup>
