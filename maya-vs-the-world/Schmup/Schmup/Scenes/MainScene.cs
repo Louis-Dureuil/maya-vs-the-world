@@ -20,7 +20,7 @@ namespace Schmup
         //private BigBoss boss;
         //private EasyBoss boss;
         //private FastBoss boss;
-        private World world;
+        private ThreeEnemies world;
 
         public MainScene(LuxGame game)
             : base(game)
@@ -29,7 +29,7 @@ namespace Schmup
 
         public override void Initialize()
         {
-            world = new World(LuxGame);
+            world = new ThreeEnemies(LuxGame);
             base.Initialize();
             world.Initialize();
         }

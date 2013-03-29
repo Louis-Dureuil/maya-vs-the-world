@@ -24,10 +24,10 @@ namespace Schmup
         public override void Update(GameTime gameTime)
         {
             elapsedSec += gameTime.ElapsedGameTime.TotalSeconds;
-            if (elapsedSec > 0.1)
+            if (elapsedSec > 0.3)
             {
                 elapsedSec = 0;
-                direction = 2 * Vector2.Normalize(world.Hero.Position - enemy.Position);
+                direction = 4 * Vector2.Normalize(world.Hero.Position - enemy.Position);
                 shots.Shoot(enemy.Position.X, enemy.Position.Y, direction.X, direction.Y, 0, 0, false, false, false);
             }
             base.Update(gameTime);

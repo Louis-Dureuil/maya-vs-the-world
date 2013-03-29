@@ -115,6 +115,7 @@
     <Compile Include="Scenes\BigBoss.cs" />
     <Compile Include="Scenes\Common.cs" />
     <Compile Include="Scenes\Character.cs" />
+    <Compile Include="Scenes\ThreeEnemies.cs" />
     <Compile Include="Scenes\EasyBoss.cs" />
     <Compile Include="Scenes\Enemy.cs" />
     <Compile Include="Scenes\FastBoss.cs" />
@@ -127,8 +128,10 @@
     <Compile Include="Scenes\MainScene.cs" />
     <Compile Include="Scenes\RotatingEnemy.cs" />
     <Compile Include="Scenes\RotatingShot.cs" />
+    <Compile Include="Scenes\ShootingPattern.cs" />
+    <Compile Include="Scenes\ShootsHero.cs" />
     <Compile Include="Scenes\Shot.cs" />
-    <Compile Include="Scenes\ShotPull.cs" />
+    <Compile Include="Scenes\ShotPool.cs" />
     <Compile Include="Scenes\TechnicalHero.cs" />
     <Compile Include="Scenes\World.cs" />
   </ItemGroup>
