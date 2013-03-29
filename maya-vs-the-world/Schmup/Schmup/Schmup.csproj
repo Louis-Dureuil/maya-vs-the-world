@@ -119,6 +119,7 @@
     <Compile Include="Scenes\EasyBoss.cs" />
     <Compile Include="Scenes\Enemy.cs" />
     <Compile Include="Scenes\FastBoss.cs" />
+    <Compile Include="Scenes\GenericEnemy.cs" />
     <Compile Include="Scenes\Hero.cs" />
     <Compile Include="Scenes\HeroLazer.cs" />
     <Compile Include="Scenes\HeroPower.cs" />
