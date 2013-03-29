@@ -60,11 +60,11 @@ namespace Schmup
             // TODO : Changer les 30, 770 etc en pourcentage!
             if (Position.X < 30)
             {
-                accel.X += (float)0.5;
+                accel.X += (float)2;
             }
-            else if (Position.X < 770)
+            else if (Position.X > 770)
             {
-                accel.X -= (float)0.5;
+                accel.X -= (float)2;
             }
             else
             {
@@ -72,23 +72,23 @@ namespace Schmup
             }
             if (Position.Y < 30)
             {
-                accel.Y += (float)0.5;
+                accel.Y += (float)2;
             }
             else if (Position.Y > 450)
             {
-                accel.Y -= (float)0.5;
+                accel.Y -= (float)2;
             }
             else
             {
                 accel.Y += (float)(Common.Rand.NextDouble() - 0.5);
             }
-            speed += accel / 3;
+            speed += accel / 30;
             Position += speed;
             if (speed.Length() > 5)
             {
-                accel = -accel;
+                accel = -accel/2;
             }
-            if (speed.Length() > 10)
+            if (speed.Length() > 15)
             {
                 speed = new Vector2(0, 0);
                 accel = new Vector2(0, 0);
