@@ -15,9 +15,6 @@ namespace Schmup
         private List<Shot> badShots = new List<Shot>();
         private List<Shot> goodShots = new List<Shot>();
 
-        // Pour le test!
-        private ShotPool shots;
-
         private double elapsed;
 
         public World(LuxGame game)
@@ -59,6 +56,8 @@ namespace Schmup
 
         public override void Initialize()
         {
+            Texture2D enemyTexture = this.Content.Load<Texture2D>("commonEnemy");
+
             base.Initialize();
             Texture2D bullet2Texture = this.Content.Load<Texture2D>("bullet002-1");
             hero = new Hero(this.LuxGame, this, 200, 1, 1, 5, 2, null);
@@ -69,20 +68,29 @@ namespace Schmup
             boss.Skin = new Sprite(boss, new List<string>() { "boss" });
             boss.Skin.SetAnimation("boss");
             boss.Position = new Vector2(400, 50);
-            enemies.Add(boss);
+            //enemies.Add(boss);
 
             ShotPool shots = new ShotPool(LuxGame, this, false, 0.2, 150,150, 8, 4, bullet2Texture, null);
-            ShootsHero shooterTest = new ShootsHero(this.LuxGame, this, shots, boss);
-
+            GenericEnemy enem;
+            for (int i = 0; i < 3; i++)
+            {
+                enem = new GenericEnemy(LuxGame, this, 500, 10, 10, null);
+                Sprite enemySkin = new Sprite(enem, new List<Texture2D>() { enemyTexture }, null);
+                enem.Skin = enemySkin;
+                enem.Skin.SetAnimation(enemyTexture.Name);
+                enem.Position = new Vector2(400, 100);
+                enemies.Add(enem);
+                Game.Components.Add(enem);
+                Game.Components.Add(enemySkin);
+            }
+            foreach (Enemy enemy in enemies.ToList<Enemy>())
+            {
+                Game.Components.Add(new ShootsHero(this.LuxGame, this, shots, enemy));
+            }
             Game.Components.Add(shots);
-            Game.Components.Add(shooterTest);
-            Game.Components.Add(boss);
+            //Game.Components.Add(boss);
             Game.Components.Add(hero);
             Game.Components.Add(heroSprite);
-
-            // Phase de test
-            shots = new ShotPool(LuxGame, this);
-            Game.Components.Add(shots);
 
             heroSprite.SetAnimation("hero");
         }

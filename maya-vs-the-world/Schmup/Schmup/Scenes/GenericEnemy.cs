@@ -82,7 +82,7 @@ namespace Schmup
             {
                 accel.Y += (float)(Common.Rand.NextDouble() - 0.5);
             }
-            speed += accel / 30;
+            speed += accel / 40;
             Position += speed;
             if (speed.Length() > 5)
             {

@@ -60,8 +60,8 @@ namespace Schmup
         public override void Initialize()
         {
             base.Initialize();
-            weakShots = new ShotPool(LuxGame, World, true, 0, 20, 20, 100, 25, this.Content.Load<Texture2D>("bullet004-1"));
-            strongShots = new ShotPool(LuxGame, World, true, 0, 30, 30, 100, 14, this.Content.Load<Texture2D>("bullet003-1"));
+            weakShots = new ShotPool(LuxGame, World, true, 0, 20, 20, 40, 25, this.Content.Load<Texture2D>("bullet004-1"));
+            strongShots = new ShotPool(LuxGame, World, true, 0, 30, 30, 40, 14, this.Content.Load<Texture2D>("bullet003-1"));
             Game.Components.Add(weakShots);
             Game.Components.Add(strongShots);
         }
