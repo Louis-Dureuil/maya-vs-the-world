@@ -94,6 +94,23 @@ namespace Schmup
                 accel = new Vector2(0, 0);
             }
 
+            if (Position.X < 0)
+            {
+                Position.X = 0;
+            }
+            if (Position.Y < 0)
+            {
+                Position.Y = 0;
+            }
+            if (Position.X > 800)
+            {
+                Position.X = 800;
+            }
+            if (Position.Y > 480)
+            {
+                Position.Y = 480;
+            }
+
             base.Update(gameTime);
         }
     }

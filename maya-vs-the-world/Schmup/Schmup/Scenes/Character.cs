@@ -57,6 +57,11 @@ namespace Schmup
             }
         }
 
+        public bool IsDead()
+        {
+            return (life <= 0);
+        }
+
         public int GivenDamageCollision
         {
             get

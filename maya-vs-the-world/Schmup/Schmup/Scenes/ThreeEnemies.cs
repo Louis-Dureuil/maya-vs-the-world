@@ -73,11 +73,11 @@ namespace Schmup
             hero.Skin = heroSprite;
             hero.Position = new Vector2(400, 400);
 
-            ListePosition.Add(new Vector2(100,100));
-            ListePosition.Add(new Vector2(700,100));
-            ListePosition.Add(new Vector2(400,100));
+            ListePosition.Add(new Vector2(100, 100));
+            ListePosition.Add(new Vector2(700, 100));
+            ListePosition.Add(new Vector2(400, 100));
 
-            ShotPool shots = new ShotPool(LuxGame, this, false, 0.2, 150,150, 8, 4, bullet2Texture, null);
+            ShotPool shots = new ShotPool(LuxGame, this, false, 0.2, 150, 150, 8, 4, bullet2Texture, null);
 
             GenericEnemy enem;
             for (int i = 0; i < 3; i++)
@@ -116,19 +116,24 @@ namespace Schmup
             int nb_a_rajouter = 0;
             for (int i = 0; i < enemies.Count; i++)
             {
-                if (enemies[i].Life <= 0)
+                if (enemies[i].IsDead())
                 {
-                    enemies[i].Die();
                     nb_a_rajouter++;
                 }
             }
             GenericEnemy enem;
+            System.Console.WriteLine(nb_a_rajouter);
             for (; nb_a_rajouter > 0; nb_a_rajouter--)
             {
+                System.Console.WriteLine("LOL");
                 enem = new GenericEnemy(LuxGame, this, 500, 10, 10, null);
                 enem.Position = new Vector2(400, 100);
+                Sprite enemySkin = new Sprite(enem, new List<Texture2D>() { enemyTexture }, null);
+                enem.Skin = enemySkin;
+                enem.Skin.SetAnimation(enemyTexture.Name);
                 enemies.Add(enem);
-                
+                Game.Components.Add(enem);
+                Game.Components.Add(enemySkin);
             }
 
 
@@ -141,7 +146,7 @@ namespace Schmup
                     {
                         hero.Hurt(badShot.Damage);
                         hero.InvincibleTimeSec = badShot.InvincibleTimeSec;
-                        System.Console.WriteLine("Tu t'es fait frapper. Il te reste {0} points de vie.",hero.Life );
+                        System.Console.WriteLine("Tu t'es fait frapper. Il te reste {0} points de vie.", hero.Life);
 
                         //TODO : Changer ça peut-être?
                         badShot.Position = new Vector2(-40, -40);
@@ -215,8 +220,7 @@ namespace Schmup
                     System.Console.WriteLine(enemy.Position);
                 }
             }
-
-
         }
+
     }
 }

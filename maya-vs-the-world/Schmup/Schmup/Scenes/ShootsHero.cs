@@ -21,6 +21,20 @@ namespace Schmup
             this.world = world;
         }
 
+        public void Associate(Enemy enemy)
+        {
+            this.enemy = enemy;
+            elapsedSec = 0;
+        }
+
+        public Enemy Enemy
+        {
+            get
+            {
+                return enemy;
+            }
+        }
+
         public override void Update(GameTime gameTime)
         {
             elapsedSec += gameTime.ElapsedGameTime.TotalSeconds;
@@ -36,7 +50,7 @@ namespace Schmup
                 direction = 4 * Vector2.Normalize(world.Hero.Position - enemy.Position);
                 shots.Shoot(enemy.Position.X, enemy.Position.Y, 3*direction.X, 3*direction.Y, 0, 0, false, false, false);
             }
-            if (elapsedSec < 0)
+            if (enemy.Life > 0 && elapsedSec < 0)
             {
                 elapsedSec = -100;
             }
