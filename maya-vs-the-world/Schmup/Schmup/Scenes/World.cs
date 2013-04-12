@@ -84,8 +84,8 @@ namespace Schmup
             hero.Position = new Vector2(400, 400);
 
             win = new MenuWindow(this, new Vector2(10, 10), deadEnemyNumber.ToString());
-            winLife = new MenuWindow(this, new Vector2(740, 10), hero.Life.ToString());
-            winTime = new MenuWindow(this, new Vector2(350, 10), ((int)(30 - elapsed)).ToString());
+            winLife = new MenuWindow(this, new Vector2(640, 10), hero.Life.ToString());
+            winTime = new MenuWindow(this, new Vector2(250, 10), ((int)(30 - elapsed)).ToString());
 
             ListePosition.Add(new Vector2(100, 100));
             ListePosition.Add(new Vector2(700, 100));
@@ -131,10 +131,10 @@ namespace Schmup
             elapsed += gameTime.ElapsedGameTime.TotalSeconds;
 
             win.Draw(gameTime);
-            win.Text = deadEnemyNumber.ToString();
+            win.Text = deadEnemyNumber.ToString() + " ennemis tués";
             winLife.Draw(gameTime);
-            winLife.Text = hero.Life.ToString();
-            winTime.Text = ((int)(30 - elapsed)).ToString();
+            winLife.Text = hero.Life.ToString() + " points de vie";
+            winTime.Text = (Math.Max((int)(30 - elapsed),0)).ToString() + " secondes restantes";
             winTime.Draw(gameTime);
 
             if (hero.IsDead() || elapsed > 60)
