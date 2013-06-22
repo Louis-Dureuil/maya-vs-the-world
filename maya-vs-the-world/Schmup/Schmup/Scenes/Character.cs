@@ -119,6 +119,7 @@ namespace Schmup
         public virtual void Die()
         {
             // TODO : Ajouter l'animation de mort
+            life = 0;
             Enabled = false;
         }
 

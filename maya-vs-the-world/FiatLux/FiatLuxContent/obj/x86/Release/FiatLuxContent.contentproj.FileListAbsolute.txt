@@ -1,5 +1,0 @@
-c:\users\lars\documents\visual studio 2010\Projects\Lux\FiatLux\FiatLuxContent\obj\x86\Release\ResolveAssemblyReference.cache
-C:\Users\Lars\documents\visual studio 2010\Projects\Lux\FiatLux\FiatLuxContent\obj\x86\Release\fiatluxsound.xml
-C:\Users\Lars\Documents\Fiat Lux\trunk\dev\Lux\FiatLux\FiatLuxContent\obj\x86\Release\ResolveAssemblyReference.cache
-C:\Users\Lars\Documents\fiatlux\trunk\dev\Lux\FiatLux\FiatLuxContent\obj\x86\Release\ResolveAssemblyReference.cache
-C:\Users\pierre\Programmation\maya-vs-the-world\maya-vs-the-world\FiatLux\FiatLuxContent\obj\x86\Release\ResolveAssemblyReference.cache
