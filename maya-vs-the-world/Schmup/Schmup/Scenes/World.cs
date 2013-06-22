@@ -93,26 +93,35 @@ namespace Schmup
 
             ShotPool shots = new ShotPool(LuxGame, this, false, 0.2, 150, 150, 8, 4, bullet2Texture, null);
 
-            for (int i = 0; i < 3; i++)
-            {
-                ShootsHero shooter = new ShootsHero(this.LuxGame, this, shots, null);
-                Game.Components.Add(shooter);
-                shootsHeros.Add(shooter);
-            }
+            EasyBoss boss = new EasyBoss(LuxGame, this, 2000, 10, 10, null, bullet2Texture, 8);
+            Sprite enemySkin = new Sprite(boss, new List<Texture2D>() { enemyTexture }, null);
+            boss.Skin = enemySkin;
+            boss.Skin.SetAnimation(enemyTexture.Name);
+            boss.Position = new Vector2(400, 100);
+            enemies.Add(boss);
+            Game.Components.Add(boss);
+            Game.Components.Add(enemySkin);
 
-            GenericEnemy enem;
-            for (int i = 0; i < 3; i++)
-            {
-                enem = new GenericEnemy(LuxGame, this, 500, 10, 10, null);
-                Sprite enemySkin = new Sprite(enem, new List<Texture2D>() { enemyTexture }, null);
-                enem.Skin = enemySkin;
-                enem.Skin.SetAnimation(enemyTexture.Name);
-                enem.Position = new Vector2(400, 100);
-                enemies.Add(enem);
-                Game.Components.Add(enem);
-                Game.Components.Add(enemySkin);
-                shootsHeros[i].Associate(enem);
-            }
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    ShootsHero shooter = new ShootsHero(this.LuxGame, this, shots, null);
+            //    Game.Components.Add(shooter);
+            //    shootsHeros.Add(shooter);
+            //}
+
+            //GenericEnemy enem;
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    enem = new GenericEnemy(LuxGame, this, 500, 10, 10, null);
+            //    Sprite enemySkin = new Sprite(enem, new List<Texture2D>() { enemyTexture }, null);
+            //    enem.Skin = enemySkin;
+            //    enem.Skin.SetAnimation(enemyTexture.Name);
+            //    enem.Position = new Vector2(400, 100);
+            //    enemies.Add(enem);
+            //    Game.Components.Add(enem);
+            //    Game.Components.Add(enemySkin);
+            //    shootsHeros[i].Associate(enem);
+            //}
             Game.Components.Add(shots);
             Game.Components.Add(hero);
             Game.Components.Add(heroSprite);
@@ -140,6 +149,8 @@ namespace Schmup
             if (hero.IsDead() || elapsed > 60)
             {
                 hero.Die();
+                hero.Position = new Vector2(-100, -100);
+                hero.Skin.Position = new Vector2(-100, -100);
                 System.Console.WriteLine("FINI! nombre d'ennemis tués : {0}", deadEnemyNumber);
             }
 
