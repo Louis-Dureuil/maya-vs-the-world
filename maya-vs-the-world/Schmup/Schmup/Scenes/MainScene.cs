@@ -11,6 +11,9 @@ namespace Schmup
     class MainScene : Scene
     {
 
+        // DELETE ME ONCE TESTING OVER
+        Interpretable interpretable;
+
         // Textures utilisées pendant tout le combat.
         //private Texture2D bullet1Texture;
         private Texture2D bullet2Texture;
@@ -30,6 +33,9 @@ namespace Schmup
         public override void Initialize()
         {
             world = new World(LuxGame);
+            Interpreter interpreter = new Interpreter("Scripts/Toto", true, false);
+            interpretable = interpreter.GetInterpretable("LuxEngine.TotoSays", this);
+            Game.Components.Add(interpretable);
             base.Initialize();
             world.Initialize();
         }
